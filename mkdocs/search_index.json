@@ -1,0 +1,74 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\nmkdocs serve -a 192.168.0.122:8000\n\n\n\n\nProject layout\n\n\n1\n2\n3\n4\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\n\n\n\ngitee.com\n\n\nhttps://gitee.com/farland/md.git\n\n\nCode Highlight\n\n\n1\npip install pygments\n\n\n\n\n\n\nmkdoc.yml\n setting\n\n\n1\n2\n3\nmarkdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.  mkdocs serve -a 192.168.0.122:8000", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "1\n2\n3\n4 mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/#giteecom", 
+            "text": "https://gitee.com/farland/md.git", 
+            "title": "gitee.com"
+        }, 
+        {
+            "location": "/#code-highlight", 
+            "text": "1 pip install pygments   mkdoc.yml  setting  1\n2\n3 markdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)", 
+            "title": "Code Highlight"
+        }, 
+        {
+            "location": "/datamining/temp/", 
+            "text": "Hello guys", 
+            "title": "Temp"
+        }, 
+        {
+            "location": "/datamining/temp/#hello-guys", 
+            "text": "", 
+            "title": "Hello guys"
+        }, 
+        {
+            "location": "/inbox/temp/", 
+            "text": "Hello guys", 
+            "title": "Temp"
+        }, 
+        {
+            "location": "/inbox/temp/#hello-guys", 
+            "text": "", 
+            "title": "Hello guys"
+        }, 
+        {
+            "location": "/linux/cmd_lib/", 
+            "text": "CMD Lines\n\n\n\u6807\u7b7e\uff1a \u547d\u4ee4\n\n\nSSH\n\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n#generate key pair\n\nssh-keygen -t rsa\n\ngit config --global user.name \nusername\n\ngit config --global user.email \nemail\n\n\n#validation after importing ssh key\n\ngit git@github.com\n\ngit clone git@github.com:name/project\n\n\n\n\n\n\nmkdocs \n material theme\n\n\n\n\nmkdocs-material-theme\n\n\nmkdocs Documentation\n\n\n\n\n1\n2\n3\n4\npip install mkdocs\n\n\npip install mkdocs-material\n\n\n\nmkdocs serve -a 192.168.0.122:8000S", 
+            "title": "Cmd lib"
+        }, 
+        {
+            "location": "/linux/cmd_lib/#cmd-lines", 
+            "text": "\u6807\u7b7e\uff1a \u547d\u4ee4", 
+            "title": "CMD Lines"
+        }, 
+        {
+            "location": "/linux/cmd_lib/#ssh", 
+            "text": "1\n2\n3\n4\n5\n6\n7\n8\n9 #generate key pair \nssh-keygen -t rsa\n\ngit config --global user.name  username \ngit config --global user.email  email  #validation after importing ssh key \ngit git@github.com\n\ngit clone git@github.com:name/project", 
+            "title": "SSH"
+        }, 
+        {
+            "location": "/linux/cmd_lib/#mkdocs-material-theme", 
+            "text": "mkdocs-material-theme  mkdocs Documentation   1\n2\n3\n4 pip install mkdocs  pip install mkdocs-material  mkdocs serve -a 192.168.0.122:8000S", 
+            "title": "mkdocs &amp; material theme"
+        }
+    ]
+}
