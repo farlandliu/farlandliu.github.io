@@ -1,2 +1,0 @@
-# farlandliu.github.io
-pages

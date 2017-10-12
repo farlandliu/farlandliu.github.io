@@ -4,26 +4,16 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-11</lastmod>
+     <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
-    <url>
-     <loc>/datamining/temp/</loc>
-     <lastmod>2017-10-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
         
     <url>
      <loc>/inbox/temp/</loc>
-     <lastmod>2017-10-11</lastmod>
+     <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -33,7 +23,17 @@
         
     <url>
      <loc>/linux/cmd_lib/</loc>
-     <lastmod>2017-10-11</lastmod>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/xdata/notebook/</loc>
+     <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
