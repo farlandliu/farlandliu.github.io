@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -10,27 +13,37 @@
       
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.0">
     
     
       
-        <title>Notebook - xCoding</title>
+        <title>Jupyter notebook 自定义配置 - xCoding</title>
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.5d3fffba.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -39,9 +52,6 @@
     
     
   </head>
-  
-  
-  
   
     <body>
   
@@ -61,7 +71,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="xCoding" class="md-header-nav__button md-logo">
           
-            <i class="md-icon md-icon--home"></i>
+            <i class="md-icon"></i>
           
         </a>
       </div>
@@ -69,23 +79,24 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Xdata
-                </span>
-              
+              <span class="md-header-nav__topic">
+                xCoding
+              </span>
+              <span class="md-header-nav__topic">
+                Jupyter notebook 自定义配置
+              </span>
             
-            Notebook
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
@@ -96,8 +107,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -106,6 +117,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -114,6 +126,8 @@
 </header>
     
     <div class="md-container">
+      
+        
       
       
       <main class="md-main">
@@ -125,11 +139,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
-        <i class="md-icon md-icon--home"></i>
+        <i class="md-icon"></i>
       
-    </div>
+    </span>
     xCoding
   </label>
   
@@ -141,8 +155,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
-      Home
+    <a href="../.." title="Welcome to xCoding Blog" class="md-nav__link">
+      Welcome to xCoding Blog
     </a>
   </li>
 
@@ -208,8 +222,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../linux/cmd_lib/" title="Cmd lib" class="md-nav__link">
-      Cmd lib
+    <a href="../../linux/cmd/" title="CMD Lines" class="md-nav__link">
+      CMD Lines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/tmux/" title="Tmux" class="md-nav__link">
+      Tmux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/vim/" title="Vim Tips & Config." class="md-nav__link">
+      Vim Tips & Config.
     </a>
   </li>
 
@@ -244,6 +282,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../ml-action/" title="Machine Learning in Action -- note" class="md-nav__link">
+      Machine Learning in Action -- note
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -255,11 +305,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Notebook
+        Jupyter notebook 自定义配置
       </label>
     
-    <a href="./" title="Notebook" class="md-nav__link md-nav__link--active">
-      Notebook
+    <a href="./" title="Jupyter notebook 自定义配置" class="md-nav__link md-nav__link--active">
+      Jupyter notebook 自定义配置
     </a>
     
       
@@ -313,6 +363,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pydata/" title="Pydata" class="md-nav__link">
+      Pydata
+    </a>
   </li>
 
         
@@ -394,11 +456,10 @@
                 <h1 id="jupyter-notebook">Jupyter notebook 自定义配置</h1>
 <hr />
 <h2 id="_1">创建配置文件</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jupyter notebook --generate-config
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jupyter notebook --generate-config
 </pre></div>
 </td></tr></table>
-
-<p>文件位置 <code>~/.jupyter/jupyter_notebook_config.py</code></p>
+文件位置 <mark>~/.jupyter/jupyter_notebook_config.py</mark></p>
 <h2 id="_2">设置密码</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -415,7 +476,7 @@ Out<span class="o">[</span><span class="m">2</span><span class="o">]</span>: <sp
 </td></tr></table>
 
 <h2 id="_3">简单的配置实例</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -438,21 +499,20 @@ c.NotebookApp.open_browser <span class="o">=</span> False
 c.NotebookApp.port <span class="o">=</span> <span class="m">9999</span>
 </pre></div>
 </td></tr></table>
-
-<p><strong>设置工作目录</strong>
-在home创建目录ipython：<code>～/ipython</code>，配置时只写目录名，不需要加<code>/</code></p>
+<strong>设置工作目录</strong>
+在home创建目录ipython：<mark>~/ipython，配置时只写目录名，不需要加<code>/</code></mark>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>c.ContentManager.root_dir = &#39;ipython&#39; # ipython目录在～/ipython, 
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <h2 id="notebook">启动notebook</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jupyter notebook
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jupyter notebook
 </pre></div>
 </td></tr></table>
-
-<p>notebook server地址：<code>http://localhost:9999/tree</code></p>
+notebook server地址：<code>http://localhost:9999/tree</code></p>
 <h2 id="resource">resource</h2>
-<p>(https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server)</p>
+<ul>
+<li><a href="https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server">https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server</a></li>
+</ul>
                 
                   
                 
@@ -471,7 +531,7 @@ c.NotebookApp.port <span class="o">=</span> <span class="m">9999</span>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../linux/cmd_lib/" title="Cmd lib" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ml-action/" title="Machine Learning in Action -- note" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -480,11 +540,25 @@ c.NotebookApp.port <span class="o">=</span> <span class="m">9999</span>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Cmd lib
+                Machine Learning in Action -- note
               </span>
             </div>
           </a>
         
+        
+          <a href="../pydata/" title="Pydata" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pydata
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
@@ -494,9 +568,9 @@ c.NotebookApp.port <span class="o">=</span> <span class="m">9999</span>
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -508,10 +582,21 @@ c.NotebookApp.port <span class="o">=</span> <span class="m">9999</span>
       
     </div>
     
-      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../assets/javascripts/application.6cdc17f0.js"></script>
       
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
-      <script>app.initialize({url:{base:"../.."}})</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="../../js/umlconvert.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default"></script>
       
     
     

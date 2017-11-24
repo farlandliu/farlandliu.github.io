@@ -1,0 +1,284 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to xCoding Blog\n\n\nxCoding is powered by:\n\n\n\n\nmkdocs Documentation\n\n\nmkdocs-material-theme\n\n\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\nmkdocs serve -a 192.168.0.122:8000\n\n\n\n\nProject layout\n\n\n1\n2\n3\n4\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\n\n\n\nsource doc repo is gitee.com\n\n\nhttps://gitee.com/farland/md.git\n\n\nhttps://github.com/farlandliu/farlandliu.github.io.git\n\n\nextensions\n\n\ncode highlight\n\n1\npip install pygments\n\n\n\n\n\nmkdoc.yml\n setting\n\n1\n2\n3\nmarkdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)\n\n\n\n\n\nFlowChart fixed\n\n\n\n\nref: \nhttps://my.oschina.net/u/3465063/blog/892515\n\n- error :\n\n1\nflowchart.parse.js:28 Uncaught TypeError: Cannot read property \nkey\n of null\n\n\n\n\n- reason:\nmaterial theme code block has a paste button,while uml converter js reads the first child node of PRE block.\n\n\n\n\n\n\naction:\nrevise umlconvert.js line 21\n\n1\n2\n3\n4\n#\nfrom\n\n\nchildEl\n \n=\n \narr\n[\ni\n].\nfirstChild\n;\n\n\n#\nto\n\n\nchildEl\n \n=\n \narr\n[\ni\n].\nlastChild\n;\n\n\n\n\n\n\n\n\nMath fix\n\n\n\n\n\n\nref: \nhttps://stackoverflow.com/questions/27882261/mkdocs-and-mathjax\n \n\n\nLatex\u516c\u5f0f\uff1a \nhttp://blog.csdn.net/zdk930519/article/details/54137476\n \n\n\nmathjax doc: \nhttp://docs.mathjax.org/en/latest/index.html\n \n\n\n\n\n\n\n1\npip install python-markdown-math\n\n\n\n\n\n\n1\n2\n3\n4\n# mkdocs.yml markdown extensions:\nmdx_math\n#js extensions:\n - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default\n\n\n\n\n\nOption\n:Create a new js file to folder js: math.js, for math configuration.\n\n1\n2\n3\n4\n5\n  MathJax.Hub.Config({\n        config: [\nMMLorHTML.js\n],\n        jax: [\ninput/TeX\n, \noutput/HTML-CSS\n, \noutput/NativeMML\n],\n        extensions: [\nMathMenu.js\n, \nMathZoom.js\n]\n    });\n\n\n\n\n\u884c\u5185\u516c\u5f0finline:\n\n1\n\\(....\\)", 
+            "title": "Welcome to xCoding Blog"
+        }, 
+        {
+            "location": "/#welcome-to-xcoding-blog", 
+            "text": "xCoding is powered by:   mkdocs Documentation  mkdocs-material-theme", 
+            "title": "Welcome to xCoding Blog"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.  mkdocs serve -a 192.168.0.122:8000", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "1\n2\n3\n4 mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/#source-doc-repo-is-giteecom", 
+            "text": "https://gitee.com/farland/md.git  https://github.com/farlandliu/farlandliu.github.io.git", 
+            "title": "source doc repo is gitee.com"
+        }, 
+        {
+            "location": "/#extensions", 
+            "text": "code highlight 1 pip install pygments   mkdoc.yml  setting 1\n2\n3 markdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)", 
+            "title": "extensions"
+        }, 
+        {
+            "location": "/#flowchart-fixed", 
+            "text": "ref:  https://my.oschina.net/u/3465063/blog/892515 \n- error : 1 flowchart.parse.js:28 Uncaught TypeError: Cannot read property  key  of null  \n- reason:\nmaterial theme code block has a paste button,while uml converter js reads the first child node of PRE block.    action:\nrevise umlconvert.js line 21 1\n2\n3\n4 # from  childEl   =   arr [ i ]. firstChild ;  # to  childEl   =   arr [ i ]. lastChild ;", 
+            "title": "FlowChart fixed"
+        }, 
+        {
+            "location": "/#math-fix", 
+            "text": "ref:  https://stackoverflow.com/questions/27882261/mkdocs-and-mathjax    Latex\u516c\u5f0f\uff1a  http://blog.csdn.net/zdk930519/article/details/54137476    mathjax doc:  http://docs.mathjax.org/en/latest/index.html      1 pip install python-markdown-math   1\n2\n3\n4 # mkdocs.yml markdown extensions:\nmdx_math\n#js extensions:\n - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default   Option :Create a new js file to folder js: math.js, for math configuration. 1\n2\n3\n4\n5   MathJax.Hub.Config({\n        config: [ MMLorHTML.js ],\n        jax: [ input/TeX ,  output/HTML-CSS ,  output/NativeMML ],\n        extensions: [ MathMenu.js ,  MathZoom.js ]\n    });  \n\u884c\u5185\u516c\u5f0finline: 1 \\(....\\)", 
+            "title": "Math fix"
+        }, 
+        {
+            "location": "/inbox/temp/", 
+            "text": "This page is for Temp Information", 
+            "title": "Temp"
+        }, 
+        {
+            "location": "/inbox/temp/#this-page-is-for-temp-information", 
+            "text": "", 
+            "title": "This page is for Temp Information"
+        }, 
+        {
+            "location": "/linux/cmd/", 
+            "text": "CMD Lines\n\n\nssh git\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n#generate key pair\n\nssh-keygen -t rsa\n\ngit config --global user.name \nusername\n\ngit config --global user.email \nemail\n\n\n\n#if want to set email for local dir, omit \nglobal\n\ngit config user.name \njohn\n\ngit config user.email \njohn@gmail.com\n\n\n\n##validation after importing ssh key\n\ngit git@github.com\n\ngit clone git@github.com:name/project\n\n\n\n\n\n\nubuntu http proxy\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\nvim /etc/environment \n\n\nexport\n \nhttp_proxy\n=\nhttp://xxx:8080\n\nexport\n \nhttps_proxy\n=\nhttp://xxx:80\n\nexport\n \nftp_proxy\n=\nhttps://xxx:8080\n\n\n# for apt-get\n\n\nvim /etc/apt/apt.conf\n\nAcquire::http:proxy \nhttp://xxx.8088\n\nAcquire::https:proxy \nhttps://xxx:8088\n\nAcquire::socks:proxy \nsocks://xxx:8088\n\n\n\n\n\n\n\nubuntu network :DNS-SERVER\n\n\n1\n2\n3\n4\n5\n6\nsudo vim /etc/network/interfaces \n\ndns-server \n8\n.8.8.8 x.x.x.x y.y.y.y\n\n\n#restart network\n\nsudo /etc/init.d/networking restart", 
+            "title": "CMD Lines"
+        }, 
+        {
+            "location": "/linux/cmd/#cmd-lines", 
+            "text": "", 
+            "title": "CMD Lines"
+        }, 
+        {
+            "location": "/linux/cmd/#ssh-git", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14 #generate key pair \nssh-keygen -t rsa\n\ngit config --global user.name  username \ngit config --global user.email  email  #if want to set email for local dir, omit  global \ngit config user.name  john \ngit config user.email  john@gmail.com  ##validation after importing ssh key \ngit git@github.com\n\ngit clone git@github.com:name/project", 
+            "title": "ssh git"
+        }, 
+        {
+            "location": "/linux/cmd/#ubuntu-http-proxy", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13 vim /etc/environment  export   http_proxy = http://xxx:8080 export   https_proxy = http://xxx:80 export   ftp_proxy = https://xxx:8080 # for apt-get \n\nvim /etc/apt/apt.conf\n\nAcquire::http:proxy  http://xxx.8088 \nAcquire::https:proxy  https://xxx:8088 \nAcquire::socks:proxy  socks://xxx:8088", 
+            "title": "ubuntu http proxy"
+        }, 
+        {
+            "location": "/linux/cmd/#ubuntu-network-dns-server", 
+            "text": "1\n2\n3\n4\n5\n6 sudo vim /etc/network/interfaces \n\ndns-server  8 .8.8.8 x.x.x.x y.y.y.y #restart network \nsudo /etc/init.d/networking restart", 
+            "title": "ubuntu network :DNS-SERVER"
+        }, 
+        {
+            "location": "/linux/tmux/", 
+            "text": "tmux shortcuts \n cheatsheet\n\n\nstart new\n\n\ntmux\n\n\nstart new with session name\n\n\n1\ntmux new -s myname\n\n\n\n\n\n\nattach\n\n\n1\ntmux a  #  (or at, or attach)\n\n\n\n\n\n\nattach to named\n\n\n1\ntmux a -t myname\n\n\n\n\n\n\nlist sessions:\n\n\n1\ntmux ls\n\n\n\n\n\n\nkill session\n\n\n1\ntmux kill-session -t myname\n\n\n\n\n\n\nKill all the tmux sessions:\n\n\ntmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill\n\n\n\n\nIn tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:\n\n\nSessions\n\n\n1\n2\n3\n:new\nCR\n  new session\ns  list sessions\n$  name session\n\n\n\n\n\n\nWindows (tabs)\n\n\n1\n2\n3\n4\n5\n6\n7\nc  create window\nw  list windows\nn  next window\np  previous window\nf  find window\n,  name window\n\n  kill window\n\n\n\n\n\n\nPanes (splits)\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n%  vertical split\n\n\n  \nhorizontal\n \nsplit\n\n\n\no\n  \nswap\n \npanes\n\n\nq\n  \nshow\n \npane\n \nnumbers\n\n\nx\n  \nkill\n \npane\n\n\n+\n  \nbreak\n \npane\n \ninto\n \nwindow\n \n(\ne\n.\ng\n.\n \nto\n \nselect\n \ntext\n \nby\n \nmouse\n \nto\n \ncopy\n)\n\n\n-\n  \nrestore\n \npane\n \nfrom\n \nwindow\n\n\u237d  \nspace\n \n-\n \ntoggle\n \nbetween\n \nlayouts\n\n\nprefix\n \nq\n \n(\nShow\n \npane\n \nnumbers\n,\n \nwhen\n \nthe\n \nnumbers\n \nshow\n \nup\n \ntype\n \nthe\n \nkey\n \nto\n \ngoto\n \nthat\n \npane\n)\n\n\nprefix\n \n{\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nleft\n)\n\n\nprefix\n \n}\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nright\n)\n\n\nprefix\n \nz\n \ntoggle\n \npane\n \nzoom\n\n\n\n\n\n\n\n\n\nCopy mode:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n   Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t\n\n\n\n\n\n\nMisc\n\n\n1\n2\n3\n4\nd  detach\nt  big clock\n?  list shortcuts\n:  prompt\n\n\n\n\n\n\nConfigurations Options:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n# Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \nscreen-256color\n\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp\n\n\n\n\n\n\n\n\n\u53c2\u8003\uff1a\n - \nhttps://gist.github.com/MohamedAlaa/2961058\n\n - \nhttp://blog.jobbole.com/87584/\n\n\n\n\ntmux shortcuts \n cheatsheet\n\n\nstart new\n\n\ntmux\n\n\nstart new with session name\n\n\n1\ntmux new -s myname\n\n\n\n\n\n\nattach\n\n\n1\ntmux a  #  (or at, or attach)\n\n\n\n\n\n\nattach to named\n\n\n1\ntmux a -t myname\n\n\n\n\n\n\nlist sessions:\n\n\n1\ntmux ls\n\n\n\n\n\n\nkill session\n\n\n1\ntmux kill-session -t myname\n\n\n\n\n\n\nKill all the tmux sessions:\n\n\ntmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill\n\n\n\n\nIn tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:\n\n\nSessions\n\n\n1\n2\n3\n:new\nCR\n  new session\ns  list sessions\n$  name session\n\n\n\n\n\n\nWindows (tabs)\n\n\n1\n2\n3\n4\n5\n6\n7\nc  create window\nw  list windows\nn  next window\np  previous window\nf  find window\n,  name window\n\n  kill window\n\n\n\n\n\n\nPanes (splits)\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n%  vertical split\n\n\n  \nhorizontal\n \nsplit\n\n\n\no\n  \nswap\n \npanes\n\n\nq\n  \nshow\n \npane\n \nnumbers\n\n\nx\n  \nkill\n \npane\n\n\n+\n  \nbreak\n \npane\n \ninto\n \nwindow\n \n(\ne\n.\ng\n.\n \nto\n \nselect\n \ntext\n \nby\n \nmouse\n \nto\n \ncopy\n)\n\n\n-\n  \nrestore\n \npane\n \nfrom\n \nwindow\n\n\u237d  \nspace\n \n-\n \ntoggle\n \nbetween\n \nlayouts\n\n\nprefix\n \nq\n \n(\nShow\n \npane\n \nnumbers\n,\n \nwhen\n \nthe\n \nnumbers\n \nshow\n \nup\n \ntype\n \nthe\n \nkey\n \nto\n \ngoto\n \nthat\n \npane\n)\n\n\nprefix\n \n{\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nleft\n)\n\n\nprefix\n \n}\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nright\n)\n\n\nprefix\n \nz\n \ntoggle\n \npane\n \nzoom\n\n\n\n\n\n\n\n\n\nCopy mode:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n   Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t\n\n\n\n\n\n\nMisc\n\n\n1\n2\n3\n4\nd  detach\nt  big clock\n?  list shortcuts\n:  prompt\n\n\n\n\n\n\nConfigurations Options:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n# Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \nscreen-256color\n\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp\n\n\n\n\n\n\n\n\n\u53c2\u8003\uff1a\n - \nhttps://gist.github.com/MohamedAlaa/2961058\n\n - \nhttp://blog.jobbole.com/87584/", 
+            "title": "Tmux"
+        }, 
+        {
+            "location": "/linux/tmux/#tmux-shortcuts-cheatsheet", 
+            "text": "start new  tmux  start new with session name  1 tmux new -s myname   attach  1 tmux a  #  (or at, or attach)   attach to named  1 tmux a -t myname   list sessions:  1 tmux ls   kill session  1 tmux kill-session -t myname   Kill all the tmux sessions:  tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill   In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:", 
+            "title": "tmux shortcuts &amp; cheatsheet"
+        }, 
+        {
+            "location": "/linux/tmux/#sessions", 
+            "text": "1\n2\n3 :new CR   new session\ns  list sessions\n$  name session", 
+            "title": "Sessions"
+        }, 
+        {
+            "location": "/linux/tmux/#copy-mode", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31    Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t", 
+            "title": "Copy mode:"
+        }, 
+        {
+            "location": "/linux/tmux/#misc", 
+            "text": "1\n2\n3\n4 d  detach\nt  big clock\n?  list shortcuts\n:  prompt", 
+            "title": "Misc"
+        }, 
+        {
+            "location": "/linux/tmux/#configurations-options", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20 # Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal  screen-256color \n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp    \u53c2\u8003\uff1a\n -  https://gist.github.com/MohamedAlaa/2961058 \n -  http://blog.jobbole.com/87584/", 
+            "title": "Configurations Options:"
+        }, 
+        {
+            "location": "/linux/tmux/#tmux-shortcuts-cheatsheet_1", 
+            "text": "start new  tmux  start new with session name  1 tmux new -s myname   attach  1 tmux a  #  (or at, or attach)   attach to named  1 tmux a -t myname   list sessions:  1 tmux ls   kill session  1 tmux kill-session -t myname   Kill all the tmux sessions:  tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill   In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:", 
+            "title": "tmux shortcuts &amp; cheatsheet"
+        }, 
+        {
+            "location": "/linux/tmux/#sessions_1", 
+            "text": "1\n2\n3 :new CR   new session\ns  list sessions\n$  name session", 
+            "title": "Sessions"
+        }, 
+        {
+            "location": "/linux/tmux/#copy-mode_1", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31    Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t", 
+            "title": "Copy mode:"
+        }, 
+        {
+            "location": "/linux/tmux/#misc_1", 
+            "text": "1\n2\n3\n4 d  detach\nt  big clock\n?  list shortcuts\n:  prompt", 
+            "title": "Misc"
+        }, 
+        {
+            "location": "/linux/tmux/#configurations-options_1", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20 # Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal  screen-256color \n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp    \u53c2\u8003\uff1a\n -  https://gist.github.com/MohamedAlaa/2961058 \n -  http://blog.jobbole.com/87584/", 
+            "title": "Configurations Options:"
+        }, 
+        {
+            "location": "/linux/vim/", 
+            "text": "Vim Tips \n Config.\n\n\nvim\u5feb\u6377\u952e\n\n\n\n\nC-w w\n \u5207\u6362\u5206\u5c4f\n\n\nC-]\n  \u8df3\u8f6c\u5230\u9009\u62e9\u7684\u6587\u4ef6\u94fe\u63a5\n\n\nC-p\n  CtrlP\u63d2\u4ef6\uff0c\u6253\u5f00\u6587\u4ef6\u6d4f\u89c8\u5217\u8868\n\n\nC-e\n  NEEDtree\uff0c\u6253\u5f00\u76ee\u5f55\u680f\n\n\n\n\nVim Buffer\n\n\n\n\n:ls\n # \u7f13\u5b58\u533a\u5217\u8868\n\n\n:bd1\n #\u5220\u9664\u7f13\u51b2\u533a\u7b2c4\u53f7\u6587\u4ef6\n\n\n:b1\n #\u7f16\u8f91\u7f13\u5b58\u533a1\u53f7\u6587\u4ef6\n\n\n:sb2\n#\u7f16\u8f91buff\u6587\u4ef62\uff0c\u5e76\u5206\u5c4f\n\n\n\n\nvim \u8bbe\u7f6e\n\n\n\n\n\u989c\u8272\u4e3b\u9898\n\u4e3b\u9898\u6587\u4ef6\u5728\n/usr/share/vim/vim74/colors\n\u4e0b\n\u4fee\u6539.vimrc, \u4f8b\u5982\uff1a\n\n1\ncolorscheme desert \n\n\n\n\n\n\u4e3b\u9898solarized light\n\n1\n2\n3\nsyntax enable\nset background=light\ncolorscheme solarized\n\n\n\n\n\n\u5feb\u6377\u952e\n\n1\n2\n3\n#\u884c\u5149\u6807\u79fb\u52a8  \nnmap lh   ^  \nnmap le   $\n\n\n\n\n\n\n\nvim\u5757\u64cd\u4f5c\n\n\n1\n2\n3\n4\n# v,V,C-v=v_b\nv_b_I #\u63d2\u5165\nv_b_A #\u8ffd\u52a0\nv_b_\n,\n  #TAB\n\n\n\n\n\n\nvim\u5206\u5c4f\n\n\n\n\n\u5df2\u7ecf\u6253\u5f00\u6587\u4ef6\u72b6\u6001\u4e0b\uff0c\u518d\u6253\u5f00\u53e6\u4e00\u4e2a\u6587\u4ef6\u5e76\u5206\u5c4f \n\n\n\n\n1\n2\n3\n:e filename\n:sp   \n#\u6c34\u5e73\u5206\u5272\n\n:vsp  \n#\u5782\u76f4\u5206\u5272\n\n\n\n\n\n\n\n\n\n\u5728\u547d\u4ee4\u884c\u4e0b\u76f4\u63a5\u5206\u5c4f\n\n1\n2\nvim -on file1 file2    \n#\u5782\u76f4\u5206\u5c4f\n\nvim -On file1 file2    \n#\u6c34\u5e73\u5206\u5c4f\n\n\n\n\n\n\n\u7a97\u53e3\u5927\u5c0f\n\n1\n2\nC-w_Shift+`-`  # \u6700\u5927\u5316\u5f53\u524d\u7a97\u53e3\nC-w _=   #\u5e73\u5747\u5206\u914d\u7a97\u53e3\u5927\u5c0f\n\n\n\n\n\n\n\nNEEDtree\n\n\nC-e\n: \u6253\u5f00\u6587\u4ef6\u76ee\u5f55\u680f\n\n\nvim resource\n\n\n\n\nhttp://blog.csdn.net/dark_tone\n  \n\u8fd9\u4e2a\u535a\u5ba2\u7684vim\u4ecb\u7ecd\u4e0d\u9519\n\n\nhttps://github.com/BillWang139967/Vim\n\n\nhttps://github.com/chxuan/vimplus\n\n\nhttps://github.com/ma6174/vim\n\n\nhttps://github.com/tao12345666333/vim\n\n\nVIM\u7ec3\u7ea7\u653b\u7565\n\n\n\u8ddf\u6211\u4e00\u8d77\u5b66VIM\n\n\n\u7b28\u65b9\u6cd5\u5b66VIM", 
+            "title": "Vim Tips & Config."
+        }, 
+        {
+            "location": "/linux/vim/#vim-tips-config", 
+            "text": "", 
+            "title": "Vim Tips &amp; Config."
+        }, 
+        {
+            "location": "/linux/vim/#vim", 
+            "text": "C-w w  \u5207\u6362\u5206\u5c4f  C-]   \u8df3\u8f6c\u5230\u9009\u62e9\u7684\u6587\u4ef6\u94fe\u63a5  C-p   CtrlP\u63d2\u4ef6\uff0c\u6253\u5f00\u6587\u4ef6\u6d4f\u89c8\u5217\u8868  C-e   NEEDtree\uff0c\u6253\u5f00\u76ee\u5f55\u680f", 
+            "title": "vim\u5feb\u6377\u952e"
+        }, 
+        {
+            "location": "/linux/vim/#vim-buffer", 
+            "text": ":ls  # \u7f13\u5b58\u533a\u5217\u8868  :bd1  #\u5220\u9664\u7f13\u51b2\u533a\u7b2c4\u53f7\u6587\u4ef6  :b1  #\u7f16\u8f91\u7f13\u5b58\u533a1\u53f7\u6587\u4ef6  :sb2 #\u7f16\u8f91buff\u6587\u4ef62\uff0c\u5e76\u5206\u5c4f", 
+            "title": "Vim Buffer"
+        }, 
+        {
+            "location": "/linux/vim/#vim_1", 
+            "text": "\u989c\u8272\u4e3b\u9898\n\u4e3b\u9898\u6587\u4ef6\u5728 /usr/share/vim/vim74/colors \u4e0b\n\u4fee\u6539.vimrc, \u4f8b\u5982\uff1a 1 colorscheme desert    \u4e3b\u9898solarized light 1\n2\n3 syntax enable\nset background=light\ncolorscheme solarized   \u5feb\u6377\u952e 1\n2\n3 #\u884c\u5149\u6807\u79fb\u52a8  \nnmap lh   ^  \nnmap le   $", 
+            "title": "vim \u8bbe\u7f6e"
+        }, 
+        {
+            "location": "/linux/vim/#vim_2", 
+            "text": "1\n2\n3\n4 # v,V,C-v=v_b\nv_b_I #\u63d2\u5165\nv_b_A #\u8ffd\u52a0\nv_b_ ,   #TAB", 
+            "title": "vim\u5757\u64cd\u4f5c"
+        }, 
+        {
+            "location": "/linux/vim/#vim_3", 
+            "text": "\u5df2\u7ecf\u6253\u5f00\u6587\u4ef6\u72b6\u6001\u4e0b\uff0c\u518d\u6253\u5f00\u53e6\u4e00\u4e2a\u6587\u4ef6\u5e76\u5206\u5c4f    1\n2\n3 :e filename\n:sp    #\u6c34\u5e73\u5206\u5272 \n:vsp   #\u5782\u76f4\u5206\u5272     \u5728\u547d\u4ee4\u884c\u4e0b\u76f4\u63a5\u5206\u5c4f 1\n2 vim -on file1 file2     #\u5782\u76f4\u5206\u5c4f \nvim -On file1 file2     #\u6c34\u5e73\u5206\u5c4f    \u7a97\u53e3\u5927\u5c0f 1\n2 C-w_Shift+`-`  # \u6700\u5927\u5316\u5f53\u524d\u7a97\u53e3\nC-w _=   #\u5e73\u5747\u5206\u914d\u7a97\u53e3\u5927\u5c0f", 
+            "title": "vim\u5206\u5c4f"
+        }, 
+        {
+            "location": "/linux/vim/#needtree", 
+            "text": "C-e : \u6253\u5f00\u6587\u4ef6\u76ee\u5f55\u680f", 
+            "title": "NEEDtree"
+        }, 
+        {
+            "location": "/linux/vim/#vim-resource", 
+            "text": "http://blog.csdn.net/dark_tone    \u8fd9\u4e2a\u535a\u5ba2\u7684vim\u4ecb\u7ecd\u4e0d\u9519  https://github.com/BillWang139967/Vim  https://github.com/chxuan/vimplus  https://github.com/ma6174/vim  https://github.com/tao12345666333/vim  VIM\u7ec3\u7ea7\u653b\u7565  \u8ddf\u6211\u4e00\u8d77\u5b66VIM  \u7b28\u65b9\u6cd5\u5b66VIM", 
+            "title": "vim resource"
+        }, 
+        {
+            "location": "/xdata/ml-action/", 
+            "text": "Machine Learning in Action -- note\n\n\nML basis\n\n\n\n\n\n\nsample\n\n\n\n\nface recognize\n\n\nhandwriting recognize\n\n\nemail spam filter\n\n\namazon product recommendation\n\n\n\n\n\n\n\n\nML \u6a2a\u8de8\u591a\u4e2a\u5b66\u79d1\uff1a\u8ba1\u7b97\u673a\uff0c\u5de5\u7a0b\uff0c\u7edf\u8ba1\uff0c\u8fd8\u80fd\u5e94\u7528\u5230\u653f\u6cbb\uff0c\u5730\u7406\n\n\n\n\n\n\n\u672f\u8bed\n\n\n\n\n\u5206\u7c7b classification\n\n\n\u4e13\u5bb6\u7cfb\u7edf expert system\n\n\n\u7279\u5f81 feature\n\n\n\u8bad\u7ec3\u96c6 training set\n\n\n\u8bad\u7ec3\u6837\u672c training example\n\n\ntarget variable\n\n\n\u77e5\u8bc6\u8868\u73b0 knowledge representation : \u4f8b\u5982\u53ef\u80fd\u662f\u4e00\u5957\u89c4\u5219\u6216\u6982\u7387\u5206\u5e03\n\n\n\n\nML\u4efb\u52a1\n\n\n\n\nSupervised learning tasks\n\n\nk-Nearest Neighbors k-\u8fd1\u90bb\u7b97\u6cd5\n\n\nLinear \u7ebf\u6027\u56de\u5f52\n\n\nNaive Bayes \u6734\u7d20\u8d1d\u53f6\u65af\u7b97\u6cd5\n\n\nLocally weighted linear \u5c40\u90e8\u52a0\u6743\u7ebf\u6027\u56de\u5f52\n\n\nSupport vector machines \u652f\u6301\u5411\u91cf\u673a\n\n\nRidge Ridge \u56de\u5f52\n\n\nDecision trees \u51b3\u7b56\u6811\n\n\nLasso \u6700\u5c0f\u56de\u5f52\u7cfb\u6570\u4f30\u8ba1\n\n\n\n\n\n\nUnsupervised learning tasks\n\n\nk-Means K-\u5747\u503c\n\n\nExpectation maximization \u6700\u5927\u671f\u671b\u7b97\u6cd5\n\n\nDBSCAN \n\n\nParzen window Parzen\u7a97\u8bbe\u8ba1\n\n\n\n\n\n\n\n\n\u5982\u4f55\u9009\u62e9\u7b97\u6cd5\n\n\n\n\n\u53d1\u73b0\u6700\u597d\u7b97\u6cd5\u7684\u5173\u952e\u73af\u8282\u662f\u53cd\u590d\u8bd5\u9519\u7684\u8fed\u4ee3\u8fc7\u7a0b\n\n\n\n\nst=\nstart: Start\nc1=\ncondition: forecast a target value|\u9884\u6d4b\nop1=\noperation: supervised learning\nop2=\noperation: unsupervised learning\ne=\nend: End\nc2=\ncondition: discrete value\nop3=\noperation: classification\nop4=\noperation: regression\nc3=\ncondition: discrete groups\nop5=\noperation: clustering\nop6=\noperation: density estimation algorithm\n\nst-\nc1\nc1(yes)-\nc2\nc2(yes)-\nop3\nc2(no)-\nop4\nc1(no)-\nop2(right)\nop2-\nc3\nop4-\ne\nop3-\ne\nc3(yes)-\nop5\nc3(no)-\nop6(right)\nop5-\ne\nop6-\ne\n\n\n\n\u5f00\u53d1\u673a\u5668\u5b66\u4e60\u7684\u6b65\u9aa4\n\n\n\n\nCollect data\n\n\nPrepare the input data\n\n\nAnalyze the input data\n\n\nTrain the algorithm: extract knowledge or information, for Supervised learning\n\n\nTest the algorithm: how to evaluate?\n\n\nUse it\n\n\n\n\n\u7b97\u6cd5\u5b66\u4e60\n\n\nDecision trees \u51b3\u7b56\u6811\n\n\n\n\nPros: Computationally cheap to use, easy for humans to understand learned results,\n   missing values OK, can deal with irrelevant features\n\n\nCons: Prone to overfitting\n\n\nWorks with: Numeric values, nominal values \n\n\n\n\nInformation gain\n\n\n\n\nClaude Shannon Shannon entropy \u9999\u6d53\u71b5\n\n\n\n\n\n\n l(x_i)= \\log_i p(x_i)\n\n\np(x_i)\n\u8868\u793a\u6982\u7387\n\n\n\n\ncollections: defaultdict\n\n\n\n\ndefault \u521d\u59cb\u5316\u4e00\u4e2a\u5b57\u5178\uff0c\u5728basketball\u5b9e\u4f8b\u4e2d\uff0cwon_last\u4fdd\u5b58\u4e86\u7403\u961f\u7684\u6700\u540e\u4e00\u6b21\u6bd4\u8d5b\u7ed3\u679c\uff0c\u5982\u4e0b\u6240\u793a\uff1a\n \n1\ndefaultdict(\ntype \nint\n, {\nNew York Knicks\n: True, \nLos Angeles Lakers\n: False, \nChicago Bulls\n: True, \nCharlotte Bobcats\n: True, \nSan Antonio Spurs\n: False, \nPhiladelphia 76ers\n: False, \nDetroit Pistons\n: True, \nBoston Celtics\n: False, \nMiami Heat\n: False, \nOrlando Magic\n: True, \nPortland Trail Blazers\n: False, \nGolden State Warriors\n: True, \nMemphis Grizzlies\n: True, \nWashington Wizards\n: False, \nHouston Rockets\n: True, \nDallas Mavericks\n: True, \nSacramento Kings\n: False, \nLos Angeles Clippers\n: False, \nOklahoma City Thunder\n: True, \nMilwaukee Bucks\n: False, \nToronto Raptors\n: True, \nUtah Jazz\n: False, \nPhoenix Suns\n: True, \nMinnesota Timberwolves\n: False, \nNew Orleans Pelicans\n: False, \nCleveland Cavaliers\n: False, \nAtlanta Hawks\n: True, \nBrooklyn Nets\n: False, \nIndiana Pacers\n: False, \nDenver Nuggets\n: False})", 
+            "title": "Machine Learning in Action -- note"
+        }, 
+        {
+            "location": "/xdata/ml-action/#machine-learning-in-action-note", 
+            "text": "", 
+            "title": "Machine Learning in Action -- note"
+        }, 
+        {
+            "location": "/xdata/ml-action/#ml-basis", 
+            "text": "sample   face recognize  handwriting recognize  email spam filter  amazon product recommendation     ML \u6a2a\u8de8\u591a\u4e2a\u5b66\u79d1\uff1a\u8ba1\u7b97\u673a\uff0c\u5de5\u7a0b\uff0c\u7edf\u8ba1\uff0c\u8fd8\u80fd\u5e94\u7528\u5230\u653f\u6cbb\uff0c\u5730\u7406", 
+            "title": "ML basis"
+        }, 
+        {
+            "location": "/xdata/ml-action/#_1", 
+            "text": "\u5206\u7c7b classification  \u4e13\u5bb6\u7cfb\u7edf expert system  \u7279\u5f81 feature  \u8bad\u7ec3\u96c6 training set  \u8bad\u7ec3\u6837\u672c training example  target variable  \u77e5\u8bc6\u8868\u73b0 knowledge representation : \u4f8b\u5982\u53ef\u80fd\u662f\u4e00\u5957\u89c4\u5219\u6216\u6982\u7387\u5206\u5e03", 
+            "title": "\u672f\u8bed"
+        }, 
+        {
+            "location": "/xdata/ml-action/#ml", 
+            "text": "Supervised learning tasks  k-Nearest Neighbors k-\u8fd1\u90bb\u7b97\u6cd5  Linear \u7ebf\u6027\u56de\u5f52  Naive Bayes \u6734\u7d20\u8d1d\u53f6\u65af\u7b97\u6cd5  Locally weighted linear \u5c40\u90e8\u52a0\u6743\u7ebf\u6027\u56de\u5f52  Support vector machines \u652f\u6301\u5411\u91cf\u673a  Ridge Ridge \u56de\u5f52  Decision trees \u51b3\u7b56\u6811  Lasso \u6700\u5c0f\u56de\u5f52\u7cfb\u6570\u4f30\u8ba1    Unsupervised learning tasks  k-Means K-\u5747\u503c  Expectation maximization \u6700\u5927\u671f\u671b\u7b97\u6cd5  DBSCAN   Parzen window Parzen\u7a97\u8bbe\u8ba1", 
+            "title": "ML\u4efb\u52a1"
+        }, 
+        {
+            "location": "/xdata/ml-action/#_2", 
+            "text": "\u53d1\u73b0\u6700\u597d\u7b97\u6cd5\u7684\u5173\u952e\u73af\u8282\u662f\u53cd\u590d\u8bd5\u9519\u7684\u8fed\u4ee3\u8fc7\u7a0b   st= start: Start\nc1= condition: forecast a target value|\u9884\u6d4b\nop1= operation: supervised learning\nop2= operation: unsupervised learning\ne= end: End\nc2= condition: discrete value\nop3= operation: classification\nop4= operation: regression\nc3= condition: discrete groups\nop5= operation: clustering\nop6= operation: density estimation algorithm\n\nst- c1\nc1(yes)- c2\nc2(yes)- op3\nc2(no)- op4\nc1(no)- op2(right)\nop2- c3\nop4- e\nop3- e\nc3(yes)- op5\nc3(no)- op6(right)\nop5- e\nop6- e", 
+            "title": "\u5982\u4f55\u9009\u62e9\u7b97\u6cd5"
+        }, 
+        {
+            "location": "/xdata/ml-action/#_3", 
+            "text": "Collect data  Prepare the input data  Analyze the input data  Train the algorithm: extract knowledge or information, for Supervised learning  Test the algorithm: how to evaluate?  Use it", 
+            "title": "\u5f00\u53d1\u673a\u5668\u5b66\u4e60\u7684\u6b65\u9aa4"
+        }, 
+        {
+            "location": "/xdata/ml-action/#_4", 
+            "text": "", 
+            "title": "\u7b97\u6cd5\u5b66\u4e60"
+        }, 
+        {
+            "location": "/xdata/ml-action/#decision-trees", 
+            "text": "Pros: Computationally cheap to use, easy for humans to understand learned results,\n   missing values OK, can deal with irrelevant features  Cons: Prone to overfitting  Works with: Numeric values, nominal values", 
+            "title": "Decision trees \u51b3\u7b56\u6811"
+        }, 
+        {
+            "location": "/xdata/ml-action/#information-gain", 
+            "text": "Claude Shannon Shannon entropy \u9999\u6d53\u71b5     l(x_i)= \\log_i p(x_i)  p(x_i) \u8868\u793a\u6982\u7387   collections: defaultdict   default \u521d\u59cb\u5316\u4e00\u4e2a\u5b57\u5178\uff0c\u5728basketball\u5b9e\u4f8b\u4e2d\uff0cwon_last\u4fdd\u5b58\u4e86\u7403\u961f\u7684\u6700\u540e\u4e00\u6b21\u6bd4\u8d5b\u7ed3\u679c\uff0c\u5982\u4e0b\u6240\u793a\uff1a\n  1 defaultdict( type  int , { New York Knicks : True,  Los Angeles Lakers : False,  Chicago Bulls : True,  Charlotte Bobcats : True,  San Antonio Spurs : False,  Philadelphia 76ers : False,  Detroit Pistons : True,  Boston Celtics : False,  Miami Heat : False,  Orlando Magic : True,  Portland Trail Blazers : False,  Golden State Warriors : True,  Memphis Grizzlies : True,  Washington Wizards : False,  Houston Rockets : True,  Dallas Mavericks : True,  Sacramento Kings : False,  Los Angeles Clippers : False,  Oklahoma City Thunder : True,  Milwaukee Bucks : False,  Toronto Raptors : True,  Utah Jazz : False,  Phoenix Suns : True,  Minnesota Timberwolves : False,  New Orleans Pelicans : False,  Cleveland Cavaliers : False,  Atlanta Hawks : True,  Brooklyn Nets : False,  Indiana Pacers : False,  Denver Nuggets : False})", 
+            "title": "Information gain"
+        }, 
+        {
+            "location": "/xdata/notebook/", 
+            "text": "Jupyter notebook \u81ea\u5b9a\u4e49\u914d\u7f6e\n\n\n\n\n\u521b\u5efa\u914d\u7f6e\u6587\u4ef6\n\n\n1\njupyter notebook --generate-config\n\n\n\n\n\u6587\u4ef6\u4f4d\u7f6e \n~/.jupyter/jupyter_notebook_config.py\n\n\n\u8bbe\u7f6e\u5bc6\u7801\n\n\n1\n2\n3\n4\n5\n6\nipython\nIn \n[\n1\n]\n: from notebook.auth import passwd\nIn \n[\n2\n]\n: passwd\n()\n\nEnter password:\nVerify password:\nOut\n[\n2\n]\n: \nsha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed\n\n\n\n\n\n\n\n\u7b80\u5355\u7684\u914d\u7f6e\u5b9e\u4f8b\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n# Set options for certfile, ip, password, and toggle off\n\n\n# browser auto-opening\n\nc.NotebookApp.certfile \n=\n u\n/absolute/path/to/your/certificate/mycert.pem\n\nc.NotebookApp.keyfile \n=\n u\n/absolute/path/to/your/certificate/mykey.key\n\n\n# Set ip to \n*\n to bind on all interfaces (ips) for the public server\n\nc.NotebookApp.ip \n=\n \n*\n\nc.NotebookApp.password \n=\n u\nsha1:bcd259ccf...\nyour hashed password here\n\nc.NotebookApp.open_browser \n=\n False\n\n\n# It is a good idea to set a known, fixed port for server access\n\nc.NotebookApp.port \n=\n \n9999\n\n\n\n\n\n\n\u8bbe\u7f6e\u5de5\u4f5c\u76ee\u5f55\n\n\u5728home\u521b\u5efa\u76ee\u5f55ipython\uff1a\n~/ipython\uff0c\u914d\u7f6e\u65f6\u53ea\u5199\u76ee\u5f55\u540d\uff0c\u4e0d\u9700\u8981\u52a0\n/\n\n\n1\nc.ContentManager.root_dir = \nipython\n # ipython\u76ee\u5f55\u5728\uff5e/ipython, \n\n\n\n\n\n\u542f\u52a8notebook\n\n\n1\njupyter notebook\n\n\n\n\nnotebook server\u5730\u5740\uff1a\nhttp://localhost:9999/tree\n\n\nresource\n\n\n\n\nhttps://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server", 
+            "title": "Jupyter notebook \u81ea\u5b9a\u4e49\u914d\u7f6e"
+        }, 
+        {
+            "location": "/xdata/notebook/#jupyter-notebook", 
+            "text": "", 
+            "title": "Jupyter notebook \u81ea\u5b9a\u4e49\u914d\u7f6e"
+        }, 
+        {
+            "location": "/xdata/notebook/#_1", 
+            "text": "1 jupyter notebook --generate-config  \n\u6587\u4ef6\u4f4d\u7f6e  ~/.jupyter/jupyter_notebook_config.py", 
+            "title": "\u521b\u5efa\u914d\u7f6e\u6587\u4ef6"
+        }, 
+        {
+            "location": "/xdata/notebook/#_2", 
+            "text": "1\n2\n3\n4\n5\n6 ipython\nIn  [ 1 ] : from notebook.auth import passwd\nIn  [ 2 ] : passwd () \nEnter password:\nVerify password:\nOut [ 2 ] :  sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed", 
+            "title": "\u8bbe\u7f6e\u5bc6\u7801"
+        }, 
+        {
+            "location": "/xdata/notebook/#_3", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11 # Set options for certfile, ip, password, and toggle off  # browser auto-opening \nc.NotebookApp.certfile  =  u /absolute/path/to/your/certificate/mycert.pem \nc.NotebookApp.keyfile  =  u /absolute/path/to/your/certificate/mykey.key  # Set ip to  *  to bind on all interfaces (ips) for the public server \nc.NotebookApp.ip  =   * \nc.NotebookApp.password  =  u sha1:bcd259ccf... your hashed password here \nc.NotebookApp.open_browser  =  False # It is a good idea to set a known, fixed port for server access \nc.NotebookApp.port  =   9999    \u8bbe\u7f6e\u5de5\u4f5c\u76ee\u5f55 \n\u5728home\u521b\u5efa\u76ee\u5f55ipython\uff1a ~/ipython\uff0c\u914d\u7f6e\u65f6\u53ea\u5199\u76ee\u5f55\u540d\uff0c\u4e0d\u9700\u8981\u52a0 /  1 c.ContentManager.root_dir =  ipython  # ipython\u76ee\u5f55\u5728\uff5e/ipython,", 
+            "title": "\u7b80\u5355\u7684\u914d\u7f6e\u5b9e\u4f8b"
+        }, 
+        {
+            "location": "/xdata/notebook/#notebook", 
+            "text": "1 jupyter notebook  \nnotebook server\u5730\u5740\uff1a http://localhost:9999/tree", 
+            "title": "\u542f\u52a8notebook"
+        }, 
+        {
+            "location": "/xdata/notebook/#resource", 
+            "text": "https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server", 
+            "title": "resource"
+        }, 
+        {
+            "location": "/xdata/pydata/", 
+            "text": "Python Data Mining\n\n\nbook-Learning DM with python\n\n\nch5 Extracting Features with Transformers - \u7279\u5f81\u63d0\u53d6\uff0c\u53d8\u5f62\u5668", 
+            "title": "Python Data Mining"
+        }, 
+        {
+            "location": "/xdata/pydata/#python-data-mining", 
+            "text": "", 
+            "title": "Python Data Mining"
+        }, 
+        {
+            "location": "/xdata/pydata/#book-learning-dm-with-python", 
+            "text": "", 
+            "title": "book-Learning DM with python"
+        }, 
+        {
+            "location": "/xdata/pydata/#ch5-extracting-features-with-transformers-", 
+            "text": "", 
+            "title": "ch5 Extracting Features with Transformers - \u7279\u5f81\u63d0\u53d6\uff0c\u53d8\u5f62\u5668"
+        }
+    ]
+}

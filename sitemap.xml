@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>/inbox/temp/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -22,18 +22,42 @@
     
         
     <url>
-     <loc>/linux/cmd_lib/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <loc>/linux/cmd/</loc>
+     <lastmod>2017-11-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/linux/tmux/</loc>
+     <lastmod>2017-11-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/linux/vim/</loc>
+     <lastmod>2017-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
+    <url>
+     <loc>/xdata/ml-action/</loc>
+     <lastmod>2017-11-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
         
     <url>
      <loc>/xdata/notebook/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-11-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/xdata/pydata/</loc>
+     <lastmod>2017-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
