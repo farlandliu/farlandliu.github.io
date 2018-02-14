@@ -1,283 +1,533 @@
 {
     "docs": [
         {
-            "location": "/", 
-            "text": "Welcome to xCoding Blog\n\n\nxCoding is powered by:\n\n\n\n\nmkdocs Documentation\n\n\nmkdocs-material-theme\n\n\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\nmkdocs serve -a 192.168.0.122:8000\n\n\n\n\nProject layout\n\n\n1\n2\n3\n4\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\n\n\n\nsource doc repo is gitee.com\n\n\nhttps://gitee.com/farland/md.git\n\n\nhttps://github.com/farlandliu/farlandliu.github.io.git\n\n\nextensions\n\n\ncode highlight\n\n1\npip install pygments\n\n\n\n\n\nmkdoc.yml\n setting\n\n1\n2\n3\nmarkdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)\n\n\n\n\n\nFlowChart fixed\n\n\n\n\nref: \nhttps://my.oschina.net/u/3465063/blog/892515\n\n- error :\n\n1\nflowchart.parse.js:28 Uncaught TypeError: Cannot read property \nkey\n of null\n\n\n\n\n- reason:\nmaterial theme code block has a paste button,while uml converter js reads the first child node of PRE block.\n\n\n\n\n\n\naction:\nrevise umlconvert.js line 21\n\n1\n2\n3\n4\n#\nfrom\n\n\nchildEl\n \n=\n \narr\n[\ni\n].\nfirstChild\n;\n\n\n#\nto\n\n\nchildEl\n \n=\n \narr\n[\ni\n].\nlastChild\n;\n\n\n\n\n\n\n\n\nMath fix\n\n\n\n\n\n\nref: \nhttps://stackoverflow.com/questions/27882261/mkdocs-and-mathjax\n \n\n\nLatex\u516c\u5f0f\uff1a \nhttp://blog.csdn.net/zdk930519/article/details/54137476\n \n\n\nmathjax doc: \nhttp://docs.mathjax.org/en/latest/index.html\n \n\n\n\n\n\n\n1\npip install python-markdown-math\n\n\n\n\n\n\n1\n2\n3\n4\n# mkdocs.yml markdown extensions:\nmdx_math\n#js extensions:\n - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default\n\n\n\n\n\nOption\n:Create a new js file to folder js: math.js, for math configuration.\n\n1\n2\n3\n4\n5\n  MathJax.Hub.Config({\n        config: [\nMMLorHTML.js\n],\n        jax: [\ninput/TeX\n, \noutput/HTML-CSS\n, \noutput/NativeMML\n],\n        extensions: [\nMathMenu.js\n, \nMathZoom.js\n]\n    });\n\n\n\n\n\u884c\u5185\u516c\u5f0finline:\n\n1\n\\(....\\)", 
+            "location": "/",
+            "text": "Welcome to xCoding Blog\n\n\nxCoding is powered by:\n\n\n\n\nmkdocs Documentation\n\n\nmkdocs-material-theme\n\n\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\nmkdocs serve -a 192.168.0.122:8000\n\n\n\n\nProject layout\n\n\n1\n2\n3\n4\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\n\n\n\nsource doc repo is gitee.com\n\n\nhttps://gitee.com/farland/md.git\n\n\nhttps://github.com/farlandliu/farlandliu.github.io.git\n\n\nerrors\n\n\n\n\nUnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte\n\n\n\n\ndelete MacOS files like DS_store\n\n\nextensions\n\n\ncode highlight\n\n1\npip install pygments\n\n\n\n\n\nmkdoc.yml\n setting\n\n1\n2\n3\nmarkdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)\n\n\n\n\n\nFlowChart fixed\n\n\n\n\nref: \nhttps://my.oschina.net/u/3465063/blog/892515\n\n- error :\n\n1\nflowchart.parse.js:28 Uncaught TypeError: Cannot read property 'key' of null\n\n\n\n\n- reason:\nmaterial theme code block has a paste button,while uml converter js reads the first child node of PRE block.\n\n\n\n\n\n\naction:\nrevise umlconvert.js line 21\n\n1\n2\n3\n4\n#\nfrom\n\n\nchildEl\n \n=\n \narr\n[\ni\n].\nfirstChild\n;\n\n\n#\nto\n\n\nchildEl\n \n=\n \narr\n[\ni\n].\nlastChild\n;\n\n\n\n\n\n\n\n\nMath fix\n\n\n\n\n\n\nref: \nhttps://stackoverflow.com/questions/27882261/mkdocs-and-mathjax\n \n\n\nLatex\u516c\u5f0f\uff1a \nhttp://blog.csdn.net/zdk930519/article/details/54137476\n \n\n\nmathjax doc: \nhttp://docs.mathjax.org/en/latest/index.html\n \n\n\n\n\n\n\n1\npip install python-markdown-math\n\n\n\n\n\n\n1\n2\n3\n4\n# mkdocs.yml markdown extensions:\nmdx_math\n#js extensions:\n - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default\n\n\n\n\n\nOption\n:Create a new js file to folder js: math.js, for math configuration.\n\n1\n2\n3\n4\n5\n  MathJax.Hub.Config({\n        config: [\"MMLorHTML.js\"],\n        jax: [\"input/TeX\", \"output/HTML-CSS\", \"output/NativeMML\"],\n        extensions: [\"MathMenu.js\", \"MathZoom.js\"]\n    });\n\n\n\n\n\u884c\u5185\u516c\u5f0finline:\n\n1\n\\(....\\)",
             "title": "Welcome to xCoding Blog"
-        }, 
+        },
         {
-            "location": "/#welcome-to-xcoding-blog", 
-            "text": "xCoding is powered by:   mkdocs Documentation  mkdocs-material-theme", 
+            "location": "/#welcome-to-xcoding-blog",
+            "text": "xCoding is powered by:   mkdocs Documentation  mkdocs-material-theme",
             "title": "Welcome to xCoding Blog"
-        }, 
+        },
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.  mkdocs serve -a 192.168.0.122:8000", 
+            "location": "/#commands",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.  mkdocs serve -a 192.168.0.122:8000",
             "title": "Commands"
-        }, 
+        },
         {
-            "location": "/#project-layout", 
-            "text": "1\n2\n3\n4 mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "location": "/#project-layout",
+            "text": "1\n2\n3\n4 mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
             "title": "Project layout"
-        }, 
+        },
         {
-            "location": "/#source-doc-repo-is-giteecom", 
-            "text": "https://gitee.com/farland/md.git  https://github.com/farlandliu/farlandliu.github.io.git", 
+            "location": "/#source-doc-repo-is-giteecom",
+            "text": "https://gitee.com/farland/md.git  https://github.com/farlandliu/farlandliu.github.io.git",
             "title": "source doc repo is gitee.com"
-        }, 
+        },
         {
-            "location": "/#extensions", 
-            "text": "code highlight 1 pip install pygments   mkdoc.yml  setting 1\n2\n3 markdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)", 
+            "location": "/#errors",
+            "text": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte   delete MacOS files like DS_store",
+            "title": "errors"
+        },
+        {
+            "location": "/#extensions",
+            "text": "code highlight 1 pip install pygments   mkdoc.yml  setting 1\n2\n3 markdown_extensions:\n  - codehilite\n  - codehilite(linenums=true)",
             "title": "extensions"
-        }, 
+        },
         {
-            "location": "/#flowchart-fixed", 
-            "text": "ref:  https://my.oschina.net/u/3465063/blog/892515 \n- error : 1 flowchart.parse.js:28 Uncaught TypeError: Cannot read property  key  of null  \n- reason:\nmaterial theme code block has a paste button,while uml converter js reads the first child node of PRE block.    action:\nrevise umlconvert.js line 21 1\n2\n3\n4 # from  childEl   =   arr [ i ]. firstChild ;  # to  childEl   =   arr [ i ]. lastChild ;", 
+            "location": "/#flowchart-fixed",
+            "text": "ref:  https://my.oschina.net/u/3465063/blog/892515 \n- error : 1 flowchart.parse.js:28 Uncaught TypeError: Cannot read property 'key' of null  \n- reason:\nmaterial theme code block has a paste button,while uml converter js reads the first child node of PRE block.    action:\nrevise umlconvert.js line 21 1\n2\n3\n4 # from  childEl   =   arr [ i ]. firstChild ;  # to  childEl   =   arr [ i ]. lastChild ;",
             "title": "FlowChart fixed"
-        }, 
+        },
         {
-            "location": "/#math-fix", 
-            "text": "ref:  https://stackoverflow.com/questions/27882261/mkdocs-and-mathjax    Latex\u516c\u5f0f\uff1a  http://blog.csdn.net/zdk930519/article/details/54137476    mathjax doc:  http://docs.mathjax.org/en/latest/index.html      1 pip install python-markdown-math   1\n2\n3\n4 # mkdocs.yml markdown extensions:\nmdx_math\n#js extensions:\n - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default   Option :Create a new js file to folder js: math.js, for math configuration. 1\n2\n3\n4\n5   MathJax.Hub.Config({\n        config: [ MMLorHTML.js ],\n        jax: [ input/TeX ,  output/HTML-CSS ,  output/NativeMML ],\n        extensions: [ MathMenu.js ,  MathZoom.js ]\n    });  \n\u884c\u5185\u516c\u5f0finline: 1 \\(....\\)", 
+            "location": "/#math-fix",
+            "text": "ref:  https://stackoverflow.com/questions/27882261/mkdocs-and-mathjax    Latex\u516c\u5f0f\uff1a  http://blog.csdn.net/zdk930519/article/details/54137476    mathjax doc:  http://docs.mathjax.org/en/latest/index.html      1 pip install python-markdown-math   1\n2\n3\n4 # mkdocs.yml markdown extensions:\nmdx_math\n#js extensions:\n - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default   Option :Create a new js file to folder js: math.js, for math configuration. 1\n2\n3\n4\n5   MathJax.Hub.Config({\n        config: [\"MMLorHTML.js\"],\n        jax: [\"input/TeX\", \"output/HTML-CSS\", \"output/NativeMML\"],\n        extensions: [\"MathMenu.js\", \"MathZoom.js\"]\n    });  \n\u884c\u5185\u516c\u5f0finline: 1 \\(....\\)",
             "title": "Math fix"
-        }, 
+        },
         {
-            "location": "/inbox/temp/", 
-            "text": "This page is for Temp Information", 
+            "location": "/inbox/temp/",
+            "text": "Collection\n\n\nPyTorch\n\n\nTheano\n\n\n200\u7bc7\u673a\u5668\u5b66\u4e60\u8d44\u6599\u5206\u4eab",
             "title": "Temp"
-        }, 
+        },
         {
-            "location": "/inbox/temp/#this-page-is-for-temp-information", 
-            "text": "", 
-            "title": "This page is for Temp Information"
-        }, 
+            "location": "/inbox/temp/#collection",
+            "text": "",
+            "title": "Collection"
+        },
         {
-            "location": "/linux/cmd/", 
-            "text": "CMD Lines\n\n\nssh git\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n#generate key pair\n\nssh-keygen -t rsa\n\ngit config --global user.name \nusername\n\ngit config --global user.email \nemail\n\n\n\n#if want to set email for local dir, omit \nglobal\n\ngit config user.name \njohn\n\ngit config user.email \njohn@gmail.com\n\n\n\n##validation after importing ssh key\n\ngit git@github.com\n\ngit clone git@github.com:name/project\n\n\n\n\n\n\nubuntu http proxy\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\nvim /etc/environment \n\n\nexport\n \nhttp_proxy\n=\nhttp://xxx:8080\n\nexport\n \nhttps_proxy\n=\nhttp://xxx:80\n\nexport\n \nftp_proxy\n=\nhttps://xxx:8080\n\n\n# for apt-get\n\n\nvim /etc/apt/apt.conf\n\nAcquire::http:proxy \nhttp://xxx.8088\n\nAcquire::https:proxy \nhttps://xxx:8088\n\nAcquire::socks:proxy \nsocks://xxx:8088\n\n\n\n\n\n\n\nubuntu network :DNS-SERVER\n\n\n1\n2\n3\n4\n5\n6\nsudo vim /etc/network/interfaces \n\ndns-server \n8\n.8.8.8 x.x.x.x y.y.y.y\n\n\n#restart network\n\nsudo /etc/init.d/networking restart", 
+            "location": "/inbox/temp/#pytorch",
+            "text": "",
+            "title": "PyTorch"
+        },
+        {
+            "location": "/inbox/temp/#theano",
+            "text": "",
+            "title": "Theano"
+        },
+        {
+            "location": "/inbox/temp/#200",
+            "text": "",
+            "title": "200\u7bc7\u673a\u5668\u5b66\u4e60\u8d44\u6599\u5206\u4eab"
+        },
+        {
+            "location": "/linux/cmd/",
+            "text": "CMD Lines\n\n\npip sources in china\n\n\nedit file ~/.pip/pip.conf\n\n1\n2\n3\n4\n[global]\n\n\nindex-url\n \n=\n \nhttp://mirrors.aliyun.com/pypi/simple/\n\n\n[install]\n\n\ntrusted-host\n=\nmirrors.aliyun.com\n\n\n\n\n\n\n\u6e05\u534e\uff1a\nhttps://pypi.tuna.tsinghua.edu.cn/simple\n\n\n\u963f\u91cc\u4e91\uff1a\nhttp://mirrors.aliyun.com/pypi/simple/\n\n\n\u4e2d\u56fd\u79d1\u6280\u5927\u5b66 \nhttps://pypi.mirrors.ustc.edu.cn/simple/\n\n\n\u534e\u4e2d\u7406\u5de5\u5927\u5b66\uff1a\nhttp://pypi.hustunique.com/\n\n\n\u5c71\u4e1c\u7406\u5de5\u5927\u5b66\uff1a\nhttp://pypi.sdutlinux.org/\n \n\n\n\u8c46\u74e3\uff1a\nhttp://pypi.douban.com/simple/\n\n\nssh git\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n#generate key pair\n\nssh-keygen -t rsa\n\ngit config --global user.name \n\"username\"\n\ngit config --global user.email \n\"email\"\n\n\n\n#if want to set email for local dir, omit \"global\"\n\ngit config user.name \n\"john\"\n\ngit config user.email \n\"john@gmail.com\"\n\n\n\n##validation after importing ssh key\n\ngit git@github.com\n\ngit clone git@github.com:name/project\n\n\n\n\n\n\nubuntu http proxy\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\nvim /etc/environment \n\n\nexport\n \nhttp_proxy\n=\nhttp://xxx:8080\n\nexport\n \nhttps_proxy\n=\nhttp://xxx:80\n\nexport\n \nftp_proxy\n=\nhttps://xxx:8080\n\n\n# for apt-get\n\n\nvim /etc/apt/apt.conf\n\nAcquire::http:proxy \n\"http://xxx.8088\"\n\nAcquire::https:proxy \n\"https://xxx:8088\"\n\nAcquire::socks:proxy \n\"socks://xxx:8088\"\n\n\n\n\n\n\n\nubuntu network :DNS-SERVER\n\n\n1\n2\n3\n4\n5\n6\nsudo vim /etc/network/interfaces \n\ndns-server \n8\n.8.8.8 x.x.x.x y.y.y.y\n\n\n#restart network\n\nsudo /etc/init.d/networking restart\n\n\n\n\n\n\nubuntu  change user shell\n\n\n\u89e3\u51b3\u4e0d\u80fd\u4f7f\u7528TAB\u952e\u3001\u4e0a\u4e0b\u952e\uff0c\u547d\u4ee4\u884c\u4e0d\u663e\u793a\u5f53\u524d\u8def\u5f84\u7684\u95ee\u9898\n\n1\nusermod -s /bin/bash \u7528\u6237\u540d\n\n\n\n\n\nubuntu \u8bed\u8a00\u95ee\u9898\n\n\n\u5b89\u88c5\u4e2d\u6587\u8bed\u8a00\u5305\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\napt-get update && apt-get install language-pack-zh-hans\n\n# \u8bbe\u7f6eshell\u8bed\u8a00\n\nvim /etc/default/locale\n# \u4e2d\u6587\nLC_ALL=\"zh_CN.UTF-8\"\n\n# US english\nLC_ALL= \"en_US.UTF-8\"\n\n\n\n\n\n\nCentos Cron task has diffrent environment variables\n\n\n\n\nproblem: python scripts can't run in cron task,while works okay in command line\n\n\ntroubleshooting:\n    view django-cron log in database, found cron task can't connect to oracle db: DatabaseError: ORA-12154\n\n\naction:\n\n\n\n\nadd root's environment variables to the scripts included in cron task, eg. abc.sh\n\n\n1\n. ~/.bashrc\n\n\n\n\nand bashrc has included all the PATH infomation for python and oracle",
             "title": "CMD Lines"
-        }, 
+        },
         {
-            "location": "/linux/cmd/#cmd-lines", 
-            "text": "", 
+            "location": "/linux/cmd/#cmd-lines",
+            "text": "",
             "title": "CMD Lines"
-        }, 
+        },
         {
-            "location": "/linux/cmd/#ssh-git", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14 #generate key pair \nssh-keygen -t rsa\n\ngit config --global user.name  username \ngit config --global user.email  email  #if want to set email for local dir, omit  global \ngit config user.name  john \ngit config user.email  john@gmail.com  ##validation after importing ssh key \ngit git@github.com\n\ngit clone git@github.com:name/project", 
+            "location": "/linux/cmd/#pip-sources-in-china",
+            "text": "edit file ~/.pip/pip.conf 1\n2\n3\n4 [global]  index-url   =   http://mirrors.aliyun.com/pypi/simple/  [install]  trusted-host = mirrors.aliyun.com    \u6e05\u534e\uff1a https://pypi.tuna.tsinghua.edu.cn/simple  \u963f\u91cc\u4e91\uff1a http://mirrors.aliyun.com/pypi/simple/  \u4e2d\u56fd\u79d1\u6280\u5927\u5b66  https://pypi.mirrors.ustc.edu.cn/simple/  \u534e\u4e2d\u7406\u5de5\u5927\u5b66\uff1a http://pypi.hustunique.com/  \u5c71\u4e1c\u7406\u5de5\u5927\u5b66\uff1a http://pypi.sdutlinux.org/    \u8c46\u74e3\uff1a http://pypi.douban.com/simple/",
+            "title": "pip sources in china"
+        },
+        {
+            "location": "/linux/cmd/#ssh-git",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14 #generate key pair \nssh-keygen -t rsa\n\ngit config --global user.name  \"username\" \ngit config --global user.email  \"email\"  #if want to set email for local dir, omit \"global\" \ngit config user.name  \"john\" \ngit config user.email  \"john@gmail.com\"  ##validation after importing ssh key \ngit git@github.com\n\ngit clone git@github.com:name/project",
             "title": "ssh git"
-        }, 
+        },
         {
-            "location": "/linux/cmd/#ubuntu-http-proxy", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13 vim /etc/environment  export   http_proxy = http://xxx:8080 export   https_proxy = http://xxx:80 export   ftp_proxy = https://xxx:8080 # for apt-get \n\nvim /etc/apt/apt.conf\n\nAcquire::http:proxy  http://xxx.8088 \nAcquire::https:proxy  https://xxx:8088 \nAcquire::socks:proxy  socks://xxx:8088", 
+            "location": "/linux/cmd/#ubuntu-http-proxy",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13 vim /etc/environment  export   http_proxy = http://xxx:8080 export   https_proxy = http://xxx:80 export   ftp_proxy = https://xxx:8080 # for apt-get \n\nvim /etc/apt/apt.conf\n\nAcquire::http:proxy  \"http://xxx.8088\" \nAcquire::https:proxy  \"https://xxx:8088\" \nAcquire::socks:proxy  \"socks://xxx:8088\"",
             "title": "ubuntu http proxy"
-        }, 
+        },
         {
-            "location": "/linux/cmd/#ubuntu-network-dns-server", 
-            "text": "1\n2\n3\n4\n5\n6 sudo vim /etc/network/interfaces \n\ndns-server  8 .8.8.8 x.x.x.x y.y.y.y #restart network \nsudo /etc/init.d/networking restart", 
+            "location": "/linux/cmd/#ubuntu-network-dns-server",
+            "text": "1\n2\n3\n4\n5\n6 sudo vim /etc/network/interfaces \n\ndns-server  8 .8.8.8 x.x.x.x y.y.y.y #restart network \nsudo /etc/init.d/networking restart",
             "title": "ubuntu network :DNS-SERVER"
-        }, 
+        },
         {
-            "location": "/linux/tmux/", 
-            "text": "tmux shortcuts \n cheatsheet\n\n\nstart new\n\n\ntmux\n\n\nstart new with session name\n\n\n1\ntmux new -s myname\n\n\n\n\n\n\nattach\n\n\n1\ntmux a  #  (or at, or attach)\n\n\n\n\n\n\nattach to named\n\n\n1\ntmux a -t myname\n\n\n\n\n\n\nlist sessions:\n\n\n1\ntmux ls\n\n\n\n\n\n\nkill session\n\n\n1\ntmux kill-session -t myname\n\n\n\n\n\n\nKill all the tmux sessions:\n\n\ntmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill\n\n\n\n\nIn tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:\n\n\nSessions\n\n\n1\n2\n3\n:new\nCR\n  new session\ns  list sessions\n$  name session\n\n\n\n\n\n\nWindows (tabs)\n\n\n1\n2\n3\n4\n5\n6\n7\nc  create window\nw  list windows\nn  next window\np  previous window\nf  find window\n,  name window\n\n  kill window\n\n\n\n\n\n\nPanes (splits)\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n%  vertical split\n\n\n  \nhorizontal\n \nsplit\n\n\n\no\n  \nswap\n \npanes\n\n\nq\n  \nshow\n \npane\n \nnumbers\n\n\nx\n  \nkill\n \npane\n\n\n+\n  \nbreak\n \npane\n \ninto\n \nwindow\n \n(\ne\n.\ng\n.\n \nto\n \nselect\n \ntext\n \nby\n \nmouse\n \nto\n \ncopy\n)\n\n\n-\n  \nrestore\n \npane\n \nfrom\n \nwindow\n\n\u237d  \nspace\n \n-\n \ntoggle\n \nbetween\n \nlayouts\n\n\nprefix\n \nq\n \n(\nShow\n \npane\n \nnumbers\n,\n \nwhen\n \nthe\n \nnumbers\n \nshow\n \nup\n \ntype\n \nthe\n \nkey\n \nto\n \ngoto\n \nthat\n \npane\n)\n\n\nprefix\n \n{\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nleft\n)\n\n\nprefix\n \n}\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nright\n)\n\n\nprefix\n \nz\n \ntoggle\n \npane\n \nzoom\n\n\n\n\n\n\n\n\n\nCopy mode:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n   Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t\n\n\n\n\n\n\nMisc\n\n\n1\n2\n3\n4\nd  detach\nt  big clock\n?  list shortcuts\n:  prompt\n\n\n\n\n\n\nConfigurations Options:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n# Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \nscreen-256color\n\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp\n\n\n\n\n\n\n\n\n\u53c2\u8003\uff1a\n - \nhttps://gist.github.com/MohamedAlaa/2961058\n\n - \nhttp://blog.jobbole.com/87584/\n\n\n\n\ntmux shortcuts \n cheatsheet\n\n\nstart new\n\n\ntmux\n\n\nstart new with session name\n\n\n1\ntmux new -s myname\n\n\n\n\n\n\nattach\n\n\n1\ntmux a  #  (or at, or attach)\n\n\n\n\n\n\nattach to named\n\n\n1\ntmux a -t myname\n\n\n\n\n\n\nlist sessions:\n\n\n1\ntmux ls\n\n\n\n\n\n\nkill session\n\n\n1\ntmux kill-session -t myname\n\n\n\n\n\n\nKill all the tmux sessions:\n\n\ntmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill\n\n\n\n\nIn tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:\n\n\nSessions\n\n\n1\n2\n3\n:new\nCR\n  new session\ns  list sessions\n$  name session\n\n\n\n\n\n\nWindows (tabs)\n\n\n1\n2\n3\n4\n5\n6\n7\nc  create window\nw  list windows\nn  next window\np  previous window\nf  find window\n,  name window\n\n  kill window\n\n\n\n\n\n\nPanes (splits)\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n%  vertical split\n\n\n  \nhorizontal\n \nsplit\n\n\n\no\n  \nswap\n \npanes\n\n\nq\n  \nshow\n \npane\n \nnumbers\n\n\nx\n  \nkill\n \npane\n\n\n+\n  \nbreak\n \npane\n \ninto\n \nwindow\n \n(\ne\n.\ng\n.\n \nto\n \nselect\n \ntext\n \nby\n \nmouse\n \nto\n \ncopy\n)\n\n\n-\n  \nrestore\n \npane\n \nfrom\n \nwindow\n\n\u237d  \nspace\n \n-\n \ntoggle\n \nbetween\n \nlayouts\n\n\nprefix\n \nq\n \n(\nShow\n \npane\n \nnumbers\n,\n \nwhen\n \nthe\n \nnumbers\n \nshow\n \nup\n \ntype\n \nthe\n \nkey\n \nto\n \ngoto\n \nthat\n \npane\n)\n\n\nprefix\n \n{\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nleft\n)\n\n\nprefix\n \n}\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nright\n)\n\n\nprefix\n \nz\n \ntoggle\n \npane\n \nzoom\n\n\n\n\n\n\n\n\n\nCopy mode:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n   Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t\n\n\n\n\n\n\nMisc\n\n\n1\n2\n3\n4\nd  detach\nt  big clock\n?  list shortcuts\n:  prompt\n\n\n\n\n\n\nConfigurations Options:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n# Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \nscreen-256color\n\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp\n\n\n\n\n\n\n\n\n\u53c2\u8003\uff1a\n - \nhttps://gist.github.com/MohamedAlaa/2961058\n\n - \nhttp://blog.jobbole.com/87584/", 
+            "location": "/linux/cmd/#ubuntu-change-user-shell",
+            "text": "\u89e3\u51b3\u4e0d\u80fd\u4f7f\u7528TAB\u952e\u3001\u4e0a\u4e0b\u952e\uff0c\u547d\u4ee4\u884c\u4e0d\u663e\u793a\u5f53\u524d\u8def\u5f84\u7684\u95ee\u9898 1 usermod -s /bin/bash \u7528\u6237\u540d",
+            "title": "ubuntu  change user shell"
+        },
+        {
+            "location": "/linux/cmd/#ubuntu",
+            "text": "\u5b89\u88c5\u4e2d\u6587\u8bed\u8a00\u5305   1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 apt-get update && apt-get install language-pack-zh-hans\n\n# \u8bbe\u7f6eshell\u8bed\u8a00\n\nvim /etc/default/locale\n# \u4e2d\u6587\nLC_ALL=\"zh_CN.UTF-8\"\n\n# US english\nLC_ALL= \"en_US.UTF-8\"",
+            "title": "ubuntu \u8bed\u8a00\u95ee\u9898"
+        },
+        {
+            "location": "/linux/cmd/#centos-cron-task-has-diffrent-environment-variables",
+            "text": "problem: python scripts can't run in cron task,while works okay in command line  troubleshooting:\n    view django-cron log in database, found cron task can't connect to oracle db: DatabaseError: ORA-12154  action:   add root's environment variables to the scripts included in cron task, eg. abc.sh  1 . ~/.bashrc  \nand bashrc has included all the PATH infomation for python and oracle",
+            "title": "Centos Cron task has diffrent environment variables"
+        },
+        {
+            "location": "/linux/python/",
+            "text": "Python\n\n\nhow to use multi pip to install packages\n\n\ncase: on my cloud ubuntu 1.6, after install minicond3, found there are three pip:\n- pip --> pip2.7\n- pip3 --> system python3.5\n- conda pip python3.6\n\n\n1\npython3 -m pip install \n\n\n\n\n\n\nPDF OCR\n\n\n\n\ninstall\n\n\n\n\n1\n2\nbrew or apt install tesseract\npip install pyocr, wand\n\n\n\n\n\n\nApache reverse proxy gunicorn\n\n\n\n\ninstall\n\n\n\n\n1\n2\npip install gunicorn\ngunicorn my-project.wsgi -b ip:port\n\n\n\n\n\n\n\n\napache config (CentOS 6)\n\n\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n# add to settings.py\nFORCE_SCRIPT_NAME = '/one-project'\n# httpd conf\nProxyPreserveHost On\n\n<Location\n \n/one-project\n/>\n\n  SSLRequireSSL\n  ProxyPass http://127.0.0.1:9999/\n  ProxyPassReverse http://127.0.0.1:9999/\n  RequestHeader set X-FORWARDED-PROTOCOL ssl\n  RequestHeader set X-FORWARDED-SSL on\n\n</Location>\n\n\n\n\n\n**Plus, revise Loadmodule section, not sure which module, use the default\n\n\n-ref: \nhttps://stackoverflow.com/questions/12144681/deploy-django-with-gunicorn-and-apache",
+            "title": "Python"
+        },
+        {
+            "location": "/linux/python/#python",
+            "text": "",
+            "title": "Python"
+        },
+        {
+            "location": "/linux/python/#how-to-use-multi-pip-to-install-packages",
+            "text": "case: on my cloud ubuntu 1.6, after install minicond3, found there are three pip:\n- pip --> pip2.7\n- pip3 --> system python3.5\n- conda pip python3.6  1 python3 -m pip install",
+            "title": "how to use multi pip to install packages"
+        },
+        {
+            "location": "/linux/python/#pdf-ocr",
+            "text": "install   1\n2 brew or apt install tesseract\npip install pyocr, wand",
+            "title": "PDF OCR"
+        },
+        {
+            "location": "/linux/python/#apache-reverse-proxy-gunicorn",
+            "text": "install   1\n2 pip install gunicorn\ngunicorn my-project.wsgi -b ip:port    apache config (CentOS 6)    1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11 # add to settings.py\nFORCE_SCRIPT_NAME = '/one-project'\n# httpd conf\nProxyPreserveHost On <Location   /one-project /> \n  SSLRequireSSL\n  ProxyPass http://127.0.0.1:9999/\n  ProxyPassReverse http://127.0.0.1:9999/\n  RequestHeader set X-FORWARDED-PROTOCOL ssl\n  RequestHeader set X-FORWARDED-SSL on </Location>   \n**Plus, revise Loadmodule section, not sure which module, use the default  -ref:  https://stackoverflow.com/questions/12144681/deploy-django-with-gunicorn-and-apache",
+            "title": "Apache reverse proxy gunicorn"
+        },
+        {
+            "location": "/linux/tmux/",
+            "text": "tmux shortcuts & cheatsheet\n\n\nstart new\n\n\ntmux\n\n\nstart new with session name\n\n\n1\ntmux new -s myname\n\n\n\n\n\n\nattach\n\n\n1\ntmux a  #  (or at, or attach)\n\n\n\n\n\n\nattach to named\n\n\n1\ntmux a -t myname\n\n\n\n\n\n\nlist sessions:\n\n\n1\ntmux ls\n\n\n\n\n\n\nkill session\n\n\n1\ntmux kill-session -t myname\n\n\n\n\n\n\nKill all the tmux sessions:\n\n\ntmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill\n\n\n\n\nIn tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:\n\n\nSessions\n\n\n1\n2\n3\n:new<CR>  new session\ns  list sessions\n$  name session\n\n\n\n\n\n\nWindows (tabs)\n\n\n1\n2\n3\n4\n5\n6\n7\nc  create window\nw  list windows\nn  next window\np  previous window\nf  find window\n,  name window\n&  kill window\n\n\n\n\n\n\nPanes (splits)\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n%  vertical split\n\n\"  \nhorizontal\n \nsplit\n\n\n\no\n  \nswap\n \npanes\n\n\nq\n  \nshow\n \npane\n \nnumbers\n\n\nx\n  \nkill\n \npane\n\n\n+\n  \nbreak\n \npane\n \ninto\n \nwindow\n \n(\ne\n.\ng\n.\n \nto\n \nselect\n \ntext\n \nby\n \nmouse\n \nto\n \ncopy\n)\n\n\n-\n  \nrestore\n \npane\n \nfrom\n \nwindow\n\n\u237d  \nspace\n \n-\n \ntoggle\n \nbetween\n \nlayouts\n\n\n<\nprefix\n>\n \nq\n \n(\nShow\n \npane\n \nnumbers\n,\n \nwhen\n \nthe\n \nnumbers\n \nshow\n \nup\n \ntype\n \nthe\n \nkey\n \nto\n \ngoto\n \nthat\n \npane\n)\n\n\n<\nprefix\n>\n \n{\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nleft\n)\n\n\n<\nprefix\n>\n \n}\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nright\n)\n\n\n<\nprefix\n>\n \nz\n \ntoggle\n \npane\n \nzoom\n\n\n\n\n\n\n\n\n\nCopy mode:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n   Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t\n\n\n\n\n\n\nMisc\n\n\n1\n2\n3\n4\nd  detach\nt  big clock\n?  list shortcuts\n:  prompt\n\n\n\n\n\n\nConfigurations Options:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n# Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \"screen-256color\"\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp\n\n\n\n\n\n\n\n\n\u53c2\u8003\uff1a\n - \nhttps://gist.github.com/MohamedAlaa/2961058\n\n - \nhttp://blog.jobbole.com/87584/\n\n\n\n\ntmux shortcuts & cheatsheet\n\n\nstart new\n\n\ntmux\n\n\nstart new with session name\n\n\n1\ntmux new -s myname\n\n\n\n\n\n\nattach\n\n\n1\ntmux a  #  (or at, or attach)\n\n\n\n\n\n\nattach to named\n\n\n1\ntmux a -t myname\n\n\n\n\n\n\nlist sessions:\n\n\n1\ntmux ls\n\n\n\n\n\n\nkill session\n\n\n1\ntmux kill-session -t myname\n\n\n\n\n\n\nKill all the tmux sessions:\n\n\ntmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill\n\n\n\n\nIn tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:\n\n\nSessions\n\n\n1\n2\n3\n:new<CR>  new session\ns  list sessions\n$  name session\n\n\n\n\n\n\nWindows (tabs)\n\n\n1\n2\n3\n4\n5\n6\n7\nc  create window\nw  list windows\nn  next window\np  previous window\nf  find window\n,  name window\n&  kill window\n\n\n\n\n\n\nPanes (splits)\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n%  vertical split\n\n\"  \nhorizontal\n \nsplit\n\n\n\no\n  \nswap\n \npanes\n\n\nq\n  \nshow\n \npane\n \nnumbers\n\n\nx\n  \nkill\n \npane\n\n\n+\n  \nbreak\n \npane\n \ninto\n \nwindow\n \n(\ne\n.\ng\n.\n \nto\n \nselect\n \ntext\n \nby\n \nmouse\n \nto\n \ncopy\n)\n\n\n-\n  \nrestore\n \npane\n \nfrom\n \nwindow\n\n\u237d  \nspace\n \n-\n \ntoggle\n \nbetween\n \nlayouts\n\n\n<\nprefix\n>\n \nq\n \n(\nShow\n \npane\n \nnumbers\n,\n \nwhen\n \nthe\n \nnumbers\n \nshow\n \nup\n \ntype\n \nthe\n \nkey\n \nto\n \ngoto\n \nthat\n \npane\n)\n\n\n<\nprefix\n>\n \n{\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nleft\n)\n\n\n<\nprefix\n>\n \n}\n \n(\nMove\n \nthe\n \ncurrent\n \npane\n \nright\n)\n\n\n<\nprefix\n>\n \nz\n \ntoggle\n \npane\n \nzoom\n\n\n\n\n\n\n\n\n\nCopy mode:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n   Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t\n\n\n\n\n\n\nMisc\n\n\n1\n2\n3\n4\nd  detach\nt  big clock\n?  list shortcuts\n:  prompt\n\n\n\n\n\n\nConfigurations Options:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n# Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \"screen-256color\"\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp\n\n\n\n\n\n\n\n\n\u53c2\u8003\uff1a\n - \nhttps://gist.github.com/MohamedAlaa/2961058\n\n - \nhttp://blog.jobbole.com/87584/",
             "title": "Tmux"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#tmux-shortcuts-cheatsheet", 
-            "text": "start new  tmux  start new with session name  1 tmux new -s myname   attach  1 tmux a  #  (or at, or attach)   attach to named  1 tmux a -t myname   list sessions:  1 tmux ls   kill session  1 tmux kill-session -t myname   Kill all the tmux sessions:  tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill   In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:", 
+            "location": "/linux/tmux/#tmux-shortcuts-cheatsheet",
+            "text": "start new  tmux  start new with session name  1 tmux new -s myname   attach  1 tmux a  #  (or at, or attach)   attach to named  1 tmux a -t myname   list sessions:  1 tmux ls   kill session  1 tmux kill-session -t myname   Kill all the tmux sessions:  tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill   In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:",
             "title": "tmux shortcuts &amp; cheatsheet"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#sessions", 
-            "text": "1\n2\n3 :new CR   new session\ns  list sessions\n$  name session", 
+            "location": "/linux/tmux/#sessions",
+            "text": "1\n2\n3 :new<CR>  new session\ns  list sessions\n$  name session",
             "title": "Sessions"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#copy-mode", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31    Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t", 
+            "location": "/linux/tmux/#copy-mode",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31    Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t",
             "title": "Copy mode:"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#misc", 
-            "text": "1\n2\n3\n4 d  detach\nt  big clock\n?  list shortcuts\n:  prompt", 
+            "location": "/linux/tmux/#misc",
+            "text": "1\n2\n3\n4 d  detach\nt  big clock\n?  list shortcuts\n:  prompt",
             "title": "Misc"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#configurations-options", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20 # Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal  screen-256color \n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp    \u53c2\u8003\uff1a\n -  https://gist.github.com/MohamedAlaa/2961058 \n -  http://blog.jobbole.com/87584/", 
+            "location": "/linux/tmux/#configurations-options",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20 # Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \"screen-256color\"\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp    \u53c2\u8003\uff1a\n -  https://gist.github.com/MohamedAlaa/2961058 \n -  http://blog.jobbole.com/87584/",
             "title": "Configurations Options:"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#tmux-shortcuts-cheatsheet_1", 
-            "text": "start new  tmux  start new with session name  1 tmux new -s myname   attach  1 tmux a  #  (or at, or attach)   attach to named  1 tmux a -t myname   list sessions:  1 tmux ls   kill session  1 tmux kill-session -t myname   Kill all the tmux sessions:  tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill   In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:", 
+            "location": "/linux/tmux/#tmux-shortcuts-cheatsheet_1",
+            "text": "start new  tmux  start new with session name  1 tmux new -s myname   attach  1 tmux a  #  (or at, or attach)   attach to named  1 tmux a -t myname   list sessions:  1 tmux ls   kill session  1 tmux kill-session -t myname   Kill all the tmux sessions:  tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill   In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:",
             "title": "tmux shortcuts &amp; cheatsheet"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#sessions_1", 
-            "text": "1\n2\n3 :new CR   new session\ns  list sessions\n$  name session", 
+            "location": "/linux/tmux/#sessions_1",
+            "text": "1\n2\n3 :new<CR>  new session\ns  list sessions\n$  name session",
             "title": "Sessions"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#copy-mode_1", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31    Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t", 
+            "location": "/linux/tmux/#copy-mode_1",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31    Function                vi             emacs\n   Back to indentation     ^              M-m\n   Clear selection         Escape         C-g\n   Cursor down             j              Down\n   Cursor left             h              Left\n   Cursor right            l              Right\n   Cursor to bottom line   L\n   Cursor to middle line   M              M-r\n   Cursor to top line      H              M-R\n   Cursor up               k              Up\n   Delete entire line      d              C-u\n   Delete to end of line   D              C-k\n   End of line             $              C-e\n   Goto line               :              g\n   Half page down          C-d            M-Down\n   Half page up            C-u            M-Up\n   Next page               C-f            Page down\n   Next word               w              M-f\n   Previous page           C-b            Page up\n   Previous word           b              M-b\n   Quit mode               q              Escape\n   Scroll down             C-Down or J    C-Down\n   Scroll up               C-Up or K      C-Up\n   Search again            n              n\n   Search backward         ?              C-r\n   Search forward          /              C-s\n   Start of line           0              C-a\n   *Start selection      Space          C-Space\n   *Paste buffer            p              C-y\n   *Copy selection          Enter          M-w\n   Transpose chars                        C-t",
             "title": "Copy mode:"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#misc_1", 
-            "text": "1\n2\n3\n4 d  detach\nt  big clock\n?  list shortcuts\n:  prompt", 
+            "location": "/linux/tmux/#misc_1",
+            "text": "1\n2\n3\n4 d  detach\nt  big clock\n?  list shortcuts\n:  prompt",
             "title": "Misc"
-        }, 
+        },
         {
-            "location": "/linux/tmux/#configurations-options_1", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20 # Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal  screen-256color \n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp    \u53c2\u8003\uff1a\n -  https://gist.github.com/MohamedAlaa/2961058 \n -  http://blog.jobbole.com/87584/", 
+            "location": "/linux/tmux/#configurations-options_1",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20 # Mouse support - set to on if you want to use the mouse\nsetw -g mode-mouse off\nset -g mouse-select-pane off\nset -g mouse-resize-pane off\nset -g mouse-select-window off\n\n# Set the default terminal mode to 256color mode\nset -g default-terminal \"screen-256color\"\n\n# enable activity alerts\nsetw -g monitor-activity on\nset -g visual-activity on\n\n# Center the window list\nset -g status-justify centre\n\n# Maximize and restore a pane\nunbind Up bind Up new-window -d -n tmp \\; swap-pane -s tmp.1 \\; select-window -t tmp\nunbind Down\nbind Down last-window \\; swap-pane -s tmp.1 \\; kill-window -t tmp    \u53c2\u8003\uff1a\n -  https://gist.github.com/MohamedAlaa/2961058 \n -  http://blog.jobbole.com/87584/",
             "title": "Configurations Options:"
-        }, 
+        },
         {
-            "location": "/linux/vim/", 
-            "text": "Vim Tips \n Config.\n\n\nvim\u5feb\u6377\u952e\n\n\n\n\nC-w w\n \u5207\u6362\u5206\u5c4f\n\n\nC-]\n  \u8df3\u8f6c\u5230\u9009\u62e9\u7684\u6587\u4ef6\u94fe\u63a5\n\n\nC-p\n  CtrlP\u63d2\u4ef6\uff0c\u6253\u5f00\u6587\u4ef6\u6d4f\u89c8\u5217\u8868\n\n\nC-e\n  NEEDtree\uff0c\u6253\u5f00\u76ee\u5f55\u680f\n\n\n\n\nVim Buffer\n\n\n\n\n:ls\n # \u7f13\u5b58\u533a\u5217\u8868\n\n\n:bd1\n #\u5220\u9664\u7f13\u51b2\u533a\u7b2c4\u53f7\u6587\u4ef6\n\n\n:b1\n #\u7f16\u8f91\u7f13\u5b58\u533a1\u53f7\u6587\u4ef6\n\n\n:sb2\n#\u7f16\u8f91buff\u6587\u4ef62\uff0c\u5e76\u5206\u5c4f\n\n\n\n\nvim \u8bbe\u7f6e\n\n\n\n\n\u989c\u8272\u4e3b\u9898\n\u4e3b\u9898\u6587\u4ef6\u5728\n/usr/share/vim/vim74/colors\n\u4e0b\n\u4fee\u6539.vimrc, \u4f8b\u5982\uff1a\n\n1\ncolorscheme desert \n\n\n\n\n\n\u4e3b\u9898solarized light\n\n1\n2\n3\nsyntax enable\nset background=light\ncolorscheme solarized\n\n\n\n\n\n\u5feb\u6377\u952e\n\n1\n2\n3\n#\u884c\u5149\u6807\u79fb\u52a8  \nnmap lh   ^  \nnmap le   $\n\n\n\n\n\n\n\nvim\u5757\u64cd\u4f5c\n\n\n1\n2\n3\n4\n# v,V,C-v=v_b\nv_b_I #\u63d2\u5165\nv_b_A #\u8ffd\u52a0\nv_b_\n,\n  #TAB\n\n\n\n\n\n\nvim\u5206\u5c4f\n\n\n\n\n\u5df2\u7ecf\u6253\u5f00\u6587\u4ef6\u72b6\u6001\u4e0b\uff0c\u518d\u6253\u5f00\u53e6\u4e00\u4e2a\u6587\u4ef6\u5e76\u5206\u5c4f \n\n\n\n\n1\n2\n3\n:e filename\n:sp   \n#\u6c34\u5e73\u5206\u5272\n\n:vsp  \n#\u5782\u76f4\u5206\u5272\n\n\n\n\n\n\n\n\n\n\u5728\u547d\u4ee4\u884c\u4e0b\u76f4\u63a5\u5206\u5c4f\n\n1\n2\nvim -on file1 file2    \n#\u5782\u76f4\u5206\u5c4f\n\nvim -On file1 file2    \n#\u6c34\u5e73\u5206\u5c4f\n\n\n\n\n\n\n\u7a97\u53e3\u5927\u5c0f\n\n1\n2\nC-w_Shift+`-`  # \u6700\u5927\u5316\u5f53\u524d\u7a97\u53e3\nC-w _=   #\u5e73\u5747\u5206\u914d\u7a97\u53e3\u5927\u5c0f\n\n\n\n\n\n\n\nNEEDtree\n\n\nC-e\n: \u6253\u5f00\u6587\u4ef6\u76ee\u5f55\u680f\n\n\nvim resource\n\n\n\n\nhttp://blog.csdn.net/dark_tone\n  \n\u8fd9\u4e2a\u535a\u5ba2\u7684vim\u4ecb\u7ecd\u4e0d\u9519\n\n\nhttps://github.com/BillWang139967/Vim\n\n\nhttps://github.com/chxuan/vimplus\n\n\nhttps://github.com/ma6174/vim\n\n\nhttps://github.com/tao12345666333/vim\n\n\nVIM\u7ec3\u7ea7\u653b\u7565\n\n\n\u8ddf\u6211\u4e00\u8d77\u5b66VIM\n\n\n\u7b28\u65b9\u6cd5\u5b66VIM", 
+            "location": "/linux/vim/",
+            "text": "Vim Tips & Config.\n\n\nvim\u5feb\u6377\u952e\n\n\n\n\nC-w w\n \u5207\u6362\u5206\u5c4f\n\n\nC-]\n  \u8df3\u8f6c\u5230\u9009\u62e9\u7684\u6587\u4ef6\u94fe\u63a5\n\n\nC-p\n  CtrlP\u63d2\u4ef6\uff0c\u6253\u5f00\u6587\u4ef6\u6d4f\u89c8\u5217\u8868\n\n\nC-e\n  NEEDtree\uff0c\u6253\u5f00\u76ee\u5f55\u680f\n\n\n\n\nVim Buffer\n\n\n\n\n:ls\n # \u7f13\u5b58\u533a\u5217\u8868\n\n\n:bd1\n #\u5220\u9664\u7f13\u51b2\u533a\u7b2c4\u53f7\u6587\u4ef6\n\n\n:b1\n #\u7f16\u8f91\u7f13\u5b58\u533a1\u53f7\u6587\u4ef6\n\n\n:sb2\n#\u7f16\u8f91buff\u6587\u4ef62\uff0c\u5e76\u5206\u5c4f\n\n\n\n\nvim \u8bbe\u7f6e\n\n\n\n\n\u989c\u8272\u4e3b\u9898\n\u4e3b\u9898\u6587\u4ef6\u5728\n/usr/share/vim/vim74/colors\n\u4e0b\n\u4fee\u6539.vimrc, \u4f8b\u5982\uff1a\n\n1\ncolorscheme desert \n\n\n\n\n\n\u4e3b\u9898solarized light\n\n1\n2\n3\nsyntax enable\nset background=light\ncolorscheme solarized\n\n\n\n\n\n\u5feb\u6377\u952e\n\n1\n2\n3\n#\u884c\u5149\u6807\u79fb\u52a8  \nnmap lh   ^  \nnmap le   $\n\n\n\n\n\n\n\nvim\u5757\u64cd\u4f5c\n\n\n1\n2\n3\n4\n# v,V,C-v=v_b\nv_b_I #\u63d2\u5165\nv_b_A #\u8ffd\u52a0\nv_b_>,<  #TAB\n\n\n\n\n\n\nvim\u5206\u5c4f\n\n\n\n\n\u5df2\u7ecf\u6253\u5f00\u6587\u4ef6\u72b6\u6001\u4e0b\uff0c\u518d\u6253\u5f00\u53e6\u4e00\u4e2a\u6587\u4ef6\u5e76\u5206\u5c4f \n\n\n\n\n1\n2\n3\n:e filename\n:sp   \n#\u6c34\u5e73\u5206\u5272\n\n:vsp  \n#\u5782\u76f4\u5206\u5272\n\n\n\n\n\n\n\n\n\n\u5728\u547d\u4ee4\u884c\u4e0b\u76f4\u63a5\u5206\u5c4f\n\n1\n2\nvim -on file1 file2    \n#\u5782\u76f4\u5206\u5c4f\n\nvim -On file1 file2    \n#\u6c34\u5e73\u5206\u5c4f\n\n\n\n\n\n\n\u7a97\u53e3\u5927\u5c0f\n\n1\n2\nC-w_Shift+`-`  # \u6700\u5927\u5316\u5f53\u524d\u7a97\u53e3\nC-w _=   #\u5e73\u5747\u5206\u914d\u7a97\u53e3\u5927\u5c0f\n\n\n\n\n\n\n\nNEEDtree\n\n\nC-e\n: \u6253\u5f00\u6587\u4ef6\u76ee\u5f55\u680f\n\n\nvim resource\n\n\n\n\nhttp://blog.csdn.net/dark_tone\n  \n\u8fd9\u4e2a\u535a\u5ba2\u7684vim\u4ecb\u7ecd\u4e0d\u9519\n\n\nhttps://github.com/BillWang139967/Vim\n\n\nhttps://github.com/chxuan/vimplus\n\n\nhttps://github.com/ma6174/vim\n\n\nhttps://github.com/tao12345666333/vim\n\n\nVIM\u7ec3\u7ea7\u653b\u7565\n\n\n\u8ddf\u6211\u4e00\u8d77\u5b66VIM\n\n\n\u7b28\u65b9\u6cd5\u5b66VIM",
             "title": "Vim Tips & Config."
-        }, 
+        },
         {
-            "location": "/linux/vim/#vim-tips-config", 
-            "text": "", 
+            "location": "/linux/vim/#vim-tips-config",
+            "text": "",
             "title": "Vim Tips &amp; Config."
-        }, 
+        },
         {
-            "location": "/linux/vim/#vim", 
-            "text": "C-w w  \u5207\u6362\u5206\u5c4f  C-]   \u8df3\u8f6c\u5230\u9009\u62e9\u7684\u6587\u4ef6\u94fe\u63a5  C-p   CtrlP\u63d2\u4ef6\uff0c\u6253\u5f00\u6587\u4ef6\u6d4f\u89c8\u5217\u8868  C-e   NEEDtree\uff0c\u6253\u5f00\u76ee\u5f55\u680f", 
+            "location": "/linux/vim/#vim",
+            "text": "C-w w  \u5207\u6362\u5206\u5c4f  C-]   \u8df3\u8f6c\u5230\u9009\u62e9\u7684\u6587\u4ef6\u94fe\u63a5  C-p   CtrlP\u63d2\u4ef6\uff0c\u6253\u5f00\u6587\u4ef6\u6d4f\u89c8\u5217\u8868  C-e   NEEDtree\uff0c\u6253\u5f00\u76ee\u5f55\u680f",
             "title": "vim\u5feb\u6377\u952e"
-        }, 
+        },
         {
-            "location": "/linux/vim/#vim-buffer", 
-            "text": ":ls  # \u7f13\u5b58\u533a\u5217\u8868  :bd1  #\u5220\u9664\u7f13\u51b2\u533a\u7b2c4\u53f7\u6587\u4ef6  :b1  #\u7f16\u8f91\u7f13\u5b58\u533a1\u53f7\u6587\u4ef6  :sb2 #\u7f16\u8f91buff\u6587\u4ef62\uff0c\u5e76\u5206\u5c4f", 
+            "location": "/linux/vim/#vim-buffer",
+            "text": ":ls  # \u7f13\u5b58\u533a\u5217\u8868  :bd1  #\u5220\u9664\u7f13\u51b2\u533a\u7b2c4\u53f7\u6587\u4ef6  :b1  #\u7f16\u8f91\u7f13\u5b58\u533a1\u53f7\u6587\u4ef6  :sb2 #\u7f16\u8f91buff\u6587\u4ef62\uff0c\u5e76\u5206\u5c4f",
             "title": "Vim Buffer"
-        }, 
+        },
         {
-            "location": "/linux/vim/#vim_1", 
-            "text": "\u989c\u8272\u4e3b\u9898\n\u4e3b\u9898\u6587\u4ef6\u5728 /usr/share/vim/vim74/colors \u4e0b\n\u4fee\u6539.vimrc, \u4f8b\u5982\uff1a 1 colorscheme desert    \u4e3b\u9898solarized light 1\n2\n3 syntax enable\nset background=light\ncolorscheme solarized   \u5feb\u6377\u952e 1\n2\n3 #\u884c\u5149\u6807\u79fb\u52a8  \nnmap lh   ^  \nnmap le   $", 
+            "location": "/linux/vim/#vim_1",
+            "text": "\u989c\u8272\u4e3b\u9898\n\u4e3b\u9898\u6587\u4ef6\u5728 /usr/share/vim/vim74/colors \u4e0b\n\u4fee\u6539.vimrc, \u4f8b\u5982\uff1a 1 colorscheme desert    \u4e3b\u9898solarized light 1\n2\n3 syntax enable\nset background=light\ncolorscheme solarized   \u5feb\u6377\u952e 1\n2\n3 #\u884c\u5149\u6807\u79fb\u52a8  \nnmap lh   ^  \nnmap le   $",
             "title": "vim \u8bbe\u7f6e"
-        }, 
+        },
         {
-            "location": "/linux/vim/#vim_2", 
-            "text": "1\n2\n3\n4 # v,V,C-v=v_b\nv_b_I #\u63d2\u5165\nv_b_A #\u8ffd\u52a0\nv_b_ ,   #TAB", 
+            "location": "/linux/vim/#vim_2",
+            "text": "1\n2\n3\n4 # v,V,C-v=v_b\nv_b_I #\u63d2\u5165\nv_b_A #\u8ffd\u52a0\nv_b_>,<  #TAB",
             "title": "vim\u5757\u64cd\u4f5c"
-        }, 
+        },
         {
-            "location": "/linux/vim/#vim_3", 
-            "text": "\u5df2\u7ecf\u6253\u5f00\u6587\u4ef6\u72b6\u6001\u4e0b\uff0c\u518d\u6253\u5f00\u53e6\u4e00\u4e2a\u6587\u4ef6\u5e76\u5206\u5c4f    1\n2\n3 :e filename\n:sp    #\u6c34\u5e73\u5206\u5272 \n:vsp   #\u5782\u76f4\u5206\u5272     \u5728\u547d\u4ee4\u884c\u4e0b\u76f4\u63a5\u5206\u5c4f 1\n2 vim -on file1 file2     #\u5782\u76f4\u5206\u5c4f \nvim -On file1 file2     #\u6c34\u5e73\u5206\u5c4f    \u7a97\u53e3\u5927\u5c0f 1\n2 C-w_Shift+`-`  # \u6700\u5927\u5316\u5f53\u524d\u7a97\u53e3\nC-w _=   #\u5e73\u5747\u5206\u914d\u7a97\u53e3\u5927\u5c0f", 
+            "location": "/linux/vim/#vim_3",
+            "text": "\u5df2\u7ecf\u6253\u5f00\u6587\u4ef6\u72b6\u6001\u4e0b\uff0c\u518d\u6253\u5f00\u53e6\u4e00\u4e2a\u6587\u4ef6\u5e76\u5206\u5c4f    1\n2\n3 :e filename\n:sp    #\u6c34\u5e73\u5206\u5272 \n:vsp   #\u5782\u76f4\u5206\u5272     \u5728\u547d\u4ee4\u884c\u4e0b\u76f4\u63a5\u5206\u5c4f 1\n2 vim -on file1 file2     #\u5782\u76f4\u5206\u5c4f \nvim -On file1 file2     #\u6c34\u5e73\u5206\u5c4f    \u7a97\u53e3\u5927\u5c0f 1\n2 C-w_Shift+`-`  # \u6700\u5927\u5316\u5f53\u524d\u7a97\u53e3\nC-w _=   #\u5e73\u5747\u5206\u914d\u7a97\u53e3\u5927\u5c0f",
             "title": "vim\u5206\u5c4f"
-        }, 
+        },
         {
-            "location": "/linux/vim/#needtree", 
-            "text": "C-e : \u6253\u5f00\u6587\u4ef6\u76ee\u5f55\u680f", 
+            "location": "/linux/vim/#needtree",
+            "text": "C-e : \u6253\u5f00\u6587\u4ef6\u76ee\u5f55\u680f",
             "title": "NEEDtree"
-        }, 
+        },
         {
-            "location": "/linux/vim/#vim-resource", 
-            "text": "http://blog.csdn.net/dark_tone    \u8fd9\u4e2a\u535a\u5ba2\u7684vim\u4ecb\u7ecd\u4e0d\u9519  https://github.com/BillWang139967/Vim  https://github.com/chxuan/vimplus  https://github.com/ma6174/vim  https://github.com/tao12345666333/vim  VIM\u7ec3\u7ea7\u653b\u7565  \u8ddf\u6211\u4e00\u8d77\u5b66VIM  \u7b28\u65b9\u6cd5\u5b66VIM", 
+            "location": "/linux/vim/#vim-resource",
+            "text": "http://blog.csdn.net/dark_tone    \u8fd9\u4e2a\u535a\u5ba2\u7684vim\u4ecb\u7ecd\u4e0d\u9519  https://github.com/BillWang139967/Vim  https://github.com/chxuan/vimplus  https://github.com/ma6174/vim  https://github.com/tao12345666333/vim  VIM\u7ec3\u7ea7\u653b\u7565  \u8ddf\u6211\u4e00\u8d77\u5b66VIM  \u7b28\u65b9\u6cd5\u5b66VIM",
             "title": "vim resource"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/", 
-            "text": "Machine Learning in Action -- note\n\n\nML basis\n\n\n\n\n\n\nsample\n\n\n\n\nface recognize\n\n\nhandwriting recognize\n\n\nemail spam filter\n\n\namazon product recommendation\n\n\n\n\n\n\n\n\nML \u6a2a\u8de8\u591a\u4e2a\u5b66\u79d1\uff1a\u8ba1\u7b97\u673a\uff0c\u5de5\u7a0b\uff0c\u7edf\u8ba1\uff0c\u8fd8\u80fd\u5e94\u7528\u5230\u653f\u6cbb\uff0c\u5730\u7406\n\n\n\n\n\n\n\u672f\u8bed\n\n\n\n\n\u5206\u7c7b classification\n\n\n\u4e13\u5bb6\u7cfb\u7edf expert system\n\n\n\u7279\u5f81 feature\n\n\n\u8bad\u7ec3\u96c6 training set\n\n\n\u8bad\u7ec3\u6837\u672c training example\n\n\ntarget variable\n\n\n\u77e5\u8bc6\u8868\u73b0 knowledge representation : \u4f8b\u5982\u53ef\u80fd\u662f\u4e00\u5957\u89c4\u5219\u6216\u6982\u7387\u5206\u5e03\n\n\n\n\nML\u4efb\u52a1\n\n\n\n\nSupervised learning tasks\n\n\nk-Nearest Neighbors k-\u8fd1\u90bb\u7b97\u6cd5\n\n\nLinear \u7ebf\u6027\u56de\u5f52\n\n\nNaive Bayes \u6734\u7d20\u8d1d\u53f6\u65af\u7b97\u6cd5\n\n\nLocally weighted linear \u5c40\u90e8\u52a0\u6743\u7ebf\u6027\u56de\u5f52\n\n\nSupport vector machines \u652f\u6301\u5411\u91cf\u673a\n\n\nRidge Ridge \u56de\u5f52\n\n\nDecision trees \u51b3\u7b56\u6811\n\n\nLasso \u6700\u5c0f\u56de\u5f52\u7cfb\u6570\u4f30\u8ba1\n\n\n\n\n\n\nUnsupervised learning tasks\n\n\nk-Means K-\u5747\u503c\n\n\nExpectation maximization \u6700\u5927\u671f\u671b\u7b97\u6cd5\n\n\nDBSCAN \n\n\nParzen window Parzen\u7a97\u8bbe\u8ba1\n\n\n\n\n\n\n\n\n\u5982\u4f55\u9009\u62e9\u7b97\u6cd5\n\n\n\n\n\u53d1\u73b0\u6700\u597d\u7b97\u6cd5\u7684\u5173\u952e\u73af\u8282\u662f\u53cd\u590d\u8bd5\u9519\u7684\u8fed\u4ee3\u8fc7\u7a0b\n\n\n\n\nst=\nstart: Start\nc1=\ncondition: forecast a target value|\u9884\u6d4b\nop1=\noperation: supervised learning\nop2=\noperation: unsupervised learning\ne=\nend: End\nc2=\ncondition: discrete value\nop3=\noperation: classification\nop4=\noperation: regression\nc3=\ncondition: discrete groups\nop5=\noperation: clustering\nop6=\noperation: density estimation algorithm\n\nst-\nc1\nc1(yes)-\nc2\nc2(yes)-\nop3\nc2(no)-\nop4\nc1(no)-\nop2(right)\nop2-\nc3\nop4-\ne\nop3-\ne\nc3(yes)-\nop5\nc3(no)-\nop6(right)\nop5-\ne\nop6-\ne\n\n\n\n\u5f00\u53d1\u673a\u5668\u5b66\u4e60\u7684\u6b65\u9aa4\n\n\n\n\nCollect data\n\n\nPrepare the input data\n\n\nAnalyze the input data\n\n\nTrain the algorithm: extract knowledge or information, for Supervised learning\n\n\nTest the algorithm: how to evaluate?\n\n\nUse it\n\n\n\n\n\u7b97\u6cd5\u5b66\u4e60\n\n\nDecision trees \u51b3\u7b56\u6811\n\n\n\n\nPros: Computationally cheap to use, easy for humans to understand learned results,\n   missing values OK, can deal with irrelevant features\n\n\nCons: Prone to overfitting\n\n\nWorks with: Numeric values, nominal values \n\n\n\n\nInformation gain\n\n\n\n\nClaude Shannon Shannon entropy \u9999\u6d53\u71b5\n\n\n\n\n\n\n l(x_i)= \\log_i p(x_i)\n\n\np(x_i)\n\u8868\u793a\u6982\u7387\n\n\n\n\ncollections: defaultdict\n\n\n\n\ndefault \u521d\u59cb\u5316\u4e00\u4e2a\u5b57\u5178\uff0c\u5728basketball\u5b9e\u4f8b\u4e2d\uff0cwon_last\u4fdd\u5b58\u4e86\u7403\u961f\u7684\u6700\u540e\u4e00\u6b21\u6bd4\u8d5b\u7ed3\u679c\uff0c\u5982\u4e0b\u6240\u793a\uff1a\n \n1\ndefaultdict(\ntype \nint\n, {\nNew York Knicks\n: True, \nLos Angeles Lakers\n: False, \nChicago Bulls\n: True, \nCharlotte Bobcats\n: True, \nSan Antonio Spurs\n: False, \nPhiladelphia 76ers\n: False, \nDetroit Pistons\n: True, \nBoston Celtics\n: False, \nMiami Heat\n: False, \nOrlando Magic\n: True, \nPortland Trail Blazers\n: False, \nGolden State Warriors\n: True, \nMemphis Grizzlies\n: True, \nWashington Wizards\n: False, \nHouston Rockets\n: True, \nDallas Mavericks\n: True, \nSacramento Kings\n: False, \nLos Angeles Clippers\n: False, \nOklahoma City Thunder\n: True, \nMilwaukee Bucks\n: False, \nToronto Raptors\n: True, \nUtah Jazz\n: False, \nPhoenix Suns\n: True, \nMinnesota Timberwolves\n: False, \nNew Orleans Pelicans\n: False, \nCleveland Cavaliers\n: False, \nAtlanta Hawks\n: True, \nBrooklyn Nets\n: False, \nIndiana Pacers\n: False, \nDenver Nuggets\n: False})", 
+            "location": "/xdata/ai/",
+            "text": "Deep Leaning Resource\n\n\n\n\n\n\nNIPS\n,  Neural Information Processing Systems\n\n\nDeep Learning\n:Ian Goodfellow and Yoshua Bengio and Aaron Courville\n\n\n\n\nNetwork list of recent years\n\n\n\n\nLeNet\n\n\nAlexNet\n\n\nZFNet\n\n\nGoogLeNet\n\n\nVGGNet\n\n\nResNet\n\n\n\n\n\n\n\n\nCaffe Example\n\n  ILSVRC12, ImageNet Large Scale Visual Recognition Challenge\n\n\n\n\n\n\nlist\n\n\n\n\nDeep Learning Tutorials\n\n\ndeepl-earning-book\n\n\nneural-net-works-book\n\n\n\n\nLeNet\n\n\n\n\nauthor: \nYann LeCun\n\n\nbio\n\n\n\n\nParis, France, in 1960. Phd in 1987 in Paris VI(\u5df4\u9ece\u7b2c\u516d\u5927\u5b66), \u6210\u5c31\u53cd\u5411\u4f20\u64ad. 1987-1988, \u591a\u4f26\u591a\u5927\u5b66 Geoffrey Hinton Lab\u535a\u58eb\u540e.1988\u5e74\u8d1d\u5c14\u5b9e\u9a8c\u5ba4,CNN(\u5377\u79ef\u795e\u7ecf\u7f51\u7edc),\u94f6\u884c\u7cfb\u7edf\u5e7f\u6cdb\u5e94\u7528.\n2003 NYC,silver professor.2013, Facebook AI.\n\n\n\n\n\n\n\n\nnetowork:\n\n\n\n\n\n\n\u6bcf\u4e2a\u5c42\u6709\u591a\u4e2aFeature Map\uff0c\u6bcf\u4e2aFeature Map\u901a\u8fc7\u4e00\u79cd\u5377\u79ef\u6ee4\u6ce2\u5668\u63d0\u53d6\u8f93\u5165\u7684\u4e00\u79cd\u7279\u5f81\uff0c\u7136\u540e\u6bcf\u4e2aFeature Map\u6709\u591a\u4e2a\u795e\u7ecf\u5143\n\n\n\n\ndetail\n \nref1\n\n \nref2\n\n\ninput:32x32\n\n\nc1: 6 feature map , 28x28; filter,5x5,156\u4e2a\u8bad\u7ec3\u53c2\u6570\uff08\u6bcf\u4e2a\u6ee4\u6ce2\u56685x5=25\u4e2aunit\u53c2\u6570\u548c\u4e00\u4e2abias\u53c2\u6570\uff0c\u4e00\u51716\u4e2a\u6ee4\u6ce2\u5668\uff0c\u5171(5x5+1)x6=156\u4e2a\u53c2\u6570 ,\u5171156x(28x28)=122,304\u4e2a\u8fde\u63a5\n\n\n\n\nAlexNet\n\n\nAlex Krizhevsky\n\n\n\n\n\n\nVGG\n\n\nKaren Simonyan & Andrew Zisserman",
+            "title": "Deep Leaning Resource"
+        },
+        {
+            "location": "/xdata/ai/#deep-leaning-resource",
+            "text": "NIPS ,  Neural Information Processing Systems  Deep Learning :Ian Goodfellow and Yoshua Bengio and Aaron Courville   Network list of recent years   LeNet  AlexNet  ZFNet  GoogLeNet  VGGNet  ResNet     Caffe Example \n  ILSVRC12, ImageNet Large Scale Visual Recognition Challenge    list   Deep Learning Tutorials  deepl-earning-book  neural-net-works-book",
+            "title": "Deep Leaning Resource"
+        },
+        {
+            "location": "/xdata/ai/#lenet",
+            "text": "author:  Yann LeCun  bio   Paris, France, in 1960. Phd in 1987 in Paris VI(\u5df4\u9ece\u7b2c\u516d\u5927\u5b66), \u6210\u5c31\u53cd\u5411\u4f20\u64ad. 1987-1988, \u591a\u4f26\u591a\u5927\u5b66 Geoffrey Hinton Lab\u535a\u58eb\u540e.1988\u5e74\u8d1d\u5c14\u5b9e\u9a8c\u5ba4,CNN(\u5377\u79ef\u795e\u7ecf\u7f51\u7edc),\u94f6\u884c\u7cfb\u7edf\u5e7f\u6cdb\u5e94\u7528.\n2003 NYC,silver professor.2013, Facebook AI.     netowork:    \u6bcf\u4e2a\u5c42\u6709\u591a\u4e2aFeature Map\uff0c\u6bcf\u4e2aFeature Map\u901a\u8fc7\u4e00\u79cd\u5377\u79ef\u6ee4\u6ce2\u5668\u63d0\u53d6\u8f93\u5165\u7684\u4e00\u79cd\u7279\u5f81\uff0c\u7136\u540e\u6bcf\u4e2aFeature Map\u6709\u591a\u4e2a\u795e\u7ecf\u5143   detail\n  ref1 \n  ref2  input:32x32  c1: 6 feature map , 28x28; filter,5x5,156\u4e2a\u8bad\u7ec3\u53c2\u6570\uff08\u6bcf\u4e2a\u6ee4\u6ce2\u56685x5=25\u4e2aunit\u53c2\u6570\u548c\u4e00\u4e2abias\u53c2\u6570\uff0c\u4e00\u51716\u4e2a\u6ee4\u6ce2\u5668\uff0c\u5171(5x5+1)x6=156\u4e2a\u53c2\u6570 ,\u5171156x(28x28)=122,304\u4e2a\u8fde\u63a5",
+            "title": "LeNet"
+        },
+        {
+            "location": "/xdata/ai/#alexnet",
+            "text": "Alex Krizhevsky",
+            "title": "AlexNet"
+        },
+        {
+            "location": "/xdata/ai/#vgg",
+            "text": "Karen Simonyan & Andrew Zisserman",
+            "title": "VGG"
+        },
+        {
+            "location": "/xdata/caffe-wiki/",
+            "text": "Caffe Tutorial\n\n\n\n\nhttp://caffe.berkeleyvision.org/tutorial/\n\n\n\n\nData & Data Layers\n\n\nData Type\n\n\n\n\nImage Data - read raw images.\n\n\nDatabase - read data from LEVELDB or LMDB.\n\n\nHDF5 Input - read HDF5 data, allows data of arbitrary dimensions.\n\n\nHDF5 Output - write data as HDF5.\n\n\nInput - typically used for networks that are being deployed.\n\n\nWindow Data - read window data file.\n\n\nMemory Data - read data directly from memory.\n\n\nDummy Data - for static data and debugging.\n\n\n\n\nData Layers defination\n\n\nTops and Bottoms\n for data layers, only have top, no bottom.\n\n\nData and Label\n Data layer has two tops: data, label.\n\n\nTransformations\n data preprocessing.\n\n\nPrefetching:\n for throughput data layers fetch the next batch of data and prepare it in the background while the Net computes the current batch.\n\n\nDeployment Input\n For on-the-fly computation deployment Nets define their inputs by input fields: these Nets then accept direct assignment of data for online or interactive computation.\n\u751f\u4ea7\u90e8\u7f72\uff0c\u4f7f\u7528\ninput\n\u53c2\u6570\u3002\n\n\nVison Layers\n\n\n\n\nConvolution Layer\n - convolves the input image with a set of learnable filters, each producing one feature map in the output image.\n\n\nPooling Layer\n - max, average, or stochastic pooling.\nSpatial Pyramid Pooling (SPP)\n\n\nCrop\n - perform cropping transformation.\n\n\nDeconvolution Layer\n - transposed convolution.\n\n\nIm2Col\n - relic helper layer that is not used much anymore.\n\n\n\n\nRecurrent Layers\n\n\n\n\nRecurrent\n\n\nRNN\n\n\nLong-Short Term Memory (LSTM)\n\n\n\n\nCommon Layers\n\n\n\n\nInner Product - fully connected layer.\nDropout\n\n\nEmbed - for learning embeddings of one-hot encoded vector (takes index as input).\n\n\n\n\nNormalization Layers\n\n\n\n\nLocal Response Normalization (LRN) - performs a kind of \u201clateral inhibition\u201d by normalizing over local input regions.\n\n\nMean Variance Normalization (MVN) - performs contrast normalization / instance normalization.\n\n\nBatch Normalization - performs normalization over mini-batches.\nThe bias and scale layers can be helpful in combination with normalization.\n\n\n\n\nActivation / Neuron Layers\n\n\n\n\nReLU / Rectified-Linear and Leaky-ReLU - ReLU and Leaky-ReLU rectification.\n\n\nPReLU - parametric ReLU.\n\n\nELU - exponential linear rectification.\n\n\nSigmoid\n\n\nTanH\n\n\nAbsolute Value\n\n\nPower - f(x) = (shift + scale * x) ^ power.\n\n\nExp - f(x) = base ^ (shift + scale * x).\n\n\nLog - f(x) = log(x).\n\n\nBNLL - f(x) = log(1 + exp(x)).\n\n\nThreshold - performs step function at user defined threshold.\n\n\nBias - adds a bias to a blob that can either be learned or fixed.\n\n\nScale - scales a blob by an amount that can either be learned or fixed.\n\n\n\n\nUtility Layers\n\n\nLoss Layers\n\n\n\n\nSolver\n\n\n\n\nhttp://caffe.berkeleyvision.org/tutorial/solver.html\n\n\n\n\nThe solver orchestrates model optimization by coordinating the network\u2019s forward inference and backward gradients to form parameter updates that attempt to improve the loss. The responsibilities of learning are divided between the Solver for overseeing the optimization and generating parameter updates and the Net for yielding loss and gradients.\n\n\nThe Caffe solvers are:\n\n\n\n\nStochastic Gradient Descent (type: \"SGD\"),\n\n\nAdaDelta (type: \"AdaDelta\"),\n\n\nAdaptive Gradient (type: \"AdaGrad\"),\n\n\nAdam (type: \"Adam\"),\n\n\nNesterov\u2019s Accelerated Gradient (type: \"Nesterov\") and\n\n\nRMSprop (type: \"RMSProp\")",
+            "title": "Caffe Tutorial"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#caffe-tutorial",
+            "text": "http://caffe.berkeleyvision.org/tutorial/",
+            "title": "Caffe Tutorial"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#data-data-layers",
+            "text": "",
+            "title": "Data &amp; Data Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#data-type",
+            "text": "Image Data - read raw images.  Database - read data from LEVELDB or LMDB.  HDF5 Input - read HDF5 data, allows data of arbitrary dimensions.  HDF5 Output - write data as HDF5.  Input - typically used for networks that are being deployed.  Window Data - read window data file.  Memory Data - read data directly from memory.  Dummy Data - for static data and debugging.",
+            "title": "Data Type"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#data-layers-defination",
+            "text": "Tops and Bottoms  for data layers, only have top, no bottom.  Data and Label  Data layer has two tops: data, label.  Transformations  data preprocessing.  Prefetching:  for throughput data layers fetch the next batch of data and prepare it in the background while the Net computes the current batch.  Deployment Input  For on-the-fly computation deployment Nets define their inputs by input fields: these Nets then accept direct assignment of data for online or interactive computation.\n\u751f\u4ea7\u90e8\u7f72\uff0c\u4f7f\u7528 input \u53c2\u6570\u3002",
+            "title": "Data Layers defination"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#vison-layers",
+            "text": "Convolution Layer  - convolves the input image with a set of learnable filters, each producing one feature map in the output image.  Pooling Layer  - max, average, or stochastic pooling.\nSpatial Pyramid Pooling (SPP)  Crop  - perform cropping transformation.  Deconvolution Layer  - transposed convolution.  Im2Col  - relic helper layer that is not used much anymore.",
+            "title": "Vison Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#recurrent-layers",
+            "text": "Recurrent  RNN  Long-Short Term Memory (LSTM)",
+            "title": "Recurrent Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#common-layers",
+            "text": "Inner Product - fully connected layer.\nDropout  Embed - for learning embeddings of one-hot encoded vector (takes index as input).",
+            "title": "Common Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#normalization-layers",
+            "text": "Local Response Normalization (LRN) - performs a kind of \u201clateral inhibition\u201d by normalizing over local input regions.  Mean Variance Normalization (MVN) - performs contrast normalization / instance normalization.  Batch Normalization - performs normalization over mini-batches.\nThe bias and scale layers can be helpful in combination with normalization.",
+            "title": "Normalization Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#activation-neuron-layers",
+            "text": "ReLU / Rectified-Linear and Leaky-ReLU - ReLU and Leaky-ReLU rectification.  PReLU - parametric ReLU.  ELU - exponential linear rectification.  Sigmoid  TanH  Absolute Value  Power - f(x) = (shift + scale * x) ^ power.  Exp - f(x) = base ^ (shift + scale * x).  Log - f(x) = log(x).  BNLL - f(x) = log(1 + exp(x)).  Threshold - performs step function at user defined threshold.  Bias - adds a bias to a blob that can either be learned or fixed.  Scale - scales a blob by an amount that can either be learned or fixed.",
+            "title": "Activation / Neuron Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#utility-layers",
+            "text": "",
+            "title": "Utility Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#loss-layers",
+            "text": "",
+            "title": "Loss Layers"
+        },
+        {
+            "location": "/xdata/caffe-wiki/#solver",
+            "text": "http://caffe.berkeleyvision.org/tutorial/solver.html   The solver orchestrates model optimization by coordinating the network\u2019s forward inference and backward gradients to form parameter updates that attempt to improve the loss. The responsibilities of learning are divided between the Solver for overseeing the optimization and generating parameter updates and the Net for yielding loss and gradients.  The Caffe solvers are:   Stochastic Gradient Descent (type: \"SGD\"),  AdaDelta (type: \"AdaDelta\"),  Adaptive Gradient (type: \"AdaGrad\"),  Adam (type: \"Adam\"),  Nesterov\u2019s Accelerated Gradient (type: \"Nesterov\") and  RMSprop (type: \"RMSProp\")",
+            "title": "Solver"
+        },
+        {
+            "location": "/xdata/caffe/",
+            "text": "Caffe\n\n\nCaffe installation on ubuntu 16\n\n\n\n\nref: \nhttp://caffe.berkeleyvision.org/install_apt.html\n\n\n\n\n\u901a\u8fc7\u4e0b\u9762\u7684\u547d\u4ee4\u5b89\u88c5protobuf\uff0cleveldb\uff0csnappy\uff0copencv\uff0chdf5\uff0cboost\u4f9d\u8d56\u5e93\uff0c\u5176\u4e2d\u6700\u9700\u8981\u6ce8\u610f\u7684\u662fhdf5\u3002\n\n\n1\n2\n3\nsudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler\n\nsudo apt-get install --no-install-recommends libboost-all-dev\n\n\n\n\n\u63a5\u7740\u5b89\u88c5BLAS\u5e93,gflags\uff0cglog\u548clmdb\uff0c\n\n\n1\n2\n3\nsudo apt-get install libatlas-base-dev\n\nsudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev\n\n\n\n\n\n\nCPU_ONLY := 1\u7684\u6ce8\u91ca\n\u6700\u7ec8Makefile.config\u6587\u4ef6\u5bf9\u5e94\u90e8\u5206\u4fee\u6539\u5982\u4e0b\uff0c\n\n\n1\n2\nINCLUDE_DIRS\n \n:=\n \n$(\nPYTHON_INCLUDE\n)\n /usr/local/include /usr/include/hdf5/serial/\n\nLIBRARY_DIRS\n \n:=\n \n$(\nPYTHON_LIB\n)\n /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/\n\n\n\n\n\n\n1\n2\n3\n4\ncp Makefile.config.example Makefile.config\nmake all\nmake \ntest\n\nmake runtest\n\n\n\n\n\n errors \n\n\npython/caffe/_caffe.cpp:10:31: fatal error: numpy/arrayobject.h: no such file or directory\n:\n\n\nmust use \napt-get install python-numpy\n, even you have installed by \npip\n\n\n/include/caffe/util/mkl_alternate.hpp:14:10: fatal error: 'cblas.h' file not found #include \n\n\n1\n2\n3\n# Homebrew puts openblas in a directory that is not on the standard search path\nBLAS_INCLUDE := $(shell brew --prefix openblas)/include\nBLAS_LIB := $(shell brew --prefix openblas)/lib\n\n\n\n\n\n\n\n\nlog/logging.h:943:30: note: expanded from macro 'LOG_EVERY_N'\n INVALID_REQUESTED_LOG_SEVERITY);           \\ \n  ^\n1 warning generated.*\n\n\n\n\n1\n2\n3\nyou can remove the '-pthread' flag from your CXXFLAGS and LINKFLAGS in your Makefile.\n\nline no=414, 418\n\n\n\n\n\n\nPython interface\n\n\n1\n2\n3\n4\n5\nfor\n req in \n$(\ncat requirements.txt\n)\n;\n \ndo\n pip install \n$req\n;\n \ndone\n\n\nmake pycaffe\n\n\nexport\n \nPYTHONPATH\n=\n/home/farland/dev/deep/caffe/python:\n$PYTHONPATH\n\n\n\n\n\nexport PYTHONPATH/mnt/sdb/doclib/caffe/python:$PYTHONPATH\n\n\n\n\nerror: \n\n1\n_caffe.so: undefined symbol: _ZN5boost6python6detail11init_moduleER11PyModuleDefPFvvE\n\n\n\n\n\n\n\ncaffe vis\n\n\n1\npip install dask,toolz\n\n\n\n\n\n\nMNIST\u8bad\u7ec3\n\n\n\u4e4b\u524d\u5c06Caffe\u7684\u73af\u5883\u642d\u597d\u4e86\uff0c\u73b0\u5728\u7528MNIST\u8fd9\u4e2a\u6570\u636e\u96c6\u8fdb\u884c\u6d4b\u8bd5\uff0c\u7ee7\u7eed\u5728$CAFFE_ROOT\u4e0b\u8fdb\u884c\u64cd\u4f5c\u3002\n\n\n1\n2\nsh data/minist/get_mnist.sh\nsh examples/mnist/create_mnist.sh\n\n\n\n\n./data/mnist/get_mnist.sh\n./examples/mnist/create_mnist.sh\n\n\n\u7ecf\u8fc7\u4e0a\u8ff0\u64cd\u4f5c./examples/mnist/\u8def\u5f84\u4e0b\u4f1a\u6709mnist_test_lmdb\u548cmnist_train_lmdb\u4e24\u4e2a\u6587\u4ef6\u5939\uff0c\u5206\u522b\u662f\u6d4b\u8bd5\u548c\u8bad\u7ec3\u6570\u636e\u3002\n\n\n\u5728\u6700\u7ec8\u8bad\u7ec3\u4e4b\u524d\u9700\u8981\u4fee\u6539./examples/mnist/lenet_solver.prototxt\u6700\u540e\u4e00\u53e5\u8bdd\u4e3a\uff0c\n\n\nsolver_mode: CPU\n\n\n\u8fd9\u6837\u4fdd\u8bc1\u6574\u4e2a\u8bad\u7ec3\u8fc7\u7a0b\u5728CPU\u4e0a\u8fdb\u884c\uff0c\u6700\u540e\u6267\u884c\u8bad\u7ec3\u547d\u4ee4\uff0c\n\n\n1\n2\ncd $CAFFE_ROOT\n./examples/mnist/train_lenet.sh\n\n\n\n\n\n\nCaffe referrence\n\n\n\n\nA Practical Introduction to Deep Learning with Caffe and Python\n\n\n\u4f7f\u7528Caffe\u7684Python\u63a5\u53e3\u8fdb\u884cCifar10\u53ef\u89c6\u5316\n\n\n\u5b98\u65b9\u7ffb\u8bd1\n\n\n\n\nMy Caffe config\n\n\n\n\nhna cloud : python3 and miniconda3\n  \ngive up!!\n due to py3 compative\n  \nimportant\n need to revise the python PATH\n\n\nvirtual ubuntu: python2\n  use clean python2.7 environments\n\n\n\n\npython tutorial\n\n\nweb-demo\n\n\nunder python3, we need fix some modules:\n\n\ncPickle to pickle\n\n\ncStringIO to \nfrom io import stringio\n\n\nLenet\n\n\n\n\nfrom examples: \n01-learning-lenet.ipynb\n\n\nmodel\n\n\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\nn\n.\ndata\n,\n \nn\n.\nlabel\n \n=\n \nL\n.\nData\n(\nbatch_size\n=\nbatch_size\n,\n \nbackend\n=\nP\n.\nData\n.\nLMDB\n,\n \nsource\n=\nlmdb\n,\n\n                             \ntransform_param\n=\ndict\n(\nscale\n=\n1.\n/\n255\n),\n \nntop\n=\n2\n)\n\n\n    \nn\n.\nconv1\n \n=\n \nL\n.\nConvolution\n(\nn\n.\ndata\n,\n \nkernel_size\n=\n5\n,\n \nnum_output\n=\n20\n,\n \nweight_filler\n=\ndict\n(\ntype\n=\n'xavier'\n))\n\n    \nn\n.\npool1\n \n=\n \nL\n.\nPooling\n(\nn\n.\nconv1\n,\n \nkernel_size\n=\n2\n,\n \nstride\n=\n2\n,\n \npool\n=\nP\n.\nPooling\n.\nMAX\n)\n\n    \nn\n.\nconv2\n \n=\n \nL\n.\nConvolution\n(\nn\n.\npool1\n,\n \nkernel_size\n=\n5\n,\n \nnum_output\n=\n50\n,\n \nweight_filler\n=\ndict\n(\ntype\n=\n'xavier'\n))\n\n    \nn\n.\npool2\n \n=\n \nL\n.\nPooling\n(\nn\n.\nconv2\n,\n \nkernel_size\n=\n2\n,\n \nstride\n=\n2\n,\n \npool\n=\nP\n.\nPooling\n.\nMAX\n)\n\n    \nn\n.\nfc1\n \n=\n   \nL\n.\nInnerProduct\n(\nn\n.\npool2\n,\n \nnum_output\n=\n500\n,\n \nweight_filler\n=\ndict\n(\ntype\n=\n'xavier'\n))\n\n    \nn\n.\nrelu1\n \n=\n \nL\n.\nReLU\n(\nn\n.\nfc1\n,\n \nin_place\n=\nTrue\n)\n\n    \nn\n.\nscore\n \n=\n \nL\n.\nInnerProduct\n(\nn\n.\nrelu1\n,\n \nnum_output\n=\n10\n,\n \nweight_filler\n=\ndict\n(\ntype\n=\n'xavier'\n))\n\n    \nn\n.\nloss\n \n=\n  \nL\n.\nSoftmaxWithLoss\n(\nn\n.\nscore\n,\n \nn\n.\nlabel\n)\n\n\n\n\n\n\n\n\n\ndata: 255x255;\n\n\nconv1 filter:20,5x5;\n\n\npool1:2x2, stride=2;\n\n\nconv2 filter:50, 5x5;\n\n\npool2:2x2, stride=2;\n\n\nfc1: 500;\n\n\nscore: 10;\n\n\nloss: Softmax;\n\n\n\n\nmnist/lenet_auto_train.prototxt\n : defining the architecture and pointing to the train/test data.\n\nmnist/lenet_auto_test.prototxt\n : defining the learning parameters.\n\n\nQ:SGD (with momentum)???\n\n\nQ:How to view lmdb file???\n\n\n\n\noutput:\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n[(\n'data'\n, \n(\n64\n, \n1\n, \n28\n, \n28\n))\n,  \n# 1x28x28\n\n \n(\n'label'\n, \n(\n64\n,\n))\n,\n \n(\n'conv1'\n, \n(\n64\n, \n20\n, \n24\n, \n24\n))\n, \n#20, filter=1x5x5, conv1=28-5+1=24\n\n \n(\n'pool1'\n, \n(\n64\n, \n20\n, \n12\n, \n12\n))\n, \n#pool filter=2x2, pool_layer=24/2\n\n \n(\n'conv2'\n, \n(\n64\n, \n50\n, \n8\n, \n8\n))\n, \n# 12-5+1=8\n\n \n(\n'pool2'\n, \n(\n64\n, \n50\n, \n4\n, \n4\n))\n, \n# 2x2, 8/2=4\n\n \n(\n'fc1'\n, \n(\n64\n, \n500\n))\n,\n \n(\n'score'\n, \n(\n64\n, \n10\n))\n,\n \n(\n'loss'\n, \n())]\n\n\n\n\n\n\n\n\nLMDB read\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\nmport\n \ncaffe\n\n\nimport\n \nlmdb\n\n\n\nlmdb_env\n \n=\n \nlmdb\n.\nopen\n(\n'directory_containing_mdb'\n)\n\n\nlmdb_txn\n \n=\n \nlmdb_env\n.\nbegin\n()\n\n\nlmdb_cursor\n \n=\n \nlmdb_txn\n.\ncursor\n()\n\n\ndatum\n \n=\n \ncaffe\n.\nproto\n.\ncaffe_pb2\n.\nDatum\n()\n\n\n\nfor\n \nkey\n,\n \nvalue\n \nin\n \nlmdb_cursor\n:\n\n    \ndatum\n.\nParseFromString\n(\nvalue\n)\n\n    \nlabel\n \n=\n \ndatum\n.\nlabel\n\n    \ndata\n \n=\n \ncaffe\n.\nio\n.\ndatum_to_array\n(\ndatum\n)\n\n    \nfor\n \nl\n,\n \nd\n \nin\n \nzip\n(\nlabel\n,\n \ndata\n):\n\n            \nprint\n \nl\n,\n \nd\n\n\n\n\n\n\n\nAlex's CIFAR-10 tutorial, Caffe style\n\n\nCIFAR \u4e00\u52a0\u62ff\u5927\u5b66\u9662\u7814\u7a76\u6240\n\n\n\n\n\n\nModel: cifar10_quick_train_test.prototxt\n\n\n\n\ndata: 3x32x32\n\n\nconv1: 32x5x5,pad=2,stride=1, 32 filters, gaussian=0.0001\n\n\npool1: 3x3, pad=2, Max\n\n\nrelu1: \n\n\nconv2: 32x5x5,pad=2,stride=1, gaussian=0.01\n\n\nrelu2\n\n\npool2: 3x3, pad=2, AVG\n\n\nconv3: 64x5x5, pad=2,stride=1, gaussian=0.01\n\n\nrelu3\n\n\npool3: 3x3, pad=2, AVG\n\n\nip1: num=64\n\n\nip2: num=10\n\n\nacc:\n\n\nloss:\n\n\n\n\n\n\n\n\nc++ version:\n\n\n\n\nbin format to leveldb format.\n\n\ncompute mean of images.\n\n\ndefine the model: \ncifar10_quick_train_test.prototxt\n\n\nrun test\n\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\n6\n7\n8\nI0208 \n00\n:59:38.055001 \n19686\n solver.cpp:457\n]\n Snapshotting to HDF5 file examples/cifar10/cifar10_quick_iter_2500.caffemodel.h5\nI0208 \n00\n:59:38.059362 \n19686\n sgd_solver.cpp:283\n]\n Snapshotting solver state to HDF5 file examples/cifar10/cifar10_quick_iter_2500.solverstate.h5\nI0208 \n00\n:59:38.383376 \n19686\n solver.cpp:310\n]\n Iteration \n2500\n, \nloss\n \n=\n \n0\n.70069\nI0208 \n00\n:59:38.383699 \n19686\n solver.cpp:330\n]\n Iteration \n2500\n, Testing net \n(\n#0)\n\nI0208 \n01\n:00:14.647847 \n19689\n data_layer.cpp:73\n]\n Restarting data prefetching from start.\nI0208 \n01\n:00:15.912474 \n19686\n solver.cpp:397\n]\n     Test net output \n#0: accuracy = 0.7294\n\nI0208 \n01\n:00:15.912914 \n19686\n solver.cpp:397\n]\n     Test net output \n#1: loss = 0.806155 (* 1 = 0.806155 loss)\n\nI0208 \n01\n:00:15.913118 \n19686\n solver.cpp:315\n]\n Optimization Done.\n\n\n\n\n* python version:\n\n\n\n\nResuming\n\n\n\n\n\n\nref \nhttps://github.com/BVLC/caffe/wiki/Training-and-Resuming\n\n\n\n\nWhen a network has stopped training, either due to manual halting or by reaching the maximum iterations, we may continue training our network by telling caffe to train from where we left off. This is as simple as supplying the snapshot flag with the current .solverstate file. For example:\n\n\ncaffe train -solver solver.prototxt -snapshot train_190000.solverstate\n\n\nIn this case we will continue training from iteration 190000.\n\n\n\n\nvisualization network\n\n\n\n\nnetscope, http://~~45.92/caffe/\n\n\n\n\nvisualization features and layers\n\n\n\n\nhttp://blog.csdn.net/jiandanjinxin/article/details/50410290\n\n\ncaffe data layer\n\n\n\n\nref: \nhttp://caffe.berkeleyvision.org/tutorial/layers.html\n\n\n\n\n\n\nImage Data - read raw images.\n\n\nDatabase - read data from LEVELDB or LMDB.\n\n\nHDF5 Input - read HDF5 data, allows data of arbitrary dimensions.\n\n\nHDF5 Output - write data as HDF5.\n\n\nInput - typically used for networks that are being deployed.\n\n\nWindow Data - read window data file.\n\n\nMemory Data - read data directly from memory.\n\n\nDummy Data - for static data and debugging.",
+            "title": "Caffe"
+        },
+        {
+            "location": "/xdata/caffe/#caffe",
+            "text": "",
+            "title": "Caffe"
+        },
+        {
+            "location": "/xdata/caffe/#caffe-installation-on-ubuntu-16",
+            "text": "ref:  http://caffe.berkeleyvision.org/install_apt.html   \u901a\u8fc7\u4e0b\u9762\u7684\u547d\u4ee4\u5b89\u88c5protobuf\uff0cleveldb\uff0csnappy\uff0copencv\uff0chdf5\uff0cboost\u4f9d\u8d56\u5e93\uff0c\u5176\u4e2d\u6700\u9700\u8981\u6ce8\u610f\u7684\u662fhdf5\u3002  1\n2\n3 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler\n\nsudo apt-get install --no-install-recommends libboost-all-dev  \n\u63a5\u7740\u5b89\u88c5BLAS\u5e93,gflags\uff0cglog\u548clmdb\uff0c  1\n2\n3 sudo apt-get install libatlas-base-dev\n\nsudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev   CPU_ONLY := 1\u7684\u6ce8\u91ca\n\u6700\u7ec8Makefile.config\u6587\u4ef6\u5bf9\u5e94\u90e8\u5206\u4fee\u6539\u5982\u4e0b\uff0c  1\n2 INCLUDE_DIRS   :=   $( PYTHON_INCLUDE )  /usr/local/include /usr/include/hdf5/serial/ LIBRARY_DIRS   :=   $( PYTHON_LIB )  /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/   1\n2\n3\n4 cp Makefile.config.example Makefile.config\nmake all\nmake  test \nmake runtest    errors   python/caffe/_caffe.cpp:10:31: fatal error: numpy/arrayobject.h: no such file or directory :  must use  apt-get install python-numpy , even you have installed by  pip  /include/caffe/util/mkl_alternate.hpp:14:10: fatal error: 'cblas.h' file not found #include   1\n2\n3 # Homebrew puts openblas in a directory that is not on the standard search path\nBLAS_INCLUDE := $(shell brew --prefix openblas)/include\nBLAS_LIB := $(shell brew --prefix openblas)/lib    log/logging.h:943:30: note: expanded from macro 'LOG_EVERY_N'\n INVALID_REQUESTED_LOG_SEVERITY);           \\ \n  ^\n1 warning generated.*   1\n2\n3 you can remove the '-pthread' flag from your CXXFLAGS and LINKFLAGS in your Makefile.\n\nline no=414, 418",
+            "title": "Caffe installation on ubuntu 16"
+        },
+        {
+            "location": "/xdata/caffe/#python-interface",
+            "text": "1\n2\n3\n4\n5 for  req in  $( cat requirements.txt ) ;   do  pip install  $req ;   done \n\nmake pycaffe export   PYTHONPATH = /home/farland/dev/deep/caffe/python: $PYTHONPATH   \nexport PYTHONPATH/mnt/sdb/doclib/caffe/python:$PYTHONPATH   error:  1 _caffe.so: undefined symbol: _ZN5boost6python6detail11init_moduleER11PyModuleDefPFvvE",
+            "title": "Python interface"
+        },
+        {
+            "location": "/xdata/caffe/#caffe-vis",
+            "text": "1 pip install dask,toolz",
+            "title": "caffe vis"
+        },
+        {
+            "location": "/xdata/caffe/#mnist",
+            "text": "\u4e4b\u524d\u5c06Caffe\u7684\u73af\u5883\u642d\u597d\u4e86\uff0c\u73b0\u5728\u7528MNIST\u8fd9\u4e2a\u6570\u636e\u96c6\u8fdb\u884c\u6d4b\u8bd5\uff0c\u7ee7\u7eed\u5728$CAFFE_ROOT\u4e0b\u8fdb\u884c\u64cd\u4f5c\u3002  1\n2 sh data/minist/get_mnist.sh\nsh examples/mnist/create_mnist.sh  \n./data/mnist/get_mnist.sh\n./examples/mnist/create_mnist.sh  \u7ecf\u8fc7\u4e0a\u8ff0\u64cd\u4f5c./examples/mnist/\u8def\u5f84\u4e0b\u4f1a\u6709mnist_test_lmdb\u548cmnist_train_lmdb\u4e24\u4e2a\u6587\u4ef6\u5939\uff0c\u5206\u522b\u662f\u6d4b\u8bd5\u548c\u8bad\u7ec3\u6570\u636e\u3002  \u5728\u6700\u7ec8\u8bad\u7ec3\u4e4b\u524d\u9700\u8981\u4fee\u6539./examples/mnist/lenet_solver.prototxt\u6700\u540e\u4e00\u53e5\u8bdd\u4e3a\uff0c  solver_mode: CPU  \u8fd9\u6837\u4fdd\u8bc1\u6574\u4e2a\u8bad\u7ec3\u8fc7\u7a0b\u5728CPU\u4e0a\u8fdb\u884c\uff0c\u6700\u540e\u6267\u884c\u8bad\u7ec3\u547d\u4ee4\uff0c  1\n2 cd $CAFFE_ROOT\n./examples/mnist/train_lenet.sh",
+            "title": "MNIST\u8bad\u7ec3"
+        },
+        {
+            "location": "/xdata/caffe/#caffe-referrence",
+            "text": "A Practical Introduction to Deep Learning with Caffe and Python  \u4f7f\u7528Caffe\u7684Python\u63a5\u53e3\u8fdb\u884cCifar10\u53ef\u89c6\u5316  \u5b98\u65b9\u7ffb\u8bd1",
+            "title": "Caffe referrence"
+        },
+        {
+            "location": "/xdata/caffe/#my-caffe-config",
+            "text": "hna cloud : python3 and miniconda3\n   give up!!  due to py3 compative\n   important  need to revise the python PATH  virtual ubuntu: python2\n  use clean python2.7 environments",
+            "title": "My Caffe config"
+        },
+        {
+            "location": "/xdata/caffe/#python-tutorial",
+            "text": "",
+            "title": "python tutorial"
+        },
+        {
+            "location": "/xdata/caffe/#web-demo",
+            "text": "under python3, we need fix some modules:  cPickle to pickle  cStringIO to  from io import stringio",
+            "title": "web-demo"
+        },
+        {
+            "location": "/xdata/caffe/#lenet",
+            "text": "from examples:  01-learning-lenet.ipynb  model    1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11 n . data ,   n . label   =   L . Data ( batch_size = batch_size ,   backend = P . Data . LMDB ,   source = lmdb , \n                              transform_param = dict ( scale = 1. / 255 ),   ntop = 2 ) \n\n     n . conv1   =   L . Convolution ( n . data ,   kernel_size = 5 ,   num_output = 20 ,   weight_filler = dict ( type = 'xavier' )) \n     n . pool1   =   L . Pooling ( n . conv1 ,   kernel_size = 2 ,   stride = 2 ,   pool = P . Pooling . MAX ) \n     n . conv2   =   L . Convolution ( n . pool1 ,   kernel_size = 5 ,   num_output = 50 ,   weight_filler = dict ( type = 'xavier' )) \n     n . pool2   =   L . Pooling ( n . conv2 ,   kernel_size = 2 ,   stride = 2 ,   pool = P . Pooling . MAX ) \n     n . fc1   =     L . InnerProduct ( n . pool2 ,   num_output = 500 ,   weight_filler = dict ( type = 'xavier' )) \n     n . relu1   =   L . ReLU ( n . fc1 ,   in_place = True ) \n     n . score   =   L . InnerProduct ( n . relu1 ,   num_output = 10 ,   weight_filler = dict ( type = 'xavier' )) \n     n . loss   =    L . SoftmaxWithLoss ( n . score ,   n . label )     data: 255x255;  conv1 filter:20,5x5;  pool1:2x2, stride=2;  conv2 filter:50, 5x5;  pool2:2x2, stride=2;  fc1: 500;  score: 10;  loss: Softmax;   mnist/lenet_auto_train.prototxt  : defining the architecture and pointing to the train/test data. mnist/lenet_auto_test.prototxt  : defining the learning parameters.  Q:SGD (with momentum)???  Q:How to view lmdb file???   output: 1\n2\n3\n4\n5\n6\n7\n8\n9 [( 'data' ,  ( 64 ,  1 ,  28 ,  28 )) ,   # 1x28x28 \n  ( 'label' ,  ( 64 , )) ,\n  ( 'conv1' ,  ( 64 ,  20 ,  24 ,  24 )) ,  #20, filter=1x5x5, conv1=28-5+1=24 \n  ( 'pool1' ,  ( 64 ,  20 ,  12 ,  12 )) ,  #pool filter=2x2, pool_layer=24/2 \n  ( 'conv2' ,  ( 64 ,  50 ,  8 ,  8 )) ,  # 12-5+1=8 \n  ( 'pool2' ,  ( 64 ,  50 ,  4 ,  4 )) ,  # 2x2, 8/2=4 \n  ( 'fc1' ,  ( 64 ,  500 )) ,\n  ( 'score' ,  ( 64 ,  10 )) ,\n  ( 'loss' ,  ())]",
+            "title": "Lenet"
+        },
+        {
+            "location": "/xdata/caffe/#lmdb-read",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14 mport   caffe  import   lmdb  lmdb_env   =   lmdb . open ( 'directory_containing_mdb' )  lmdb_txn   =   lmdb_env . begin ()  lmdb_cursor   =   lmdb_txn . cursor ()  datum   =   caffe . proto . caffe_pb2 . Datum ()  for   key ,   value   in   lmdb_cursor : \n     datum . ParseFromString ( value ) \n     label   =   datum . label \n     data   =   caffe . io . datum_to_array ( datum ) \n     for   l ,   d   in   zip ( label ,   data ): \n             print   l ,   d",
+            "title": "LMDB read"
+        },
+        {
+            "location": "/xdata/caffe/#alexs-cifar-10-tutorial-caffe-style",
+            "text": "CIFAR \u4e00\u52a0\u62ff\u5927\u5b66\u9662\u7814\u7a76\u6240    Model: cifar10_quick_train_test.prototxt   data: 3x32x32  conv1: 32x5x5,pad=2,stride=1, 32 filters, gaussian=0.0001  pool1: 3x3, pad=2, Max  relu1:   conv2: 32x5x5,pad=2,stride=1, gaussian=0.01  relu2  pool2: 3x3, pad=2, AVG  conv3: 64x5x5, pad=2,stride=1, gaussian=0.01  relu3  pool3: 3x3, pad=2, AVG  ip1: num=64  ip2: num=10  acc:  loss:     c++ version:   bin format to leveldb format.  compute mean of images.  define the model:  cifar10_quick_train_test.prototxt  run test     1\n2\n3\n4\n5\n6\n7\n8 I0208  00 :59:38.055001  19686  solver.cpp:457 ]  Snapshotting to HDF5 file examples/cifar10/cifar10_quick_iter_2500.caffemodel.h5\nI0208  00 :59:38.059362  19686  sgd_solver.cpp:283 ]  Snapshotting solver state to HDF5 file examples/cifar10/cifar10_quick_iter_2500.solverstate.h5\nI0208  00 :59:38.383376  19686  solver.cpp:310 ]  Iteration  2500 ,  loss   =   0 .70069\nI0208  00 :59:38.383699  19686  solver.cpp:330 ]  Iteration  2500 , Testing net  ( #0) \nI0208  01 :00:14.647847  19689  data_layer.cpp:73 ]  Restarting data prefetching from start.\nI0208  01 :00:15.912474  19686  solver.cpp:397 ]      Test net output  #0: accuracy = 0.7294 \nI0208  01 :00:15.912914  19686  solver.cpp:397 ]      Test net output  #1: loss = 0.806155 (* 1 = 0.806155 loss) \nI0208  01 :00:15.913118  19686  solver.cpp:315 ]  Optimization Done.  \n* python version:   Resuming    ref  https://github.com/BVLC/caffe/wiki/Training-and-Resuming   When a network has stopped training, either due to manual halting or by reaching the maximum iterations, we may continue training our network by telling caffe to train from where we left off. This is as simple as supplying the snapshot flag with the current .solverstate file. For example:  caffe train -solver solver.prototxt -snapshot train_190000.solverstate  In this case we will continue training from iteration 190000.   visualization network   netscope, http://~~45.92/caffe/   visualization features and layers   http://blog.csdn.net/jiandanjinxin/article/details/50410290",
+            "title": "Alex's CIFAR-10 tutorial, Caffe style"
+        },
+        {
+            "location": "/xdata/caffe/#caffe-data-layer",
+            "text": "ref:  http://caffe.berkeleyvision.org/tutorial/layers.html    Image Data - read raw images.  Database - read data from LEVELDB or LMDB.  HDF5 Input - read HDF5 data, allows data of arbitrary dimensions.  HDF5 Output - write data as HDF5.  Input - typically used for networks that are being deployed.  Window Data - read window data file.  Memory Data - read data directly from memory.  Dummy Data - for static data and debugging.",
+            "title": "caffe data layer"
+        },
+        {
+            "location": "/xdata/caffe2/",
+            "text": "Caffe2\n\n\nconda install instructions\n\n\n\n\nref:\nhttps://caffe2.ai/docs/getting-started.html?platform=mac&configuration=compile#anaconda-install-path\n\n\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n# Create a conda environment \n\nconda create -n caffe2 \npython\n=\n2\n \n&&\n \nsource\n activate caffe2\n\n# Install required packages\n\n\n# mkl isn't actually required, but is really recommended for Anaconda\n\nconda install -y \n\\\n\n    future \n\\\n\n    gflags \n\\\n\n    glog \n\\\n\n    lmdb \n\\\n\n    mkl \n\\\n\n    mkl-include \n\\\n\n    numpy \n\\\n\n    opencv \n\\\n\n    protobuf \n\\\n\n    snappy \n\\\n\n    six\n\n# Clone Caffe2\n\n\ncd\n ~ \n&&\n git clone --recursive https://github.com/caffe2/caffe2.git \n&&\n \ncd\n caffe2\n\n\n# Make Caffe2 in a separate folder to avoid polluting the Caffe2 source tree.\n\n\n# This can be anywhere you want it\n\nmkdir build \n&&\n \ncd\n build\n\n\n# Add flags to this command to control which packages you want to use. The\n\n\n# options to use are at the top of CMakeLists.txt in the topmost Caffe2\n\n\n# directory\n\n\n# /usr/bin/miniconda3/envs/python2\n\ncmake -DUSE_CUDA\n=\nOFF -DUSE_LEVELDB\n=\nOFF -DCMAKE_PREFIX_PATH\n=\n/path-to-conda/envs/my_caffe2_env -DCMAKE_INSTALL_PREFIX\n=\n/path-to-conda/envs/my_caffe2_env \n\ncmake -DUSE_CUDA\n=\nOFF -DUSE_LEVELDB\n=\nOFF -DCMAKE_PREFIX_PATH\n=\n/usr/bin/miniconda3/envs/python2 -DCMAKE_INSTALL_PREFIX\n=\n/usr/bin/miniconda3/envs/python2\n..\nsudo make install\n\n\n\n\n\n\ninstall log\n\n\n\n\ndev-127: \nuse conda env:my_caffe2_env, python2.7\n\nbuild ok~~\n\n\n\n\n1\n2\n3\nconda create -n my_caffe2_env \npython\n=\n2\n\n\nsource\n activate my_caffe2_env\n\nsource\n decativate my_caffe2_env\n\n\n\n\nwrite sripts to switch caffe2 env, named caffe2-env.sh under home dir\n\n\n\n\nvirtural-220: \nenv-name=python2\n\n\n\n\ntutarial log\n\n\n\n\ndot not found in path\n\n\n\n\n1\n2\n3\n4\npip install graphviz\npip install gprof2dot\npip install pygraphviz\napt install graphviz \n# finally fixed!!",
+            "title": "Caffe2"
+        },
+        {
+            "location": "/xdata/caffe2/#caffe2",
+            "text": "",
+            "title": "Caffe2"
+        },
+        {
+            "location": "/xdata/caffe2/#conda-install-instructions",
+            "text": "ref: https://caffe2.ai/docs/getting-started.html?platform=mac&configuration=compile#anaconda-install-path    1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32 # Create a conda environment  \nconda create -n caffe2  python = 2   &&   source  activate caffe2 # Install required packages  # mkl isn't actually required, but is really recommended for Anaconda \nconda install -y  \\ \n    future  \\ \n    gflags  \\ \n    glog  \\ \n    lmdb  \\ \n    mkl  \\ \n    mkl-include  \\ \n    numpy  \\ \n    opencv  \\ \n    protobuf  \\ \n    snappy  \\ \n    six # Clone Caffe2  cd  ~  &&  git clone --recursive https://github.com/caffe2/caffe2.git  &&   cd  caffe2 # Make Caffe2 in a separate folder to avoid polluting the Caffe2 source tree.  # This can be anywhere you want it \nmkdir build  &&   cd  build # Add flags to this command to control which packages you want to use. The  # options to use are at the top of CMakeLists.txt in the topmost Caffe2  # directory  # /usr/bin/miniconda3/envs/python2 \ncmake -DUSE_CUDA = OFF -DUSE_LEVELDB = OFF -DCMAKE_PREFIX_PATH = /path-to-conda/envs/my_caffe2_env -DCMAKE_INSTALL_PREFIX = /path-to-conda/envs/my_caffe2_env \n\ncmake -DUSE_CUDA = OFF -DUSE_LEVELDB = OFF -DCMAKE_PREFIX_PATH = /usr/bin/miniconda3/envs/python2 -DCMAKE_INSTALL_PREFIX = /usr/bin/miniconda3/envs/python2\n..\nsudo make install",
+            "title": "conda install instructions"
+        },
+        {
+            "location": "/xdata/caffe2/#install-log",
+            "text": "dev-127: \nuse conda env:my_caffe2_env, python2.7 build ok~~   1\n2\n3 conda create -n my_caffe2_env  python = 2  source  activate my_caffe2_env source  decativate my_caffe2_env  \nwrite sripts to switch caffe2 env, named caffe2-env.sh under home dir   virtural-220: \nenv-name=python2",
+            "title": "install log"
+        },
+        {
+            "location": "/xdata/caffe2/#tutarial-log",
+            "text": "dot not found in path   1\n2\n3\n4 pip install graphviz\npip install gprof2dot\npip install pygraphviz\napt install graphviz  # finally fixed!!",
+            "title": "tutarial log"
+        },
+        {
+            "location": "/xdata/ml-action/",
+            "text": "Machine Learning in Action -- note\n\n\nML basis\n\n\n\n\n\n\nsample\n\n\n\n\nface recognize\n\n\nhandwriting recognize\n\n\nemail spam filter\n\n\namazon product recommendation\n\n\n\n\n\n\n\n\nML \u6a2a\u8de8\u591a\u4e2a\u5b66\u79d1\uff1a\u8ba1\u7b97\u673a\uff0c\u5de5\u7a0b\uff0c\u7edf\u8ba1\uff0c\u8fd8\u80fd\u5e94\u7528\u5230\u653f\u6cbb\uff0c\u5730\u7406\n\n\n\n\n\n\n\u672f\u8bed\n\n\n\n\n\u5206\u7c7b classification\n\n\n\u4e13\u5bb6\u7cfb\u7edf expert system\n\n\n\u7279\u5f81 feature\n\n\n\u8bad\u7ec3\u96c6 training set\n\n\n\u8bad\u7ec3\u6837\u672c training example\n\n\ntarget variable\n\n\n\u77e5\u8bc6\u8868\u73b0 knowledge representation : \u4f8b\u5982\u53ef\u80fd\u662f\u4e00\u5957\u89c4\u5219\u6216\u6982\u7387\u5206\u5e03\n\n\n\n\nML\u4efb\u52a1\n\n\n\n\nSupervised learning tasks\n\n\nk-Nearest Neighbors k-\u8fd1\u90bb\u7b97\u6cd5\n\n\nLinear \u7ebf\u6027\u56de\u5f52\n\n\nNaive Bayes \u6734\u7d20\u8d1d\u53f6\u65af\u7b97\u6cd5\n\n\nLocally weighted linear \u5c40\u90e8\u52a0\u6743\u7ebf\u6027\u56de\u5f52\n\n\nSupport vector machines \u652f\u6301\u5411\u91cf\u673a\n\n\nRidge Ridge \u56de\u5f52\n\n\nDecision trees \u51b3\u7b56\u6811\n\n\nLasso \u6700\u5c0f\u56de\u5f52\u7cfb\u6570\u4f30\u8ba1\n\n\n\n\n\n\nUnsupervised learning tasks\n\n\nk-Means K-\u5747\u503c\n\n\nExpectation maximization \u6700\u5927\u671f\u671b\u7b97\u6cd5\n\n\nDBSCAN \n\n\nParzen window Parzen\u7a97\u8bbe\u8ba1\n\n\n\n\n\n\n\n\n\u5982\u4f55\u9009\u62e9\u7b97\u6cd5\n\n\n\n\n\u53d1\u73b0\u6700\u597d\u7b97\u6cd5\u7684\u5173\u952e\u73af\u8282\u662f\u53cd\u590d\u8bd5\u9519\u7684\u8fed\u4ee3\u8fc7\u7a0b\n\n\n\n\nst=>start: Start\nc1=>condition: forecast a target value|\u9884\u6d4b\nop1=>operation: supervised learning\nop2=>operation: unsupervised learning\ne=>end: End\nc2=>condition: discrete value\nop3=>operation: classification\nop4=>operation: regression\nc3=>condition: discrete groups\nop5=>operation: clustering\nop6=>operation: density estimation algorithm\n\nst->c1\nc1(yes)->c2\nc2(yes)->op3\nc2(no)->op4\nc1(no)->op2(right)\nop2->c3\nop4->e\nop3->e\nc3(yes)->op5\nc3(no)->op6(right)\nop5->e\nop6->e\n\n\n\n\u5f00\u53d1\u673a\u5668\u5b66\u4e60\u7684\u6b65\u9aa4\n\n\n\n\nCollect data\n\n\nPrepare the input data\n\n\nAnalyze the input data\n\n\nTrain the algorithm: extract knowledge or information, for Supervised learning\n\n\nTest the algorithm: how to evaluate?\n\n\nUse it\n\n\n\n\n\u7b97\u6cd5\u5b66\u4e60\n\n\nDecision trees \u51b3\u7b56\u6811\n\n\n\n\nPros: Computationally cheap to use, easy for humans to understand learned results,\n   missing values OK, can deal with irrelevant features\n\n\nCons: Prone to overfitting\n\n\nWorks with: Numeric values, nominal values \n\n\n\n\nInformation gain\n\n\n\n\nClaude Shannon Shannon entropy \u9999\u6d53\u71b5\n\n\n\n\n\n\n l(x_i)= \\log_i p(x_i)\n\n\np(x_i)\n\u8868\u793a\u6982\u7387\n\n\n\n\ncollections: defaultdict\n\n\n\n\ndefault \u521d\u59cb\u5316\u4e00\u4e2a\u5b57\u5178\uff0c\u5728basketball\u5b9e\u4f8b\u4e2d\uff0cwon_last\u4fdd\u5b58\u4e86\u7403\u961f\u7684\u6700\u540e\u4e00\u6b21\u6bd4\u8d5b\u7ed3\u679c\uff0c\u5982\u4e0b\u6240\u793a\uff1a\n\n\n1\ndefaultdict(<type 'int'>, {'New York Knicks': True, 'Los Angeles Lakers': False, 'Chicago Bulls': True, 'Charlotte Bobcats': True, 'San Antonio Spurs': False, 'Philadelphia 76ers': False, 'Detroit Pistons': True, 'Boston Celtics': False, 'Miami Heat': False, 'Orlando Magic': True, 'Portland Trail Blazers': False, 'Golden State Warriors': True, 'Memphis Grizzlies': True, 'Washington Wizards': False, 'Houston Rockets': True, 'Dallas Mavericks': True, 'Sacramento Kings': False, 'Los Angeles Clippers': False, 'Oklahoma City Thunder': True, 'Milwaukee Bucks': False, 'Toronto Raptors': True, 'Utah Jazz': False, 'Phoenix Suns': True, 'Minnesota Timberwolves': False, 'New Orleans Pelicans': False, 'Cleveland Cavaliers': False, 'Atlanta Hawks': True, 'Brooklyn Nets': False, 'Indiana Pacers': False, 'Denver Nuggets': False})",
             "title": "Machine Learning in Action -- note"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#machine-learning-in-action-note", 
-            "text": "", 
+            "location": "/xdata/ml-action/#machine-learning-in-action-note",
+            "text": "",
             "title": "Machine Learning in Action -- note"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#ml-basis", 
-            "text": "sample   face recognize  handwriting recognize  email spam filter  amazon product recommendation     ML \u6a2a\u8de8\u591a\u4e2a\u5b66\u79d1\uff1a\u8ba1\u7b97\u673a\uff0c\u5de5\u7a0b\uff0c\u7edf\u8ba1\uff0c\u8fd8\u80fd\u5e94\u7528\u5230\u653f\u6cbb\uff0c\u5730\u7406", 
+            "location": "/xdata/ml-action/#ml-basis",
+            "text": "sample   face recognize  handwriting recognize  email spam filter  amazon product recommendation     ML \u6a2a\u8de8\u591a\u4e2a\u5b66\u79d1\uff1a\u8ba1\u7b97\u673a\uff0c\u5de5\u7a0b\uff0c\u7edf\u8ba1\uff0c\u8fd8\u80fd\u5e94\u7528\u5230\u653f\u6cbb\uff0c\u5730\u7406",
             "title": "ML basis"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#_1", 
-            "text": "\u5206\u7c7b classification  \u4e13\u5bb6\u7cfb\u7edf expert system  \u7279\u5f81 feature  \u8bad\u7ec3\u96c6 training set  \u8bad\u7ec3\u6837\u672c training example  target variable  \u77e5\u8bc6\u8868\u73b0 knowledge representation : \u4f8b\u5982\u53ef\u80fd\u662f\u4e00\u5957\u89c4\u5219\u6216\u6982\u7387\u5206\u5e03", 
+            "location": "/xdata/ml-action/#_1",
+            "text": "\u5206\u7c7b classification  \u4e13\u5bb6\u7cfb\u7edf expert system  \u7279\u5f81 feature  \u8bad\u7ec3\u96c6 training set  \u8bad\u7ec3\u6837\u672c training example  target variable  \u77e5\u8bc6\u8868\u73b0 knowledge representation : \u4f8b\u5982\u53ef\u80fd\u662f\u4e00\u5957\u89c4\u5219\u6216\u6982\u7387\u5206\u5e03",
             "title": "\u672f\u8bed"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#ml", 
-            "text": "Supervised learning tasks  k-Nearest Neighbors k-\u8fd1\u90bb\u7b97\u6cd5  Linear \u7ebf\u6027\u56de\u5f52  Naive Bayes \u6734\u7d20\u8d1d\u53f6\u65af\u7b97\u6cd5  Locally weighted linear \u5c40\u90e8\u52a0\u6743\u7ebf\u6027\u56de\u5f52  Support vector machines \u652f\u6301\u5411\u91cf\u673a  Ridge Ridge \u56de\u5f52  Decision trees \u51b3\u7b56\u6811  Lasso \u6700\u5c0f\u56de\u5f52\u7cfb\u6570\u4f30\u8ba1    Unsupervised learning tasks  k-Means K-\u5747\u503c  Expectation maximization \u6700\u5927\u671f\u671b\u7b97\u6cd5  DBSCAN   Parzen window Parzen\u7a97\u8bbe\u8ba1", 
+            "location": "/xdata/ml-action/#ml",
+            "text": "Supervised learning tasks  k-Nearest Neighbors k-\u8fd1\u90bb\u7b97\u6cd5  Linear \u7ebf\u6027\u56de\u5f52  Naive Bayes \u6734\u7d20\u8d1d\u53f6\u65af\u7b97\u6cd5  Locally weighted linear \u5c40\u90e8\u52a0\u6743\u7ebf\u6027\u56de\u5f52  Support vector machines \u652f\u6301\u5411\u91cf\u673a  Ridge Ridge \u56de\u5f52  Decision trees \u51b3\u7b56\u6811  Lasso \u6700\u5c0f\u56de\u5f52\u7cfb\u6570\u4f30\u8ba1    Unsupervised learning tasks  k-Means K-\u5747\u503c  Expectation maximization \u6700\u5927\u671f\u671b\u7b97\u6cd5  DBSCAN   Parzen window Parzen\u7a97\u8bbe\u8ba1",
             "title": "ML\u4efb\u52a1"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#_2", 
-            "text": "\u53d1\u73b0\u6700\u597d\u7b97\u6cd5\u7684\u5173\u952e\u73af\u8282\u662f\u53cd\u590d\u8bd5\u9519\u7684\u8fed\u4ee3\u8fc7\u7a0b   st= start: Start\nc1= condition: forecast a target value|\u9884\u6d4b\nop1= operation: supervised learning\nop2= operation: unsupervised learning\ne= end: End\nc2= condition: discrete value\nop3= operation: classification\nop4= operation: regression\nc3= condition: discrete groups\nop5= operation: clustering\nop6= operation: density estimation algorithm\n\nst- c1\nc1(yes)- c2\nc2(yes)- op3\nc2(no)- op4\nc1(no)- op2(right)\nop2- c3\nop4- e\nop3- e\nc3(yes)- op5\nc3(no)- op6(right)\nop5- e\nop6- e", 
+            "location": "/xdata/ml-action/#_2",
+            "text": "\u53d1\u73b0\u6700\u597d\u7b97\u6cd5\u7684\u5173\u952e\u73af\u8282\u662f\u53cd\u590d\u8bd5\u9519\u7684\u8fed\u4ee3\u8fc7\u7a0b   st=>start: Start\nc1=>condition: forecast a target value|\u9884\u6d4b\nop1=>operation: supervised learning\nop2=>operation: unsupervised learning\ne=>end: End\nc2=>condition: discrete value\nop3=>operation: classification\nop4=>operation: regression\nc3=>condition: discrete groups\nop5=>operation: clustering\nop6=>operation: density estimation algorithm\n\nst->c1\nc1(yes)->c2\nc2(yes)->op3\nc2(no)->op4\nc1(no)->op2(right)\nop2->c3\nop4->e\nop3->e\nc3(yes)->op5\nc3(no)->op6(right)\nop5->e\nop6->e",
             "title": "\u5982\u4f55\u9009\u62e9\u7b97\u6cd5"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#_3", 
-            "text": "Collect data  Prepare the input data  Analyze the input data  Train the algorithm: extract knowledge or information, for Supervised learning  Test the algorithm: how to evaluate?  Use it", 
+            "location": "/xdata/ml-action/#_3",
+            "text": "Collect data  Prepare the input data  Analyze the input data  Train the algorithm: extract knowledge or information, for Supervised learning  Test the algorithm: how to evaluate?  Use it",
             "title": "\u5f00\u53d1\u673a\u5668\u5b66\u4e60\u7684\u6b65\u9aa4"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#_4", 
-            "text": "", 
+            "location": "/xdata/ml-action/#_4",
+            "text": "",
             "title": "\u7b97\u6cd5\u5b66\u4e60"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#decision-trees", 
-            "text": "Pros: Computationally cheap to use, easy for humans to understand learned results,\n   missing values OK, can deal with irrelevant features  Cons: Prone to overfitting  Works with: Numeric values, nominal values", 
+            "location": "/xdata/ml-action/#decision-trees",
+            "text": "Pros: Computationally cheap to use, easy for humans to understand learned results,\n   missing values OK, can deal with irrelevant features  Cons: Prone to overfitting  Works with: Numeric values, nominal values",
             "title": "Decision trees \u51b3\u7b56\u6811"
-        }, 
+        },
         {
-            "location": "/xdata/ml-action/#information-gain", 
-            "text": "Claude Shannon Shannon entropy \u9999\u6d53\u71b5     l(x_i)= \\log_i p(x_i)  p(x_i) \u8868\u793a\u6982\u7387   collections: defaultdict   default \u521d\u59cb\u5316\u4e00\u4e2a\u5b57\u5178\uff0c\u5728basketball\u5b9e\u4f8b\u4e2d\uff0cwon_last\u4fdd\u5b58\u4e86\u7403\u961f\u7684\u6700\u540e\u4e00\u6b21\u6bd4\u8d5b\u7ed3\u679c\uff0c\u5982\u4e0b\u6240\u793a\uff1a\n  1 defaultdict( type  int , { New York Knicks : True,  Los Angeles Lakers : False,  Chicago Bulls : True,  Charlotte Bobcats : True,  San Antonio Spurs : False,  Philadelphia 76ers : False,  Detroit Pistons : True,  Boston Celtics : False,  Miami Heat : False,  Orlando Magic : True,  Portland Trail Blazers : False,  Golden State Warriors : True,  Memphis Grizzlies : True,  Washington Wizards : False,  Houston Rockets : True,  Dallas Mavericks : True,  Sacramento Kings : False,  Los Angeles Clippers : False,  Oklahoma City Thunder : True,  Milwaukee Bucks : False,  Toronto Raptors : True,  Utah Jazz : False,  Phoenix Suns : True,  Minnesota Timberwolves : False,  New Orleans Pelicans : False,  Cleveland Cavaliers : False,  Atlanta Hawks : True,  Brooklyn Nets : False,  Indiana Pacers : False,  Denver Nuggets : False})", 
+            "location": "/xdata/ml-action/#information-gain",
+            "text": "Claude Shannon Shannon entropy \u9999\u6d53\u71b5     l(x_i)= \\log_i p(x_i)  p(x_i) \u8868\u793a\u6982\u7387   collections: defaultdict   default \u521d\u59cb\u5316\u4e00\u4e2a\u5b57\u5178\uff0c\u5728basketball\u5b9e\u4f8b\u4e2d\uff0cwon_last\u4fdd\u5b58\u4e86\u7403\u961f\u7684\u6700\u540e\u4e00\u6b21\u6bd4\u8d5b\u7ed3\u679c\uff0c\u5982\u4e0b\u6240\u793a\uff1a  1 defaultdict(<type 'int'>, {'New York Knicks': True, 'Los Angeles Lakers': False, 'Chicago Bulls': True, 'Charlotte Bobcats': True, 'San Antonio Spurs': False, 'Philadelphia 76ers': False, 'Detroit Pistons': True, 'Boston Celtics': False, 'Miami Heat': False, 'Orlando Magic': True, 'Portland Trail Blazers': False, 'Golden State Warriors': True, 'Memphis Grizzlies': True, 'Washington Wizards': False, 'Houston Rockets': True, 'Dallas Mavericks': True, 'Sacramento Kings': False, 'Los Angeles Clippers': False, 'Oklahoma City Thunder': True, 'Milwaukee Bucks': False, 'Toronto Raptors': True, 'Utah Jazz': False, 'Phoenix Suns': True, 'Minnesota Timberwolves': False, 'New Orleans Pelicans': False, 'Cleveland Cavaliers': False, 'Atlanta Hawks': True, 'Brooklyn Nets': False, 'Indiana Pacers': False, 'Denver Nuggets': False})",
             "title": "Information gain"
-        }, 
+        },
         {
-            "location": "/xdata/notebook/", 
-            "text": "Jupyter notebook \u81ea\u5b9a\u4e49\u914d\u7f6e\n\n\n\n\n\u521b\u5efa\u914d\u7f6e\u6587\u4ef6\n\n\n1\njupyter notebook --generate-config\n\n\n\n\n\u6587\u4ef6\u4f4d\u7f6e \n~/.jupyter/jupyter_notebook_config.py\n\n\n\u8bbe\u7f6e\u5bc6\u7801\n\n\n1\n2\n3\n4\n5\n6\nipython\nIn \n[\n1\n]\n: from notebook.auth import passwd\nIn \n[\n2\n]\n: passwd\n()\n\nEnter password:\nVerify password:\nOut\n[\n2\n]\n: \nsha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed\n\n\n\n\n\n\n\n\u7b80\u5355\u7684\u914d\u7f6e\u5b9e\u4f8b\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n# Set options for certfile, ip, password, and toggle off\n\n\n# browser auto-opening\n\nc.NotebookApp.certfile \n=\n u\n/absolute/path/to/your/certificate/mycert.pem\n\nc.NotebookApp.keyfile \n=\n u\n/absolute/path/to/your/certificate/mykey.key\n\n\n# Set ip to \n*\n to bind on all interfaces (ips) for the public server\n\nc.NotebookApp.ip \n=\n \n*\n\nc.NotebookApp.password \n=\n u\nsha1:bcd259ccf...\nyour hashed password here\n\nc.NotebookApp.open_browser \n=\n False\n\n\n# It is a good idea to set a known, fixed port for server access\n\nc.NotebookApp.port \n=\n \n9999\n\n\n\n\n\n\n\u8bbe\u7f6e\u5de5\u4f5c\u76ee\u5f55\n\n\u5728home\u521b\u5efa\u76ee\u5f55ipython\uff1a\n~/ipython\uff0c\u914d\u7f6e\u65f6\u53ea\u5199\u76ee\u5f55\u540d\uff0c\u4e0d\u9700\u8981\u52a0\n/\n\n\n1\nc.ContentManager.root_dir = \nipython\n # ipython\u76ee\u5f55\u5728\uff5e/ipython, \n\n\n\n\n\n\u542f\u52a8notebook\n\n\n1\njupyter notebook\n\n\n\n\nnotebook server\u5730\u5740\uff1a\nhttp://localhost:9999/tree\n\n\nresource\n\n\n\n\nhttps://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server", 
+            "location": "/xdata/notebook/",
+            "text": "Jupyter notebook \u81ea\u5b9a\u4e49\u914d\u7f6e\n\n\n\n\n\u521b\u5efa\u914d\u7f6e\u6587\u4ef6\n\n\n1\njupyter notebook --generate-config\n\n\n\n\n\u6587\u4ef6\u4f4d\u7f6e \n~/.jupyter/jupyter_notebook_config.py\n\n\n\u8bbe\u7f6e\u5bc6\u7801\n\n\n1\n2\n3\n4\n5\n6\nipython\nIn \n[\n1\n]\n: from notebook.auth import passwd\nIn \n[\n2\n]\n: passwd\n()\n\nEnter password:\nVerify password:\nOut\n[\n2\n]\n: \n'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'\n\n\n\n\n\n\n\n\u7b80\u5355\u7684\u914d\u7f6e\u5b9e\u4f8b\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n# Set options for certfile, ip, password, and toggle off\n\n\n# browser auto-opening\n\nc.NotebookApp.certfile \n=\n u\n'/absolute/path/to/your/certificate/mycert.pem'\n\nc.NotebookApp.keyfile \n=\n u\n'/absolute/path/to/your/certificate/mykey.key'\n\n\n# Set ip to '*' to bind on all interfaces (ips) for the public server\n\nc.NotebookApp.ip \n=\n \n'*'\n\nc.NotebookApp.password \n=\n u\n'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'\n\nc.NotebookApp.open_browser \n=\n False\n\n\n# It is a good idea to set a known, fixed port for server access\n\nc.NotebookApp.port \n=\n \n8001\n\nc.ContentManager.root_dir \n=\n \n'ipython'\n \n# ipython\u76ee\u5f55\u5728\uff5e/ipython, \n\n\n\n\n\n\n\u8bbe\u7f6e\u5de5\u4f5c\u76ee\u5f55\n\n\u5728home\u521b\u5efa\u76ee\u5f55ipython\uff1a\n~/ipython\uff0c\u914d\u7f6e\u65f6\u53ea\u5199\u76ee\u5f55\u540d\uff0c\u4e0d\u9700\u8981\u52a0\n/\n\n\n1\nc.ContentManager.root_dir = 'ipython' # ipython\u76ee\u5f55\u5728\uff5e/ipython, \n\n\n\n\n\n\u542f\u52a8notebook\n\n\n1\njupyter notebook\n\n\n\n\nnotebook server\u5730\u5740\uff1a\nhttp://localhost:9999/tree\n\n\nresource\n\n\n\n\nhttps://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server",
             "title": "Jupyter notebook \u81ea\u5b9a\u4e49\u914d\u7f6e"
-        }, 
+        },
         {
-            "location": "/xdata/notebook/#jupyter-notebook", 
-            "text": "", 
+            "location": "/xdata/notebook/#jupyter-notebook",
+            "text": "",
             "title": "Jupyter notebook \u81ea\u5b9a\u4e49\u914d\u7f6e"
-        }, 
+        },
         {
-            "location": "/xdata/notebook/#_1", 
-            "text": "1 jupyter notebook --generate-config  \n\u6587\u4ef6\u4f4d\u7f6e  ~/.jupyter/jupyter_notebook_config.py", 
+            "location": "/xdata/notebook/#_1",
+            "text": "1 jupyter notebook --generate-config  \n\u6587\u4ef6\u4f4d\u7f6e  ~/.jupyter/jupyter_notebook_config.py",
             "title": "\u521b\u5efa\u914d\u7f6e\u6587\u4ef6"
-        }, 
+        },
         {
-            "location": "/xdata/notebook/#_2", 
-            "text": "1\n2\n3\n4\n5\n6 ipython\nIn  [ 1 ] : from notebook.auth import passwd\nIn  [ 2 ] : passwd () \nEnter password:\nVerify password:\nOut [ 2 ] :  sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed", 
+            "location": "/xdata/notebook/#_2",
+            "text": "1\n2\n3\n4\n5\n6 ipython\nIn  [ 1 ] : from notebook.auth import passwd\nIn  [ 2 ] : passwd () \nEnter password:\nVerify password:\nOut [ 2 ] :  'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'",
             "title": "\u8bbe\u7f6e\u5bc6\u7801"
-        }, 
+        },
         {
-            "location": "/xdata/notebook/#_3", 
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11 # Set options for certfile, ip, password, and toggle off  # browser auto-opening \nc.NotebookApp.certfile  =  u /absolute/path/to/your/certificate/mycert.pem \nc.NotebookApp.keyfile  =  u /absolute/path/to/your/certificate/mykey.key  # Set ip to  *  to bind on all interfaces (ips) for the public server \nc.NotebookApp.ip  =   * \nc.NotebookApp.password  =  u sha1:bcd259ccf... your hashed password here \nc.NotebookApp.open_browser  =  False # It is a good idea to set a known, fixed port for server access \nc.NotebookApp.port  =   9999    \u8bbe\u7f6e\u5de5\u4f5c\u76ee\u5f55 \n\u5728home\u521b\u5efa\u76ee\u5f55ipython\uff1a ~/ipython\uff0c\u914d\u7f6e\u65f6\u53ea\u5199\u76ee\u5f55\u540d\uff0c\u4e0d\u9700\u8981\u52a0 /  1 c.ContentManager.root_dir =  ipython  # ipython\u76ee\u5f55\u5728\uff5e/ipython,", 
+            "location": "/xdata/notebook/#_3",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12 # Set options for certfile, ip, password, and toggle off  # browser auto-opening \nc.NotebookApp.certfile  =  u '/absolute/path/to/your/certificate/mycert.pem' \nc.NotebookApp.keyfile  =  u '/absolute/path/to/your/certificate/mykey.key'  # Set ip to '*' to bind on all interfaces (ips) for the public server \nc.NotebookApp.ip  =   '*' \nc.NotebookApp.password  =  u 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed' \nc.NotebookApp.open_browser  =  False # It is a good idea to set a known, fixed port for server access \nc.NotebookApp.port  =   8001 \nc.ContentManager.root_dir  =   'ipython'   # ipython\u76ee\u5f55\u5728\uff5e/ipython,     \u8bbe\u7f6e\u5de5\u4f5c\u76ee\u5f55 \n\u5728home\u521b\u5efa\u76ee\u5f55ipython\uff1a ~/ipython\uff0c\u914d\u7f6e\u65f6\u53ea\u5199\u76ee\u5f55\u540d\uff0c\u4e0d\u9700\u8981\u52a0 /  1 c.ContentManager.root_dir = 'ipython' # ipython\u76ee\u5f55\u5728\uff5e/ipython,",
             "title": "\u7b80\u5355\u7684\u914d\u7f6e\u5b9e\u4f8b"
-        }, 
+        },
         {
-            "location": "/xdata/notebook/#notebook", 
-            "text": "1 jupyter notebook  \nnotebook server\u5730\u5740\uff1a http://localhost:9999/tree", 
+            "location": "/xdata/notebook/#notebook",
+            "text": "1 jupyter notebook  \nnotebook server\u5730\u5740\uff1a http://localhost:9999/tree",
             "title": "\u542f\u52a8notebook"
-        }, 
+        },
         {
-            "location": "/xdata/notebook/#resource", 
-            "text": "https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server", 
+            "location": "/xdata/notebook/#resource",
+            "text": "https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server",
             "title": "resource"
-        }, 
+        },
         {
-            "location": "/xdata/pydata/", 
-            "text": "Python Data Mining\n\n\nbook-Learning DM with python\n\n\nch5 Extracting Features with Transformers - \u7279\u5f81\u63d0\u53d6\uff0c\u53d8\u5f62\u5668", 
+            "location": "/xdata/pydata/",
+            "text": "Python Data Mining\n\n\nbook-Learning DM with python\n\n\nch5 Extracting Features with Transformers - \u7279\u5f81\u63d0\u53d6\uff0c\u53d8\u5f62\u5668",
             "title": "Python Data Mining"
-        }, 
+        },
         {
-            "location": "/xdata/pydata/#python-data-mining", 
-            "text": "", 
+            "location": "/xdata/pydata/#python-data-mining",
+            "text": "",
             "title": "Python Data Mining"
-        }, 
+        },
         {
-            "location": "/xdata/pydata/#book-learning-dm-with-python", 
-            "text": "", 
+            "location": "/xdata/pydata/#book-learning-dm-with-python",
+            "text": "",
             "title": "book-Learning DM with python"
-        }, 
+        },
         {
-            "location": "/xdata/pydata/#ch5-extracting-features-with-transformers-", 
-            "text": "", 
+            "location": "/xdata/pydata/#ch5-extracting-features-with-transformers-",
+            "text": "",
             "title": "ch5 Extracting Features with Transformers - \u7279\u5f81\u63d0\u53d6\uff0c\u53d8\u5f62\u5668"
         }
     ]

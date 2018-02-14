@@ -1,0 +1,1028 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.3">
+    
+    
+      
+        <title>Caffe - xCoding</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#caffe" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="xCoding" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                xCoding
+              </span>
+              <span class="md-header-nav__topic">
+                Caffe
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    xCoding
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome to xCoding Blog" class="md-nav__link">
+      Welcome to xCoding Blog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Inbox
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Inbox
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
+      Temp
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/cmd/" title="CMD Lines" class="md-nav__link">
+      CMD Lines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/tmux/" title="Tmux" class="md-nav__link">
+      Tmux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/vim/" title="Vim Tips & Config." class="md-nav__link">
+      Vim Tips & Config.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Xdata
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Xdata
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ai/" title="Deep Leaning Resource" class="md-nav__link">
+      Deep Leaning Resource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../caffe-wiki/" title="Caffe Tutorial" class="md-nav__link">
+      Caffe Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Caffe
+      </label>
+    
+    <a href="./" title="Caffe" class="md-nav__link md-nav__link--active">
+      Caffe
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-installation-on-ubuntu-16" title="Caffe installation on ubuntu 16" class="md-nav__link">
+    Caffe installation on ubuntu 16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-interface" title="Python interface" class="md-nav__link">
+    Python interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-vis" title="caffe vis" class="md-nav__link">
+    caffe vis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mnist" title="MNIST训练" class="md-nav__link">
+    MNIST训练
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-referrence" title="Caffe referrence" class="md-nav__link">
+    Caffe referrence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-caffe-config" title="My Caffe config" class="md-nav__link">
+    My Caffe config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-tutorial" title="python tutorial" class="md-nav__link">
+    python tutorial
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-demo" title="web-demo" class="md-nav__link">
+    web-demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lenet" title="Lenet" class="md-nav__link">
+    Lenet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lmdb-read" title="LMDB read" class="md-nav__link">
+    LMDB read
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alexs-cifar-10-tutorial-caffe-style" title="Alex's CIFAR-10 tutorial, Caffe style" class="md-nav__link">
+    Alex's CIFAR-10 tutorial, Caffe style
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-data-layer" title="caffe data layer" class="md-nav__link">
+    caffe data layer
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../caffe2/" title="Caffe2" class="md-nav__link">
+      Caffe2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ml-action/" title="Ml action" class="md-nav__link">
+      Ml action
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../notebook/" title="Notebook" class="md-nav__link">
+      Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pydata/" title="Pydata" class="md-nav__link">
+      Pydata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-installation-on-ubuntu-16" title="Caffe installation on ubuntu 16" class="md-nav__link">
+    Caffe installation on ubuntu 16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-interface" title="Python interface" class="md-nav__link">
+    Python interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-vis" title="caffe vis" class="md-nav__link">
+    caffe vis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mnist" title="MNIST训练" class="md-nav__link">
+    MNIST训练
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-referrence" title="Caffe referrence" class="md-nav__link">
+    Caffe referrence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-caffe-config" title="My Caffe config" class="md-nav__link">
+    My Caffe config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-tutorial" title="python tutorial" class="md-nav__link">
+    python tutorial
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-demo" title="web-demo" class="md-nav__link">
+    web-demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lenet" title="Lenet" class="md-nav__link">
+    Lenet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lmdb-read" title="LMDB read" class="md-nav__link">
+    LMDB read
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alexs-cifar-10-tutorial-caffe-style" title="Alex's CIFAR-10 tutorial, Caffe style" class="md-nav__link">
+    Alex's CIFAR-10 tutorial, Caffe style
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caffe-data-layer" title="caffe data layer" class="md-nav__link">
+    caffe data layer
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="caffe">Caffe</h1>
+<h3 id="caffe-installation-on-ubuntu-16">Caffe installation on ubuntu 16</h3>
+<blockquote>
+<p>ref: <a href="http://caffe.berkeleyvision.org/install_apt.html">http://caffe.berkeleyvision.org/install_apt.html</a></p>
+</blockquote>
+<p>通过下面的命令安装protobuf，leveldb，snappy，opencv，hdf5，boost依赖库，其中最需要注意的是hdf5。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+
+sudo apt-get install --no-install-recommends libboost-all-dev
+</pre></div>
+</td></tr></table>
+接着安装BLAS库,gflags，glog和lmdb，</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install libatlas-base-dev
+
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+</pre></div>
+</td></tr></table>
+
+<p>CPU_ONLY := 1的注释
+最终Makefile.config文件对应部分修改如下，</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">INCLUDE_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>PYTHON_INCLUDE<span class="k">)</span> /usr/local/include /usr/include/hdf5/serial/
+<span class="nv">LIBRARY_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>PYTHON_LIB<span class="k">)</span> /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
+</pre></div>
+</td></tr></table>
+
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp Makefile.config.example Makefile.config
+make all
+make <span class="nb">test</span>
+make runtest
+</pre></div>
+</td></tr></table>
+<em> errors </em>
+<code>python/caffe/_caffe.cpp:10:31: fatal error: numpy/arrayobject.h: no such file or directory</code>:</p>
+<p>must use <code>apt-get install python-numpy</code>, even you have installed by <code>pip</code></p>
+<p><em>/include/caffe/util/mkl_alternate.hpp:14:10: fatal error: 'cblas.h' file not found #include <cblas.h></em></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Homebrew puts openblas in a directory that is not on the standard search path
+BLAS_INCLUDE := $(shell brew --prefix openblas)/include
+BLAS_LIB := $(shell brew --prefix openblas)/lib
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>log/logging.h:943:30: note: expanded from macro 'LOG_EVERY_N'
+ INVALID_REQUESTED_LOG_SEVERITY);           \ 
+  ^
+1 warning generated.*</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>you can remove the &#39;-pthread&#39; flag from your CXXFLAGS and LINKFLAGS in your Makefile.
+
+line no=414, 418
+</pre></div>
+</td></tr></table>
+
+<h3 id="python-interface">Python interface</h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> req in <span class="k">$(</span>cat requirements.txt<span class="k">)</span><span class="p">;</span> <span class="k">do</span> pip install <span class="nv">$req</span><span class="p">;</span> <span class="k">done</span>
+
+make pycaffe
+
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>/home/farland/dev/deep/caffe/python:<span class="nv">$PYTHONPATH</span>
+</pre></div>
+</td></tr></table>
+export PYTHONPATH/mnt/sdb/doclib/caffe/python:$PYTHONPATH</p>
+<ul>
+<li>error: 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>_caffe.so: undefined symbol: _ZN5boost6python6detail11init_moduleER11PyModuleDefPFvvE
+</pre></div>
+</td></tr></table></li>
+</ul>
+<h3 id="caffe-vis">caffe vis</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install dask,toolz
+</pre></div>
+</td></tr></table>
+
+<h3 id="mnist">MNIST训练</h3>
+<p>之前将Caffe的环境搭好了，现在用MNIST这个数据集进行测试，继续在$CAFFE_ROOT下进行操作。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sh data/minist/get_mnist.sh
+sh examples/mnist/create_mnist.sh
+</pre></div>
+</td></tr></table>
+./data/mnist/get_mnist.sh
+./examples/mnist/create_mnist.sh</p>
+<p>经过上述操作./examples/mnist/路径下会有mnist_test_lmdb和mnist_train_lmdb两个文件夹，分别是测试和训练数据。</p>
+<p>在最终训练之前需要修改./examples/mnist/lenet_solver.prototxt最后一句话为，</p>
+<p>solver_mode: CPU</p>
+<p>这样保证整个训练过程在CPU上进行，最后执行训练命令，</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd $CAFFE_ROOT
+./examples/mnist/train_lenet.sh
+</pre></div>
+</td></tr></table>
+
+<h3 id="caffe-referrence">Caffe referrence</h3>
+<blockquote>
+<p><a href="http://adilmoujahid.com/posts/2016/06/introduction-deep-learning-python-caffe/">A Practical Introduction to Deep Learning with Caffe and Python</a></p>
+<p><a href="http://wentaoma.com/2016/08/08/caffe-cifar10-model-visualization-with-python/">使用Caffe的Python接口进行Cifar10可视化</a></p>
+<p><a href="http://www.voidcn.com/article/p-sjnronct-xe.html">官方翻译</a></p>
+</blockquote>
+<h3 id="my-caffe-config">My Caffe config</h3>
+<ul>
+<li>hna cloud : python3 and miniconda3
+  <mark>give up!!</mark> due to py3 compative
+  <em>important</em> need to revise the python PATH</li>
+<li>virtual ubuntu: python2
+  use clean python2.7 environments</li>
+</ul>
+<h3 id="python-tutorial">python tutorial</h3>
+<h4 id="web-demo">web-demo</h4>
+<p>under python3, we need fix some modules:</p>
+<p><code>cPickle to pickle</code></p>
+<p>cStringIO to <code>from io import stringio</code></p>
+<h4 id="lenet">Lenet</h4>
+<ul>
+<li>from examples: <mark>01-learning-lenet.ipynb</mark></li>
+<li>model</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">P</span><span class="o">.</span><span class="n">Data</span><span class="o">.</span><span class="n">LMDB</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">lmdb</span><span class="p">,</span>
+                             <span class="n">transform_param</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">),</span> <span class="n">ntop</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">n</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">Convolution</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">num_output</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">weight_filler</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;xavier&#39;</span><span class="p">))</span>
+    <span class="n">n</span><span class="o">.</span><span class="n">pool1</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">Pooling</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">conv1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="n">P</span><span class="o">.</span><span class="n">Pooling</span><span class="o">.</span><span class="n">MAX</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">.</span><span class="n">conv2</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">Convolution</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">pool1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">num_output</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">weight_filler</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;xavier&#39;</span><span class="p">))</span>
+    <span class="n">n</span><span class="o">.</span><span class="n">pool2</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">Pooling</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">conv2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="n">P</span><span class="o">.</span><span class="n">Pooling</span><span class="o">.</span><span class="n">MAX</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span>   <span class="n">L</span><span class="o">.</span><span class="n">InnerProduct</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">pool2</span><span class="p">,</span> <span class="n">num_output</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">weight_filler</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;xavier&#39;</span><span class="p">))</span>
+    <span class="n">n</span><span class="o">.</span><span class="n">relu1</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">fc1</span><span class="p">,</span> <span class="n">in_place</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">InnerProduct</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">relu1</span><span class="p">,</span> <span class="n">num_output</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">weight_filler</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;xavier&#39;</span><span class="p">))</span>
+    <span class="n">n</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span>  <span class="n">L</span><span class="o">.</span><span class="n">SoftmaxWithLoss</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">label</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>data: 255x255;</li>
+<li>conv1 filter:20,5x5;</li>
+<li>pool1:2x2, stride=2;</li>
+<li>conv2 filter:50, 5x5;</li>
+<li>pool2:2x2, stride=2;</li>
+<li>fc1: 500;</li>
+<li>score: 10;</li>
+<li>loss: Softmax;</li>
+</ul>
+<p><code>mnist/lenet_auto_train.prototxt</code> : defining the architecture and pointing to the train/test data.
+<code>mnist/lenet_auto_test.prototxt</code> : defining the learning parameters.</p>
+<p><mark>Q:SGD (with momentum)???</mark></p>
+<p><mark>Q:How to view lmdb file???</mark></p>
+<ul>
+<li>output:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[(</span><span class="s1">&#39;data&#39;</span>, <span class="o">(</span><span class="m">64</span>, <span class="m">1</span>, <span class="m">28</span>, <span class="m">28</span><span class="o">))</span>,  <span class="c1"># 1x28x28</span>
+ <span class="o">(</span><span class="s1">&#39;label&#39;</span>, <span class="o">(</span><span class="m">64</span>,<span class="o">))</span>,
+ <span class="o">(</span><span class="s1">&#39;conv1&#39;</span>, <span class="o">(</span><span class="m">64</span>, <span class="m">20</span>, <span class="m">24</span>, <span class="m">24</span><span class="o">))</span>, <span class="c1">#20, filter=1x5x5, conv1=28-5+1=24</span>
+ <span class="o">(</span><span class="s1">&#39;pool1&#39;</span>, <span class="o">(</span><span class="m">64</span>, <span class="m">20</span>, <span class="m">12</span>, <span class="m">12</span><span class="o">))</span>, <span class="c1">#pool filter=2x2, pool_layer=24/2</span>
+ <span class="o">(</span><span class="s1">&#39;conv2&#39;</span>, <span class="o">(</span><span class="m">64</span>, <span class="m">50</span>, <span class="m">8</span>, <span class="m">8</span><span class="o">))</span>, <span class="c1"># 12-5+1=8</span>
+ <span class="o">(</span><span class="s1">&#39;pool2&#39;</span>, <span class="o">(</span><span class="m">64</span>, <span class="m">50</span>, <span class="m">4</span>, <span class="m">4</span><span class="o">))</span>, <span class="c1"># 2x2, 8/2=4</span>
+ <span class="o">(</span><span class="s1">&#39;fc1&#39;</span>, <span class="o">(</span><span class="m">64</span>, <span class="m">500</span><span class="o">))</span>,
+ <span class="o">(</span><span class="s1">&#39;score&#39;</span>, <span class="o">(</span><span class="m">64</span>, <span class="m">10</span><span class="o">))</span>,
+ <span class="o">(</span><span class="s1">&#39;loss&#39;</span>, <span class="o">())]</span>
+</pre></div>
+</td></tr></table></li>
+</ul>
+<h3 id="lmdb-read">LMDB read</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">mport</span> <span class="n">caffe</span>
+<span class="kn">import</span> <span class="nn">lmdb</span>
+
+<span class="n">lmdb_env</span> <span class="o">=</span> <span class="n">lmdb</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;directory_containing_mdb&#39;</span><span class="p">)</span>
+<span class="n">lmdb_txn</span> <span class="o">=</span> <span class="n">lmdb_env</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+<span class="n">lmdb_cursor</span> <span class="o">=</span> <span class="n">lmdb_txn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">datum</span> <span class="o">=</span> <span class="n">caffe</span><span class="o">.</span><span class="n">proto</span><span class="o">.</span><span class="n">caffe_pb2</span><span class="o">.</span><span class="n">Datum</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">lmdb_cursor</span><span class="p">:</span>
+    <span class="n">datum</span><span class="o">.</span><span class="n">ParseFromString</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">datum</span><span class="o">.</span><span class="n">label</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">caffe</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">datum_to_array</span><span class="p">(</span><span class="n">datum</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+            <span class="k">print</span> <span class="n">l</span><span class="p">,</span> <span class="n">d</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="alexs-cifar-10-tutorial-caffe-style">Alex's CIFAR-10 tutorial, Caffe style</h3>
+<p>CIFAR 一加拿大学院研究所</p>
+<ul>
+<li>
+<p>Model: cifar10_quick_train_test.prototxt</p>
+<ul>
+<li>data: 3x32x32</li>
+<li>conv1: 32x5x5,pad=2,stride=1, 32 filters, gaussian=0.0001</li>
+<li>pool1: 3x3, pad=2, Max</li>
+<li>relu1: </li>
+<li>conv2: 32x5x5,pad=2,stride=1, gaussian=0.01</li>
+<li>relu2</li>
+<li>pool2: 3x3, pad=2, AVG</li>
+<li>conv3: 64x5x5, pad=2,stride=1, gaussian=0.01</li>
+<li>relu3</li>
+<li>pool3: 3x3, pad=2, AVG</li>
+<li>ip1: num=64</li>
+<li>ip2: num=10</li>
+<li>acc:</li>
+<li>loss:</li>
+</ul>
+</li>
+<li>
+<p>c++ version:</p>
+<ol>
+<li>bin format to leveldb format.</li>
+<li>compute mean of images.</li>
+<li>define the model: <code>cifar10_quick_train_test.prototxt</code></li>
+<li>run test</li>
+</ol>
+</li>
+</ul>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>I0208 <span class="m">00</span>:59:38.055001 <span class="m">19686</span> solver.cpp:457<span class="o">]</span> Snapshotting to HDF5 file examples/cifar10/cifar10_quick_iter_2500.caffemodel.h5
+I0208 <span class="m">00</span>:59:38.059362 <span class="m">19686</span> sgd_solver.cpp:283<span class="o">]</span> Snapshotting solver state to HDF5 file examples/cifar10/cifar10_quick_iter_2500.solverstate.h5
+I0208 <span class="m">00</span>:59:38.383376 <span class="m">19686</span> solver.cpp:310<span class="o">]</span> Iteration <span class="m">2500</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.70069
+I0208 <span class="m">00</span>:59:38.383699 <span class="m">19686</span> solver.cpp:330<span class="o">]</span> Iteration <span class="m">2500</span>, Testing net <span class="o">(</span><span class="c1">#0)</span>
+I0208 <span class="m">01</span>:00:14.647847 <span class="m">19689</span> data_layer.cpp:73<span class="o">]</span> Restarting data prefetching from start.
+I0208 <span class="m">01</span>:00:15.912474 <span class="m">19686</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#0: accuracy = 0.7294</span>
+I0208 <span class="m">01</span>:00:15.912914 <span class="m">19686</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#1: loss = 0.806155 (* 1 = 0.806155 loss)</span>
+I0208 <span class="m">01</span>:00:15.913118 <span class="m">19686</span> solver.cpp:315<span class="o">]</span> Optimization Done.
+</pre></div>
+</td></tr></table>
+* python version:</p>
+<ul>
+<li>Resuming</li>
+</ul>
+<blockquote>
+<p>ref <a href="https://github.com/BVLC/caffe/wiki/Training-and-Resuming">https://github.com/BVLC/caffe/wiki/Training-and-Resuming</a></p>
+</blockquote>
+<p>When a network has stopped training, either due to manual halting or by reaching the maximum iterations, we may continue training our network by telling caffe to train from where we left off. This is as simple as supplying the snapshot flag with the current .solverstate file. For example:</p>
+<p>caffe train -solver solver.prototxt -snapshot train_190000.solverstate</p>
+<p>In this case we will continue training from iteration 190000.</p>
+<ul>
+<li>visualization network</li>
+</ul>
+<p>netscope, http://~~45.92/caffe/</p>
+<ul>
+<li>visualization features and layers</li>
+</ul>
+<p><a href="http://blog.csdn.net/jiandanjinxin/article/details/50410290">http://blog.csdn.net/jiandanjinxin/article/details/50410290</a></p>
+<h3 id="caffe-data-layer">caffe data layer</h3>
+<blockquote>
+<p>ref: <a href="http://caffe.berkeleyvision.org/tutorial/layers.html">http://caffe.berkeleyvision.org/tutorial/layers.html</a></p>
+</blockquote>
+<ul>
+<li>Image Data - read raw images.</li>
+<li>Database - read data from LEVELDB or LMDB.</li>
+<li>HDF5 Input - read HDF5 data, allows data of arbitrary dimensions.</li>
+<li>HDF5 Output - write data as HDF5.</li>
+<li>Input - typically used for networks that are being deployed.</li>
+<li>Window Data - read window data file.</li>
+<li>Memory Data - read data directly from memory.</li>
+<li>Dummy Data - for static data and debugging.</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../caffe-wiki/" title="Caffe Tutorial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Caffe Tutorial
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../caffe2/" title="Caffe2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Caffe2
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.f041762f.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="../../js/umlconvert.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=default"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
