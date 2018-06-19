@@ -179,11 +179,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Inbox
+      Dev
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Inbox
+        Dev
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -194,8 +194,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
-      Temp
+    <a href="../../dev/django/" title="Django" class="md-nav__link">
+      Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/exchange/" title="MS Exchange API" class="md-nav__link">
+      MS Exchange API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/viz/" title="data visualization" class="md-nav__link">
+      data visualization
     </a>
   </li>
 
@@ -215,10 +239,70 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Linux
+      Inbox
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        Inbox
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/Unit02/" title="Unit02" class="md-nav__link">
+      Unit02
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
+      Temp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/u01/" title="U01" class="md-nav__link">
+      U01
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -286,13 +370,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Xdata
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Xdata
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -435,6 +519,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#naive-bayes" title="Naive Bayes朴素贝叶斯算法" class="md-nav__link">
+    Naive Bayes朴素贝叶斯算法
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -555,6 +646,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#naive-bayes" title="Naive Bayes朴素贝叶斯算法" class="md-nav__link">
+    Naive Bayes朴素贝叶斯算法
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -602,8 +700,19 @@
 <li>知识表现 knowledge representation : 例如可能是一套规则或概率分布</li>
 </ul>
 <h2 id="ml">ML任务</h2>
+<p><strong>explanation</strong></p>
+<blockquote>
+<p>ref <a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.01-what-is-machine-learning.html">https://jakevdp.github.io/PythonDataScienceHandbook/05.01-what-is-machine-learning.html</a></p>
+</blockquote>
 <ul>
-<li>Supervised learning tasks<ul>
+<li>Categories of Machine Learning</li>
+<li><strong>Supervised learning tasks</strong> 分类回归， 用于带标签数据</li>
+<li>
+<p><strong>Unsupervised learning tasks</strong> 无标签数据，让数据自己说话, 聚类、降维</p>
+</li>
+<li>
+<p>Supervised learning tasks</p>
+<ul>
 <li>k-Nearest Neighbors k-近邻算法</li>
 <li>Linear 线性回归</li>
 <li>Naive Bayes 朴素贝叶斯算法</li>
@@ -682,6 +791,47 @@ op6-&gt;e</code></pre>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>defaultdict(&lt;type &#39;int&#39;&gt;, {&#39;New York Knicks&#39;: True, &#39;Los Angeles Lakers&#39;: False, &#39;Chicago Bulls&#39;: True, &#39;Charlotte Bobcats&#39;: True, &#39;San Antonio Spurs&#39;: False, &#39;Philadelphia 76ers&#39;: False, &#39;Detroit Pistons&#39;: True, &#39;Boston Celtics&#39;: False, &#39;Miami Heat&#39;: False, &#39;Orlando Magic&#39;: True, &#39;Portland Trail Blazers&#39;: False, &#39;Golden State Warriors&#39;: True, &#39;Memphis Grizzlies&#39;: True, &#39;Washington Wizards&#39;: False, &#39;Houston Rockets&#39;: True, &#39;Dallas Mavericks&#39;: True, &#39;Sacramento Kings&#39;: False, &#39;Los Angeles Clippers&#39;: False, &#39;Oklahoma City Thunder&#39;: True, &#39;Milwaukee Bucks&#39;: False, &#39;Toronto Raptors&#39;: True, &#39;Utah Jazz&#39;: False, &#39;Phoenix Suns&#39;: True, &#39;Minnesota Timberwolves&#39;: False, &#39;New Orleans Pelicans&#39;: False, &#39;Cleveland Cavaliers&#39;: False, &#39;Atlanta Hawks&#39;: True, &#39;Brooklyn Nets&#39;: False, &#39;Indiana Pacers&#39;: False, &#39;Denver Nuggets&#39;: False})
 </pre></div>
 </td></tr></table>
+
+<h3 id="naive-bayes">Naive Bayes朴素贝叶斯算法</h3>
+<ul>
+<li><a href="https://www.jianshu.com/p/748ea7e71dc8">Naive Bayes朴素贝叶斯算法</a></li>
+</ul>
+<p>
+<script type="math/tex; mode=display"> P(A|B)=P(B|A)x P(A)/P(B) </script>
+</p>
+<p>边缘概率（又称先验概率）：某个事件发生的概率。边缘概率是这样得到的：在联合概率中，把最终结果中那些不需要的事件通过合并成它们的全概率，而消去它们（对离散随机变量用求和得全概率，对连续随机变量用积分得全概率），这称为边缘化（marginalization），比如A的边缘概率表示为P(A)，B的边缘概率表示为P(B)。</p>
+<p>联合概率表示两个事件共同发生的概率。A与B的联合概率表示为P(A∩B)或者P(A,B)。</p>
+<p>条件概率（又称后验概率）：事件A在另外一个事件B已经发生条件下的发生概率。条件概率表示为P(A|B)，读作“在B条件下A的概率”,。</p>
+<p>接着，考虑一个问题：P(A|B)是在B发生的情况下A发生的可能性。</p>
+<p>首先，事件B发生之前，我们对事件A的发生有一个基本的概率判断，称为A的先验概率，用P(A)表示；</p>
+<p>其次，事件B发生之后，我们对事件A的发生概率重新评估，称为A的后验概率，用P(A|B)表示；</p>
+<p>类似的，事件A发生之前，我们对事件B的发生有一个基本的概率判断，称为B的先验概率，用P(B)表示；</p>
+<p>同样，事件A发生之后，我们对事件B的发生概率重新评估，称为B的后验概率，用P(B|A)表示。</p>
+<p>作者：zhoulujun
+链接：<a href="https://www.jianshu.com/p/a1a2be7ccac4">https://www.jianshu.com/p/a1a2be7ccac4</a>
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<ul>
+<li>通俗解释</li>
+</ul>
+<p><img alt="img" src="https://pic4.zhimg.com/80/v2-72991fdcedd7697f24d49dc9423c4803_hd.jpg" /></p>
+<p>1）假设：X = 下雨，Z = 有乌云。通常来说，~X表示X的反面，这里就是 ~X = 不下雨。P(X/Z)是表示在Z条件下，X发生的概率，所以在这里：
+P(X/Z)是有乌云的时候，真的下雨了的概率；
+P(Z/X)是天上有乌云，是发生在下雨的条件下 的概率；
+P(Z/~X)天上有乌云，是发生在没下雨的条件下 的概率。
+那么，
+P(X/Z)是有乌云的时候，真的下雨了的概率=
+<img alt="img1" src="https://pic4.zhimg.com/80/v2-b82415af624f1fe2b48f654c4b9c3f10_hd.jpg" /></p>
+<p>上面，下面各乘以总天数，就比较好理解了。上面那个式子=</p>
+<p><img alt="img2" src="../img2_bayes.png" /></p>
+<p>也就是有乌云的时候，会下雨的比率。</p>
+<p><img alt="img3" src="https://pic4.zhimg.com/80/v2-a28bbd59ba4308a8b5a8990b89368051_hd.jpg" /></p>
+<ul>
+<li>实战</li>
+</ul>
+<blockquote>
+<p><a href="https://blog.csdn.net/on2way/article/details/47294805">https://blog.csdn.net/on2way/article/details/47294805</a></p>
+</blockquote>
                 
                   
                 

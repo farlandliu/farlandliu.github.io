@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,8 +12,42 @@
     
         
     <url>
+     <loc>/dev/django/</loc>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dev/exchange/</loc>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dev/viz/</loc>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/inbox/Unit02/</loc>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/inbox/temp/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/inbox/u01/</loc>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,25 +57,25 @@
         
     <url>
      <loc>/linux/cmd/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/linux/python/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/linux/tmux/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/linux/vim/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -51,43 +85,43 @@
         
     <url>
      <loc>/xdata/ai/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/xdata/caffe-wiki/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/xdata/caffe/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/xdata/caffe2/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/xdata/ml-action/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/xdata/notebook/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/xdata/pydata/</loc>
-     <lastmod>2018-02-14</lastmod>
+     <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

@@ -179,11 +179,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Inbox
+      Dev
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Inbox
+        Dev
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -194,8 +194,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
-      Temp
+    <a href="../../dev/django/" title="Django" class="md-nav__link">
+      Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/exchange/" title="MS Exchange API" class="md-nav__link">
+      MS Exchange API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/viz/" title="data visualization" class="md-nav__link">
+      data visualization
     </a>
   </li>
 
@@ -215,10 +239,70 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Linux
+      Inbox
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        Inbox
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/Unit02/" title="Unit02" class="md-nav__link">
+      Unit02
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
+      Temp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/u01/" title="U01" class="md-nav__link">
+      U01
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -286,13 +370,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Xdata
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Xdata
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -494,6 +578,45 @@
                 <h1 id="python-data-mining">Python Data Mining</h1>
 <h2 id="book-learning-dm-with-python">book-Learning DM with python</h2>
 <h3 id="ch5-extracting-features-with-transformers-">ch5 Extracting Features with Transformers - 特征提取，变形器</h3>
+<h1 id="python-data-science-handbook"><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a></h1>
+<hr />
+<h1 id="deep-learningian-goodfellow-and-yoshua-bengio-and-aaron-courville"><a href="http://www.deeplearningbook.org/">Deep Learning</a>:Ian Goodfellow and Yoshua Bengio and Aaron Courville</h1>
+<h2 id="ch5-ml-basic">ch5 ML basic</h2>
+<p><a href="http://www.deeplearningbook.org/contents/ml.html">http://www.deeplearningbook.org/contents/ml.html</a></p>
+<ul>
+<li>hyperparameters</li>
+<li>优化器：stochastic gradient descent</li>
+</ul>
+<p><strong>But what do we mean by learning? Mitchell (1997) provides a succinct deﬁnition:</strong></p>
+<p>“A computer program is said to learn from experienceE with respect to someclass of tasksT and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” 
+One can imagine a wide variety ofexperiences E, tasks T, and performance measures P, and we do not attempt in this book to formally deﬁne what may be used for each of these entities. Instead,in the following sections, we provide intuitive descriptions and examples of the diﬀerent kinds of tasks, performance measures, and experiences that can be used to construct machine learning algorithms.</p>
+<hr />
+<ul>
+<li><strong>通用的机器学习任务 Task</strong><ul>
+<li>分类 classification: 图片分类</li>
+<li>参数缺失的分类 classification with missing input: 医疗诊断，原因是医学实验昂贵且需要手术</li>
+<li>回归 Regression</li>
+<li>标注 Transcription， 图片识别，语音识别</li>
+<li>Machine translation 机器翻译</li>
+<li>Structured output 图片标注</li>
+<li>Anomaly detection 异常检测：信用卡盗用，购物习惯检测</li>
+<li>Synthesis and sampling 复制模仿：绘画再创作，语音模仿</li>
+<li>Imputation of missing values</li>
+<li>Density estimation</li>
+</ul>
+</li>
+<li><strong>The Performance Measure, P 性能评估</strong></li>
+<li><strong>The Experience, E 知识</strong></li>
+</ul>
+<hr />
+<h2 id="_1">贝叶斯理论</h2>
+<ul>
+<li><a href="https://www.jianshu.com/p/748ea7e71dc8">Naive Bayes朴素贝叶斯算法</a></li>
+</ul>
+<h2 id="practice">practice</h2>
+<ul>
+<li>广告过滤 <a href="https://www.cnblogs.com/marc01in/p/4775440.html">https://www.cnblogs.com/marc01in/p/4775440.html</a></li>
+</ul>
                 
                   
                 

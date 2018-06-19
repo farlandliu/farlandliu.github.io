@@ -179,11 +179,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Inbox
+      Dev
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Inbox
+        Dev
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -194,8 +194,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
-      Temp
+    <a href="../../dev/django/" title="Django" class="md-nav__link">
+      Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/exchange/" title="MS Exchange API" class="md-nav__link">
+      MS Exchange API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/viz/" title="data visualization" class="md-nav__link">
+      data visualization
     </a>
   </li>
 
@@ -215,10 +239,70 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Linux
+      Inbox
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        Inbox
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/Unit02/" title="Unit02" class="md-nav__link">
+      Unit02
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
+      Temp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/u01/" title="U01" class="md-nav__link">
+      U01
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -286,13 +370,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Xdata
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Xdata
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -440,6 +524,13 @@
         <li class="md-nav__item">
   <a href="#caffe-data-layer" title="caffe data layer" class="md-nav__link">
     caffe data layer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cat-vs-dog-practise" title="Cat vs Dog Practise" class="md-nav__link">
+    Cat vs Dog Practise
   </a>
   
 </li>
@@ -616,6 +707,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cat-vs-dog-practise" title="Cat vs Dog Practise" class="md-nav__link">
+    Cat vs Dog Practise
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -671,7 +769,18 @@ make runtest
 </pre></div>
 </td></tr></table>
 <em> errors </em>
-<code>python/caffe/_caffe.cpp:10:31: fatal error: numpy/arrayobject.h: no such file or directory</code>:</p>
+- <code>undefined reference to cv::imdecode()</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>LIBRARIES += glog gflags protobuf leveldb snappy \
+    lmdb boost_system hdf5_hl hdf5 m \
+    opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code>python/caffe/_caffe.cpp:10:31: fatal error: numpy/arrayobject.h: no such file or directory</code>:</li>
+</ul>
 <p>must use <code>apt-get install python-numpy</code>, even you have installed by <code>pip</code></p>
 <p><em>/include/caffe/util/mkl_alternate.hpp:14:10: fatal error: 'cblas.h' file not found #include <cblas.h></em></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -935,6 +1044,264 @@ I0208 <span class="m">01</span>:00:15.913118 <span class="m">19686</span> solver
 <li>Memory Data - read data directly from memory.</li>
 <li>Dummy Data - for static data and debugging.</li>
 </ul>
+<h3 id="cat-vs-dog-practise">Cat vs Dog Practise</h3>
+<ul>
+<li>ref <a href="http://adilmoujahid.com/posts/2016/06/introduction-deep-learning-python-caffe/">A Practical Introduction to Deep Learning with Caffe and Python</a></li>
+<li><a href="https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html">keras example</a></li>
+<li>
+<p>my gitrepo caffedemo/catdog</p>
+<ul>
+<li>prepare lmdb data</li>
+<li>define network: Lenet</li>
+<li>define nework: Alexnet or Caffenet</li>
+</ul>
+</li>
+<li>
+<p>Alexnet test</p>
+</li>
+</ul>
+<p><strong>200X200 images</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data    (3, 200, 200)
+conv1   (96, 48, 48) 
+norm1   (96, 48, 48) 
+pool1   (96, 24, 24) 
+conv2   (256, 24, 24) 
+norm2   (256, 24, 24) 
+pool2   (256, 12, 12) 
+conv3   (384, 12, 12) 
+conv4   (384, 12, 12) 
+conv5   (256, 12, 12) 
+pool5   (256, 6, 6)
+fc6     (4096,)
+fc7     (4096,)
+fc8     (8,)
+</pre></div>
+</td></tr></table>
+<strong>150x150 images</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data    (3, 150, 150)
+conv1   (96, 35, 35)
+pool1   (96, 17, 17)
+conv2   (256, 17, 17)
+norm2   (256, 17, 17)
+pool2   (256, 8, 8)
+conv3   (384, 8, 8)
+conv4   (384, 8, 8)
+conv5   (256, 8, 8)
+pool5   (256, 4, 4)
+fc6     (4096,)
+fc7     (4096,)
+fc8     (8,)
+</pre></div>
+</td></tr></table></p>
+<p><strong>Log with lmdb made by python3</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>I0302 <span class="m">13</span>:55:48.626802  <span class="m">2973</span> net.cpp:198<span class="o">]</span> conv1 needs backward computation.
+I0302 <span class="m">13</span>:55:48.626809  <span class="m">2973</span> net.cpp:200<span class="o">]</span> label_val-data_1_split does not need backward computation.
+I0302 <span class="m">13</span>:55:48.626817  <span class="m">2973</span> net.cpp:200<span class="o">]</span> val-data does not need backward computation.
+I0302 <span class="m">13</span>:55:48.626823  <span class="m">2973</span> net.cpp:242<span class="o">]</span> This network produces output accuracy
+I0302 <span class="m">13</span>:55:48.626829  <span class="m">2973</span> net.cpp:242<span class="o">]</span> This network produces output loss
+I0302 <span class="m">13</span>:55:48.626850  <span class="m">2973</span> net.cpp:255<span class="o">]</span> Network initialization <span class="k">done</span>.
+I0302 <span class="m">13</span>:55:48.626982  <span class="m">2973</span> solver.cpp:56<span class="o">]</span> Solver scaffolding <span class="k">done</span>.
+I0302 <span class="m">13</span>:55:48.627032  <span class="m">2973</span> caffe.cpp:248<span class="o">]</span> Starting Optimization
+I0302 <span class="m">13</span>:55:48.627041  <span class="m">2973</span> solver.cpp:272<span class="o">]</span> Solving AlexNet
+I0302 <span class="m">13</span>:55:48.627048  <span class="m">2973</span> solver.cpp:273<span class="o">]</span> Learning Rate Policy: step
+I0302 <span class="m">13</span>:55:48.714823  <span class="m">2973</span> solver.cpp:330<span class="o">]</span> Iteration <span class="m">0</span>, Testing net <span class="o">(</span><span class="c1">#0)</span>
+
+<span class="c1"># long time to fetch the data, seems bad lmdb; need to re-make the lmdb using caffe tools</span>
+I0302 <span class="m">13</span>:55:48.714872  <span class="m">2973</span> net.cpp:676<span class="o">]</span> Ignoring <span class="nb">source</span> layer train-data
+I0302 <span class="m">14</span>:06:49.240409  <span class="m">2975</span> data_layer.cpp:73<span class="o">]</span> Restarting data prefetching from start.
+</pre></div>
+</td></tr></table>
+<strong>adjust the batch size</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>I0302 <span class="m">14</span>:06:49.240409  <span class="m">2975</span> data_layer.cpp:73<span class="o">]</span> Restarting data prefetching from start.
+I0302 <span class="m">14</span>:13:48.347620  <span class="m">2973</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#0: accuracy = 0.5</span>
+I0302 <span class="m">14</span>:13:48.347870  <span class="m">2973</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#1: loss = 0.69308 (* 1 = 0.69308 loss)</span>
+I0302 <span class="m">14</span>:15:26.408660  <span class="m">2973</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">0</span> <span class="o">(</span><span class="m">0</span> iter/s, <span class="m">1177</span>.78s/19 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.698183
+I0302 <span class="m">14</span>:15:26.408766  <span class="m">2973</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.698183 (* 1 = 0.698183 loss)</span>
+I0302 <span class="m">14</span>:15:26.408782  <span class="m">2973</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">0</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.01
+I0302 <span class="m">14</span>:46:25.656106  <span class="m">2973</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">19</span> <span class="o">(</span><span class="m">0</span>.0102192 iter/s, <span class="m">1859</span>.25s/19 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.782848
+I0302 <span class="m">14</span>:46:25.656365  <span class="m">2973</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.782848 (* 1 = 0.782848 loss)</span>
+I0302 <span class="m">14</span>:46:25.656399  <span class="m">2973</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">19</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.01
+I0302 <span class="m">15</span>:17:25.324733  <span class="m">2973</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">38</span> <span class="o">(</span><span class="m">0</span>.0102169 iter/s, <span class="m">1859</span>.67s/19 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.702112
+I0302 <span class="m">15</span>:17:25.325037  <span class="m">2973</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.702112 (* 1 = 0.702112 loss)</span>
+I0302 <span class="m">15</span>:17:25.325081  <span class="m">2973</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">38</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.01
+^C^CI0302 <span class="m">15</span>:46:47.763084  <span class="m">2973</span> solver.cpp:447<span class="o">]</span> Snapshotting to binary proto file snapshot_catdog_iter_57.caffemodel
+I0302 <span class="m">15</span>:46:49.490085  <span class="m">2973</span> sgd_solver.cpp:273<span class="o">]</span> Snapshotting solver state to binary proto file snapshot_catdog_iter_57.solverstate
+</pre></div>
+</td></tr></table>
+<strong>training log continued</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>I0304 <span class="m">23</span>:58:22.170994  <span class="m">5212</span> solver.cpp:330<span class="o">]</span> Iteration <span class="m">1600</span>, Testing net <span class="o">(</span><span class="c1">#0)</span>
+I0304 <span class="m">23</span>:58:22.171283  <span class="m">5212</span> net.cpp:676<span class="o">]</span> Ignoring <span class="nb">source</span> layer train-data
+I0305 <span class="m">00</span>:22:23.897614  <span class="m">5212</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#0: accuracy = 0.834</span>
+I0305 <span class="m">00</span>:22:23.897877  <span class="m">5212</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#1: loss = 0.369265 (* 1 = 0.369265 loss)</span>
+I0305 <span class="m">00</span>:24:02.809653  <span class="m">5212</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">1600</span> <span class="o">(</span><span class="m">0</span>.00751501 iter/s, <span class="m">6653</span>.35s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.509785
+I0305 <span class="m">00</span>:24:02.809762  <span class="m">5212</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.509785 (* 1 = 0.509785 loss)</span>
+I0305 <span class="m">00</span>:24:02.809777  <span class="m">5212</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">1600</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.001
+I0305 <span class="m">01</span>:50:24.552824  <span class="m">5212</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">1650</span> <span class="o">(</span><span class="m">0</span>.00964926 iter/s, <span class="m">5181</span>.74s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.276768
+I0305 <span class="m">01</span>:50:24.553104  <span class="m">5212</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.276768 (* 1 = 0.276768 loss)</span>
+I0305 <span class="m">01</span>:50:24.553138  <span class="m">5212</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">1650</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.001
+I0305 <span class="m">03</span>:17:22.565573  <span class="m">5212</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">1700</span> <span class="o">(</span><span class="m">0</span>.00958219 iter/s, <span class="m">5218</span>.01s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.328765
+I0305 <span class="m">03</span>:17:22.565898  <span class="m">5212</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.328765 (* 1 = 0.328765 loss)</span>
+I0305 <span class="m">03</span>:17:22.565933  <span class="m">5212</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">1700</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.001
+I0305 <span class="m">04</span>:44:18.327543  <span class="m">5212</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">1750</span> <span class="o">(</span><span class="m">0</span>.00958633 iter/s, <span class="m">5215</span>.76s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.36657
+I0305 <span class="m">04</span>:44:18.327798  <span class="m">5212</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.36657 (* 1 = 0.36657 loss)</span>
+I0305 <span class="m">04</span>:44:18.327831  <span class="m">5212</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">1750</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.001
+I0305 <span class="m">05</span>:58:36.756759  <span class="m">5213</span> data_layer.cpp:73<span class="o">]</span> Restarting data prefetching from start.
+I0305 <span class="m">06</span>:05:12.976563  <span class="m">5212</span> solver.cpp:330<span class="o">]</span> Iteration <span class="m">1800</span>, Testing net <span class="o">(</span><span class="c1">#0)</span>
+I0305 <span class="m">06</span>:05:12.976810  <span class="m">5212</span> net.cpp:676<span class="o">]</span> Ignoring <span class="nb">source</span> layer train-data
+I0305 <span class="m">06</span>:29:18.516247  <span class="m">5212</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#0: accuracy = 0.8315</span>
+I0305 <span class="m">06</span>:29:18.516490  <span class="m">5212</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#1: loss = 0.365121 (* 1 = 0.365121 loss)</span>
+I0305 <span class="m">06</span>:31:02.358755  <span class="m">5212</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">1800</span> <span class="o">(</span><span class="m">0</span>.00780758 iter/s, <span class="m">6404</span>.03s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.333411
+I0305 <span class="m">06</span>:31:02.358863  <span class="m">5212</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.333411 (* 1 = 0.333411 loss)</span>
+I0305 <span class="m">06</span>:31:02.358877  <span class="m">5212</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">1800</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.001
+I0305 <span class="m">07</span>:57:55.495415  <span class="m">5212</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">1850</span> <span class="o">(</span><span class="m">0</span>.00959116 iter/s, <span class="m">5213</span>.14s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.404511
+I0305 <span class="m">07</span>:57:55.495767  <span class="m">5212</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.404511 (* 1 = 0.404511 loss)</span>
+I0305 <span class="m">07</span>:57:55.495800  <span class="m">5212</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">1850</span>, <span class="nv">lr</span> <span class="o">=</span> <span class="m">0</span>.001
+</pre></div>
+</td></tr></table>
+<strong>final result</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>I0308 <span class="m">19</span>:53:22.088604  <span class="m">8980</span> data_layer.cpp:73<span class="o">]</span> Restarting data prefetching from start.
+I0308 <span class="m">20</span>:06:24.541040  <span class="m">8979</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">4700</span> <span class="o">(</span><span class="m">0</span>.0102182 iter/s, <span class="m">4893</span>.24s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.48688
+I0308 <span class="m">20</span>:06:24.541328  <span class="m">8979</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.48688 (* 1 = 0.48688 loss)</span>
+I0308 <span class="m">20</span>:06:24.541365  <span class="m">8979</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">4700</span>, <span class="nv">lr</span> <span class="o">=</span> 1e-06
+I0308 <span class="m">21</span>:28:04.610251  <span class="m">8979</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">4750</span> <span class="o">(</span><span class="m">0</span>.0102039 iter/s, <span class="m">4900</span>.07s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.233911
+I0308 <span class="m">21</span>:28:04.610510  <span class="m">8979</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.233911 (* 1 = 0.233911 loss)</span>
+I0308 <span class="m">21</span>:28:04.610553  <span class="m">8979</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">4750</span>, <span class="nv">lr</span> <span class="o">=</span> 1e-06
+I0308 <span class="m">22</span>:48:01.638105  <span class="m">8979</span> solver.cpp:330<span class="o">]</span> Iteration <span class="m">4800</span>, Testing net <span class="o">(</span><span class="c1">#0)</span>
+I0308 <span class="m">22</span>:48:01.638392  <span class="m">8979</span> net.cpp:676<span class="o">]</span> Ignoring <span class="nb">source</span> layer train-data
+I0308 <span class="m">23</span>:11:02.277693  <span class="m">8979</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#0: accuracy = 0.8595</span>
+I0308 <span class="m">23</span>:11:02.277943  <span class="m">8979</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#1: loss = 0.31265 (* 1 = 0.31265 loss)</span>
+I0308 <span class="m">23</span>:12:40.059612  <span class="m">8979</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">4800</span> <span class="o">(</span><span class="m">0</span>.00796756 iter/s, <span class="m">6275</span>.45s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.316846
+I0308 <span class="m">23</span>:12:40.059916  <span class="m">8979</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.316846 (* 1 = 0.316846 loss)</span>
+I0308 <span class="m">23</span>:12:40.059957  <span class="m">8979</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">4800</span>, <span class="nv">lr</span> <span class="o">=</span> 1e-06
+I0309 <span class="m">00</span>:34:13.728375  <span class="m">8979</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">4850</span> <span class="o">(</span><span class="m">0</span>.0102173 iter/s, <span class="m">4893</span>.67s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.322553
+I0309 <span class="m">00</span>:34:13.728811  <span class="m">8979</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.322554 (* 1 = 0.322554 loss)</span>
+I0309 <span class="m">00</span>:34:13.728844  <span class="m">8979</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">4850</span>, <span class="nv">lr</span> <span class="o">=</span> 1e-06
+I0309 <span class="m">01</span>:55:47.676964  <span class="m">8979</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">4900</span> <span class="o">(</span><span class="m">0</span>.0102167 iter/s, <span class="m">4893</span>.95s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.264964
+I0309 <span class="m">01</span>:55:47.677289  <span class="m">8979</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.264964 (* 1 = 0.264964 loss)</span>
+I0309 <span class="m">01</span>:55:47.677326  <span class="m">8979</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">4900</span>, <span class="nv">lr</span> <span class="o">=</span> 1e-06
+I0309 <span class="m">03</span>:17:21.340381  <span class="m">8979</span> solver.cpp:218<span class="o">]</span> Iteration <span class="m">4950</span> <span class="o">(</span><span class="m">0</span>.0102173 iter/s, <span class="m">4893</span>.66s/50 iters<span class="o">)</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.218652
+I0309 <span class="m">03</span>:17:21.340736  <span class="m">8979</span> solver.cpp:237<span class="o">]</span>     Train net output <span class="c1">#0: loss = 0.218652 (* 1 = 0.218652 loss)</span>
+I0309 <span class="m">03</span>:17:21.340771  <span class="m">8979</span> sgd_solver.cpp:105<span class="o">]</span> Iteration <span class="m">4950</span>, <span class="nv">lr</span> <span class="o">=</span> 1e-06
+I0309 <span class="m">04</span>:37:17.947527  <span class="m">8979</span> solver.cpp:447<span class="o">]</span> Snapshotting to binary proto file snapshot_catdog_iter_5000.caffemodel
+I0309 <span class="m">04</span>:37:19.677809  <span class="m">8979</span> sgd_solver.cpp:273<span class="o">]</span> Snapshotting solver state to binary proto file snapshot_catdog_iter_5000.solverstate
+I0309 <span class="m">04</span>:37:54.730581  <span class="m">8979</span> solver.cpp:310<span class="o">]</span> Iteration <span class="m">5000</span>, <span class="nv">loss</span> <span class="o">=</span> <span class="m">0</span>.325828
+I0309 <span class="m">04</span>:37:54.730845  <span class="m">8979</span> solver.cpp:330<span class="o">]</span> Iteration <span class="m">5000</span>, Testing net <span class="o">(</span><span class="c1">#0)</span>
+I0309 <span class="m">04</span>:37:54.730877  <span class="m">8979</span> net.cpp:676<span class="o">]</span> Ignoring <span class="nb">source</span> layer train-data
+I0309 <span class="m">05</span>:00:55.331269  <span class="m">8979</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#0: accuracy = 0.8605</span>
+I0309 <span class="m">05</span>:00:55.331594  <span class="m">8979</span> solver.cpp:397<span class="o">]</span>     Test net output <span class="c1">#1: loss = 0.314442 (* 1 = 0.314442 loss)</span>
+I0309 <span class="m">05</span>:00:55.331624  <span class="m">8979</span> solver.cpp:315<span class="o">]</span> Optimization Done.
+I0309 <span class="m">05</span>:00:55.331637  <span class="m">8979</span> caffe.cpp:259<span class="o">]</span> Optimization Done.
+</pre></div>
+</td></tr></table></p>
                 
                   
                 

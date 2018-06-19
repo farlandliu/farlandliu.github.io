@@ -179,11 +179,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Inbox
+      Dev
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Inbox
+        Dev
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -194,8 +194,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
-      Temp
+    <a href="../../dev/django/" title="Django" class="md-nav__link">
+      Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/exchange/" title="MS Exchange API" class="md-nav__link">
+      MS Exchange API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/viz/" title="data visualization" class="md-nav__link">
+      data visualization
     </a>
   </li>
 
@@ -215,10 +239,70 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Linux
+      Inbox
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        Inbox
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/Unit02/" title="Unit02" class="md-nav__link">
+      Unit02
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
+      Temp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/u01/" title="U01" class="md-nav__link">
+      U01
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -286,13 +370,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Xdata
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Xdata
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -419,6 +503,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#error" title="error" class="md-nav__link">
+    error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resource" title="resource" class="md-nav__link">
     resource
   </a>
@@ -495,6 +586,13 @@
         <li class="md-nav__item">
   <a href="#notebook" title="启动notebook" class="md-nav__link">
     启动notebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error" title="error" class="md-nav__link">
+    error
   </a>
   
 </li>
@@ -579,6 +677,13 @@ c.ContentManager.root_dir <span class="o">=</span> <span class="s1">&#39;ipython
 </pre></div>
 </td></tr></table>
 notebook server地址：<code>http://localhost:9999/tree</code></p>
+<h2 id="error">error</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#PermissionError: [Errno 13] Permission denied: &#39;/run/user/1001/jupyter/notebook_cookie_secret&#39;</span>
+sudo rm -rf /run/user/1001/jupyter
+</pre></div>
+</td></tr></table>
+
 <h2 id="resource">resource</h2>
 <ul>
 <li><a href="https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server">https://jupyter-notebook.readthedocs.io/en/latest/public_server.html#securing-a-notebook-server</a></li>

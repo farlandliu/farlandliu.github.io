@@ -32,7 +32,7 @@
     
     
       
-        <title>Vim Tips & Config. - xCoding</title>
+        <title>Django - xCoding</title>
       
     
     
@@ -66,7 +66,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#vim-tips-config" tabindex="1" class="md-skip">
+      <a href="#django" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -92,7 +92,7 @@
                 xCoding
               </span>
               <span class="md-header-nav__topic">
-                Vim Tips & Config.
+                Django
               </span>
             
           
@@ -173,10 +173,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Dev
@@ -192,11 +194,103 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../dev/django/" title="Django" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Django
+      </label>
+    
+    <a href="./" title="Django" class="md-nav__link md-nav__link--active">
       Django
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-font-and-icon" title="public font and icon" class="md-nav__link">
+    public font and icon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-geo-installation" title="Django GEO installation" class="md-nav__link">
+    Django GEO installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatialite-library-libspatialite" title="SpatiaLite library (libspatialite)" class="md-nav__link">
+    SpatiaLite library (libspatialite)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-to-jupyter-notebook" title="django to jupyter notebook" class="md-nav__link">
+    django to jupyter notebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms-sqlserver-backend-for-ubuntu" title="MS Sqlserver backend for ubuntu" class="md-nav__link">
+    MS Sqlserver backend for ubuntu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-files-serving-by-default" title="static files serving by default" class="md-nav__link">
+    static files serving by default
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-files-serving-by-customized" title="static files serving by customized" class="md-nav__link">
+    static files serving by customized
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gzip-vs-zlib" title="gzip vs zlib" class="md-nav__link">
+    gzip vs zlib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook-dev" title="outlook Dev" class="md-nav__link">
+    outlook Dev
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -206,8 +300,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev/exchange/" title="MS Exchange API" class="md-nav__link">
-      MS Exchange API
+    <a href="../exchange/" title="Exchange" class="md-nav__link">
+      Exchange
     </a>
   </li>
 
@@ -218,8 +312,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev/viz/" title="data visualization" class="md-nav__link">
-      data visualization
+    <a href="../viz/" title="Viz" class="md-nav__link">
+      Viz
     </a>
   </li>
 
@@ -293,12 +387,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Linux
@@ -316,8 +408,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../cmd/" title="CMD Lines" class="md-nav__link">
-      CMD Lines
+    <a href="../../linux/cmd/" title="Cmd" class="md-nav__link">
+      Cmd
     </a>
   </li>
 
@@ -328,7 +420,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../python/" title="Python" class="md-nav__link">
+    <a href="../../linux/python/" title="Python" class="md-nav__link">
       Python
     </a>
   </li>
@@ -340,7 +432,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tmux/" title="Tmux" class="md-nav__link">
+    <a href="../../linux/tmux/" title="Tmux" class="md-nav__link">
       Tmux
     </a>
   </li>
@@ -350,96 +442,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Vim Tips & Config.
-      </label>
-    
-    <a href="./" title="Vim Tips & Config." class="md-nav__link md-nav__link--active">
-      Vim Tips & Config.
+  <li class="md-nav__item">
+    <a href="../../linux/vim/" title="Vim" class="md-nav__link">
+      Vim
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vim-paster-mode" title="vim paster mode" class="md-nav__link">
-    vim paster mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vim" title="vim快捷键" class="md-nav__link">
-    vim快捷键
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vim-buffer" title="Vim Buffer" class="md-nav__link">
-    Vim Buffer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vim_1" title="vim 设置" class="md-nav__link">
-    vim 设置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vim_2" title="vim块操作" class="md-nav__link">
-    vim块操作
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vim_3" title="vim分屏" class="md-nav__link">
-    vim分屏
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#needtree" title="NEEDtree" class="md-nav__link">
-    NEEDtree
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vim-resource" title="vim resource" class="md-nav__link">
-    vim resource
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -577,57 +584,64 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vim-paster-mode" title="vim paster mode" class="md-nav__link">
-    vim paster mode
+  <a href="#public-font-and-icon" title="public font and icon" class="md-nav__link">
+    public font and icon
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim" title="vim快捷键" class="md-nav__link">
-    vim快捷键
+  <a href="#django-geo-installation" title="Django GEO installation" class="md-nav__link">
+    Django GEO installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim-buffer" title="Vim Buffer" class="md-nav__link">
-    Vim Buffer
+  <a href="#spatialite-library-libspatialite" title="SpatiaLite library (libspatialite)" class="md-nav__link">
+    SpatiaLite library (libspatialite)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim_1" title="vim 设置" class="md-nav__link">
-    vim 设置
+  <a href="#django-to-jupyter-notebook" title="django to jupyter notebook" class="md-nav__link">
+    django to jupyter notebook
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim_2" title="vim块操作" class="md-nav__link">
-    vim块操作
+  <a href="#ms-sqlserver-backend-for-ubuntu" title="MS Sqlserver backend for ubuntu" class="md-nav__link">
+    MS Sqlserver backend for ubuntu
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim_3" title="vim分屏" class="md-nav__link">
-    vim分屏
+  <a href="#static-files-serving-by-default" title="static files serving by default" class="md-nav__link">
+    static files serving by default
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#needtree" title="NEEDtree" class="md-nav__link">
-    NEEDtree
+  <a href="#static-files-serving-by-customized" title="static files serving by customized" class="md-nav__link">
+    static files serving by customized
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim-resource" title="vim resource" class="md-nav__link">
-    vim resource
+  <a href="#gzip-vs-zlib" title="gzip vs zlib" class="md-nav__link">
+    gzip vs zlib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook-dev" title="outlook Dev" class="md-nav__link">
+    outlook Dev
   </a>
   
 </li>
@@ -647,106 +661,206 @@
               
                 
                 
-                <h1 id="vim-tips-config">Vim Tips &amp; Config.</h1>
-<h2 id="vim-paster-mode">vim paster mode</h2>
+                <h1 id="django">Django</h1>
+<div class="admonition important">
+<p class="admonition-title">ORA-02000: missing ALWAYS keyword</p>
+<p>The end of upstream support for Oracle 11.2 is Dec. 2020. Django 1.11 will be supported until April 2020 which almost reaches this date. Django 2.0 officially supports Oracle 12.1+.</p>
+</div>
+<h2 id="public-font-and-icon">public font and icon</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>http://202.100.200.207/public/css/fonts.css
+</pre></div>
+</td></tr></table>
+
+<h2 id="django-geo-installation">Django GEO installation</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install binutils libproj-dev gdal-bin
+
+<span class="c1">#GEOS </span>
+wget http://download.osgeo.org/geos/geos-3.4.2.tar.bz2
+tar xjf geos-3.4.2.tar.bz2
+<span class="nb">cd</span> geos-3.4.2
+./configure
+make
+sudo make install
+<span class="nb">cd</span> ..
+
+<span class="c1"># settings</span>
+<span class="nv">GEOS_LIBRARY_PATH</span> <span class="o">=</span> <span class="s1">&#39;/home/bob/local/lib/libgeos_c.so&#39;</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="spatialite-library-libspatialite">SpatiaLite library (libspatialite)</h2>
+<p>Get the latest SpatiaLite library source bundle from the download page:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># enter paste mode
-:set paste
-#quit paste mode
-:set nopaste
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget http://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-4.1.0.tar.gz
+tar xaf libspatialite-4.1.0.tar.gz
+cd libspatialite-4.1.0
+ ./configure --disable-freexl
+make
+sudo make install
 </pre></div>
-</td></tr></table>
-
-<h2 id="vim">vim快捷键</h2>
-<ul>
-<li><code>C-w w</code> 切换分屏</li>
-<li><code>C-]</code>  跳转到选择的文件链接</li>
-<li><code>C-p</code>  CtrlP插件，打开文件浏览列表</li>
-<li><code>C-e</code>  NEEDtree，打开目录栏</li>
-</ul>
-<h2 id="vim-buffer">Vim Buffer</h2>
-<ul>
-<li><code>:ls</code> # 缓存区列表</li>
-<li><code>:bd1</code> #删除缓冲区第4号文件</li>
-<li><code>:b1</code> #编辑缓存区1号文件</li>
-<li><code>:sb2</code>#编辑buff文件2，并分屏</li>
-</ul>
-<h2 id="vim_1">vim 设置</h2>
-<ul>
-<li>颜色主题
-主题文件在<code>/usr/share/vim/vim74/colors</code>下
-修改.vimrc, 例如：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>colorscheme desert 
-</pre></div>
-</td></tr></table></li>
-<li>主题solarized light
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>syntax enable
-set background=light
-colorscheme solarized
-</pre></div>
-</td></tr></table></li>
-<li>快捷键
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#行光标移动  
-nmap lh   ^  
-nmap le   $
-</pre></div>
-</td></tr></table></li>
-</ul>
-<h2 id="vim_2">vim块操作</h2>
+</td></tr></table></p>
+<h2 id="django-to-jupyter-notebook">django to jupyter notebook</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># v,V,C-v=v_b
-v_b_I #插入
-v_b_A #追加
-v_b_&gt;,&lt;  #TAB
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python -m ipykernel install --user --name env_name --display-name &quot;env name&quot;
+
+# eg:
+python -m ipykernel install --user --name py2 --display-name &quot;Python27&quot;
 </pre></div>
 </td></tr></table>
 
-<h2 id="vim_3">vim分屏</h2>
-<ul>
-<li>已经打开文件状态下，再打开另一个文件并分屏 </li>
-</ul>
+<h2 id="ms-sqlserver-backend-for-ubuntu">MS Sqlserver backend for ubuntu</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>:e filename
-:sp   <span class="c1">#水平分割</span>
-:vsp  <span class="c1">#垂直分割</span>
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>X pip install django-mssql
+X pip install django-pymssql
+X &#39;ENGINE&#39;: &#39;sqlserver_pymssql&#39;,
+
+# only this backend works
+pip install git+https://github.com/denisenkom/django-sqlserver.git#egg=django-sqlserver
+# will install django-mssql&gt;=1.8
+&#39;enging&#39; : &#39;sqlserver&#39;
 </pre></div>
 </td></tr></table>
 
+<h2 id="static-files-serving-by-default">static files serving by default</h2>
+<ol>
+<li>
+<p>Make sure that <code>django.contrib.staticfiles</code> is included in your <code>INSTALLED_APPS</code>.</p>
+</li>
+<li>
+<p>In your settings file, define <code>STATIC_URL</code>,</p>
+</li>
+<li>
+<p>template tag
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{% load static %}
+&lt;img src=&quot;{% static &quot;my_app/example.jpg&quot; %}&quot; alt=&quot;My image&quot;/&gt;
+</pre></div>
+</td></tr></table></p>
+</li>
+<li>
+<p>store the file to <code>my_app/static/my_app/example.jpg</code>.</p>
+</li>
+<li>
+<p>Note:</p>
+</li>
+</ol>
+<blockquote>
+<p>django 自动查找app目录下 <code>static/app/**</code> 下面的静态文件</p>
+</blockquote>
+<h2 id="static-files-serving-by-customized">static files serving by customized</h2>
+<p><strong>urls.py</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.views.static</span> <span class="kn">import</span> <span class="n">serve</span>
+<span class="c1"># ... the rest of your URLconf goes here ...</span>
+<span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+    <span class="n">urlpatterns</span> <span class="o">+=</span> <span class="p">[</span>
+        <span class="n">re_path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^media/(?P&lt;path&gt;.*)$&#39;</span><span class="p">,</span> <span class="n">serve</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s1">&#39;document_root&#39;</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="n">MEDIA_ROOT</span><span class="p">,</span>
+        <span class="p">}),</span>
+        <span class="n">re_path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^static/(?P&lt;path&gt;.*)$&#39;</span><span class="p">,</span> <span class="n">serve</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s1">&#39;document_root&#39;</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="n">STATIC_ROOT</span><span class="p">,</span> 
+        <span class="p">}),</span>
+    <span class="p">]</span>
+</pre></div>
+</td></tr></table></p>
+<p><strong>settings</strong>
+static file for additonal dirs, add prefix name for them:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>STATIC_URL = &#39;/static/&#39;
+MEDIA_ROOT  = &#39;media/&#39;
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, &quot;static&quot;),
+    (&quot;common&quot;, os.path.join(BASE_DIR, &quot;static/common&quot;)),
+]
+</pre></div>
+</td></tr></table></p>
+<h2 id="gzip-vs-zlib">gzip vs zlib</h2>
+<p><strong>question: how to decompress bytes from db?</strong></p>
 <ul>
-<li>在命令行下直接分屏
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vim -on file1 file2    <span class="c1">#垂直分屏</span>
-vim -On file1 file2    <span class="c1">#水平分屏</span>
-</pre></div>
-</td></tr></table></li>
-<li>窗口大小
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>C-w_Shift+`-`  # 最大化当前窗口
-C-w _=   #平均分配窗口大小
-</pre></div>
-</td></tr></table></li>
+<li>step.1: no compress to db, to 'outlooktestnozip-30'
+  results: mail num - 1900; rawdata size -- 742MB;msg size -71MB</li>
+<li>step.2: gzip compress, need to read from file? no test</li>
+<li>step.3: zlib compress
+  results: mail num - 1900; rawdata --666MB: msg size -25MB</li>
 </ul>
-<h2 id="needtree">NEEDtree</h2>
-<p><strong><code>C-e</code></strong>: 打开文件目录栏</p>
-<h2 id="vim-resource">vim resource</h2>
+<p><strong>do not compress html_body, difficult to convert from bytes to str</strong>
+use binaryfield</p>
+<h2 id="outlook-dev">outlook Dev</h2>
 <ul>
-<li><a href="http://blog.csdn.net/dark_tone">http://blog.csdn.net/dark_tone</a>  <strong>这个博客的vim介绍不错</strong></li>
-<li><a href="https://github.com/BillWang139967/Vim">https://github.com/BillWang139967/Vim</a></li>
-<li><a href="https://github.com/chxuan/vimplus">https://github.com/chxuan/vimplus</a></li>
-<li><a href="https://github.com/ma6174/vim">https://github.com/ma6174/vim</a></li>
-<li><a href="https://github.com/tao12345666333/vim">https://github.com/tao12345666333/vim</a></li>
-<li><a href="https://coolshell.cn/articles/5426.html">VIM练级攻略</a></li>
-<li><a href="http://feihu.me/blog/2014/intro-to-vim/">跟我一起学VIM</a></li>
-<li><a href="http://learnvimscriptthehardway.onefloweroneworld.com/">笨方法学VIM</a></li>
+<li>test outlook clint sync ok, --0409</li>
+<li>test exchange server sync? Y</li>
+<li>sync all folder?</li>
+<li>convert body from html to text.  Y<ul>
+<li>need remove many blank lines</li>
+</ul>
+</li>
+<li>lxml decode body Y</li>
+<li>table pretty fix?</li>
+<li>add taggit feature ?</li>
+<li>attachment thumbnail preview</li>
+<li>recipients didn't parse to message?</li>
+<li>pk1154, no html body shown? Y: add <code>method=html,decode="utf8"</code></li>
+<li>
+<p><code>a bytes-like object is required, not 'NoneType'</code>
+  img loaded error,not saved on server.</p>
+</li>
+<li>
+<p>cid issue:
+  <code>cid:_Foxmail.0@1E41CF17-1297-4116-BEFD-D7D66D0016B7</code></p>
+</li>
+<li><code>(1366, "Incorrect string value: '\\xF0\\x9F\\xA4\\x9D\\x0D\\x0A...' for column 'text_body' at row 1")</code>
+  get_text add .encode('utf-8')</li>
+<li><code>INFO : sync_server - ----No. 599---------</code>: <strong>MemoryError</strong></li>
+</ul>
+<hr />
+<p><strong>Folder</strong></p>
+<ul>
+<li>0-Vip:Very important
+_ 1-Work: related to work scope, or techncal document</li>
+<li>2-Notice: from hr, about the company or work policy</li>
+<li>3-EO: worker order feedback</li>
+<li>4-ACMS: AHM</li>
+<li>5-amicos:amicos subscription,to del later</li>
+<li>10-backup</li>
 </ul>
                 
                   
@@ -766,7 +880,7 @@ C-w _=   #平均分配窗口大小
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tmux/" title="Tmux" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Welcome to xCoding Blog" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -775,19 +889,19 @@ C-w _=   #平均分配窗口大小
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Tmux
+                Welcome to xCoding Blog
               </span>
             </div>
           </a>
         
         
-          <a href="../../xdata/ai/" title="Ai" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../exchange/" title="Exchange" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Ai
+                Exchange
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
