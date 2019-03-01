@@ -19,6 +19,10 @@
       
         <meta name="lang:search.language" content="en">
       
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
         <meta name="lang:search.result.none" content="No matching documents">
       
         <meta name="lang:search.result.one" content="1 matching document">
@@ -28,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.3">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
     
     
       
@@ -36,23 +40,24 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
   </head>
-  
   
     <body dir="ltr">
   
@@ -62,9 +67,9 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
       <a href="#django" tabindex="1" class="md-skip">
         Skip to content
@@ -82,7 +87,7 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
@@ -101,14 +106,14 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
             
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -146,7 +151,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
     <span class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
@@ -199,12 +204,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         Django
       </label>
     
@@ -219,8 +224,83 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redis-and-rabbitmq-and-celery" title="redis and rabbitmq and celery" class="md-nav__link">
+    redis and rabbitmq and celery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenv-with-systemd" title="Pipenv with systemd" class="md-nav__link">
+    Pipenv with systemd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-django-settings" title="celery django settings" class="md-nav__link">
+    celery django settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-error" title="celery error:" class="md-nav__link">
+    celery error:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-test" title="django test" class="md-nav__link">
+    django test
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#userful-posts" title="userful posts" class="md-nav__link">
+    userful posts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipenv-and-autoenv" title="pipenv and autoenv" class="md-nav__link">
+    pipenv and autoenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-project-template" title="django project template" class="md-nav__link">
+    django project template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wagtail-user-language" title="wagtail user language" class="md-nav__link">
+    wagtail user language
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#public-font-and-icon" title="public font and icon" class="md-nav__link">
@@ -285,6 +365,22 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#acars" title="acars" class="md-nav__link">
+    acars
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-deployment" title="Django Deployment" class="md-nav__link">
+    Django Deployment
+  </a>
+  
+</li>
+      
+      
+      
       
       
     </ul>
@@ -314,6 +410,18 @@
   <li class="md-nav__item">
     <a href="../viz/" title="Viz" class="md-nav__link">
       Viz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wagtail/" title="Wagtail" class="md-nav__link">
+      Wagtail
     </a>
   </li>
 
@@ -401,6 +509,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../linux/centos/" title="Centos" class="md-nav__link">
+      Centos
+    </a>
+  </li>
+
         
           
           
@@ -528,6 +648,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../xdata/image_caption/" title="Image caption" class="md-nav__link">
+      Image caption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../xdata/ml-action/" title="Ml action" class="md-nav__link">
       Ml action
     </a>
@@ -558,6 +690,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../xdata/tensorflow/" title="Tensorflow" class="md-nav__link">
+      Tensorflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../xdata/vqa/" title="Vqa" class="md-nav__link">
+      Vqa
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../xdata/zsl/" title="Zsl" class="md-nav__link">
+      Zsl
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -580,8 +748,83 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redis-and-rabbitmq-and-celery" title="redis and rabbitmq and celery" class="md-nav__link">
+    redis and rabbitmq and celery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenv-with-systemd" title="Pipenv with systemd" class="md-nav__link">
+    Pipenv with systemd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-django-settings" title="celery django settings" class="md-nav__link">
+    celery django settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-error" title="celery error:" class="md-nav__link">
+    celery error:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-test" title="django test" class="md-nav__link">
+    django test
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#userful-posts" title="userful posts" class="md-nav__link">
+    userful posts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipenv-and-autoenv" title="pipenv and autoenv" class="md-nav__link">
+    pipenv and autoenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-project-template" title="django project template" class="md-nav__link">
+    django project template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wagtail-user-language" title="wagtail user language" class="md-nav__link">
+    wagtail user language
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#public-font-and-icon" title="public font and icon" class="md-nav__link">
@@ -646,6 +889,22 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#acars" title="acars" class="md-nav__link">
+    acars
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-deployment" title="Django Deployment" class="md-nav__link">
+    Django Deployment
+  </a>
+  
+</li>
+      
+      
+      
       
       
     </ul>
@@ -662,6 +921,266 @@
                 
                 
                 <h1 id="django">Django</h1>
+<h2 id="redis-and-rabbitmq-and-celery">redis and rabbitmq and celery</h2>
+<ul>
+<li>rabbitmq doc: <a href="http://next.rabbitmq.com/admin-guide.html">http://next.rabbitmq.com/admin-guide.html</a></li>
+<li>install redis 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>apt install redis
+pip install redis
+</pre></div>
+</td></tr></table></li>
+<li>python redis
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">redis</span>
+<span class="n">rd</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">ex</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span> <span class="c1"># ex=expired seconds</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="c1"># hash dict</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">hset</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="o">..</span><span class="p">)</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">hget</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">hexists</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="c1"># avoid duplicate keys</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">rd</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">rd</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">Obj</span><span class="p">()</span> <span class="c1"># new object</span>
+</pre></div>
+</td></tr></table></li>
+<li>redis presistence</li>
+</ul>
+<p><em>RDB持久化配置</em>
+Redis会将数据集的快照dump到dump.rdb文件中。此外，我们也可以通过配置文件来修改Redis服务器dump快照的频率，在打开6379.conf文件之后，我们搜索save，可以看到下面的配置信息：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>save 900 1              #在900秒(15分钟)之后，如果至少有1个key发生变化，则dump内存快照。
+save 300 10            #在300秒(5分钟)之后，如果至少有10个key发生变化，则dump内存快照。
+save 60 10000        #在60秒(1分钟)之后，如果至少有10000个key发生变化，则dump内存快照。
+</pre></div>
+</td></tr></table>
+<em>AOF持久化配置</em>
+在Redis的配置文件中存在三种同步方式，它们分别是：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>appendfsync always     #每次有数据修改发生时都会写入AOF文件。
+appendfsync everysec  #每秒钟同步一次，该策略为AOF的缺省策略。
+appendfsync no          #从不同步。高效但是数据不会被持久化。
+</pre></div>
+</td></tr></table></p>
+<ul>
+<li>rabbitmq: add user
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rabbitmqctl add_user mytest mytest
+rabbitmqctl set_user_tags mytest administrator
+<span class="c1"># &#39;/&#39; = vhost</span>
+rabbitmqctl set_permissions -p / mytest <span class="s1">&#39;.*&#39;</span> <span class="s1">&#39;.*&#39;</span> <span class="s1">&#39;.*&#39;</span>
+rabbitmqctl list_permissions
+</pre></div>
+</td></tr></table></li>
+<li>
+<p>enable rabbitmq web management
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rabbitmq-plugins <span class="nb">enable</span> rabbitmq_management
+</pre></div>
+</td></tr></table></p>
+</li>
+<li>
+<p>celery daemon task config</p>
+<blockquote>
+<p>ref: <a href="http://docs.celeryproject.org/en/latest/userguide/daemonizing.html">http://docs.celeryproject.org/en/latest/userguide/daemonizing.html</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="pipenv-with-systemd">Pipenv with systemd</h3>
+<blockquote>
+<p><a href="https://linuxacademy.com/linux/training/lesson/course/nginx-web-server-in-detail/name/deploying-a-uwsgi-application">https://linuxacademy.com/linux/training/lesson/course/nginx-web-server-in-detail/name/deploying-a-uwsgi-application</a>
+<a href="http://www.robpeck.com/2017/11/using-pipenv-with-systemd/#.XHX7KpMzYkM">http://www.robpeck.com/2017/11/using-pipenv-with-systemd/#.XHX7KpMzYkM</a>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">My Python Service</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">User</span><span class="o">=</span><span class="s">user</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/path/to</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/pipenv run python3 /path/to/src/foo.py</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</pre></div>
+</td></tr></table></p>
+</blockquote>
+<h3 id="celery-django-settings">celery django settings</h3>
+<blockquote>
+<p>ref: <a href="http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html#django-first-steps">http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html#django-first-steps</a>
+new format settings: <a href="http://docs.celeryproject.org/en/latest/userguide/configuration.html#new-lowercase-settings">http://docs.celeryproject.org/en/latest/userguide/configuration.html#new-lowercase-settings</a></p>
+<p><code>note</code>: new format use lower_case name, you must prefix with CELERY_, and chang to uppercase, eg: task_always_eager setting becomes CELERY_TASK_ALWAYS_EAGER, </p>
+</blockquote>
+<h3 id="celery-error">celery error:</h3>
+<ul>
+<li>'unicode' object has no attribute 'body'
+ must use redis==2.20.6</li>
+</ul>
+<h2 id="django-test">django test</h2>
+<p>Everything! Seriously, you should test whatever you can, including:
+- Views: Viewing of data, changing of data, and custom class-based view methods.
+- Models: Creating/updating/deleting of models, model methods, model manager methods.
+- Forms: Form methods, clean() methods, and custom fields.
+- Validators: Really dig in and write multiple test methods against each custom validator you write.
+Pretend you are a malignant intruder attempting to damage the data in the site.
+- Signals: Since they act at a distance, signals can cause grief especially if you lack tests on them. Filters: Since filters are essentially just functions accepting one or two arguments, writing tests for
+them should be easy.
+Template Tags: Since template tags can do anything and can even accept template context, writing
+tests often becomes much more challenging. This means you really need to test them, since
+otherwise you may run into edge cases.
+Miscellany: Context processors, middleware, email, and anything else not covered in this list. Failure Whathappenswhenanyoftheabovefail?Testingforsystemerrorisasimportantastesting
+for system success.</p>
+<h3 id="userful-posts">userful posts</h3>
+<ul>
+<li><a href="https://tech.coffeemeetsbagel.com/testing-django-with-pytest-debugging-a-teardown-failure-acfa4103aa67">Testing Django with pytest: debugging a teardown failure</a></li>
+<li><a href="https://medium.com/@harshvb7/using-pytest-to-write-tests-in-django-6783674c55b8">Pytest in Django</a></li>
+<li><a href="https://www.agiliq.com/blog/2018/05/django-unit-testing/">Django Unit Testing</a></li>
+</ul>
+<h2 id="pipenv-and-autoenv">pipenv and autoenv</h2>
+<blockquote>
+<p>ref <a href="https://mtaoist.xyz/2018/07/26/pipenv/">https://mtaoist.xyz/2018/07/26/pipenv/</a>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install autoenv
+echo &quot;source `which activate.sh`&quot; &gt;&gt; ~/.bashrc
+
+pip install pipenv
+
+cd ~
+mkdir test_env
+cd test_env
+pipenv install --THREE
+touch .env
+echo &quot;pipenv shell&quot; &gt; .env
+
+# if project in diffent path
+PIPENV_DOTENV_LOCATION=~/temp/.env pipenv shell
+</pre></div>
+</td></tr></table></p>
+</blockquote>
+<h2 id="django-project-template">django project template</h2>
+<blockquote>
+<p>ref: <a href="https://github.com/marcofucci/cookiecutter-simple-django">https://github.com/marcofucci/cookiecutter-simple-django</a>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install cookiecutter
+cookiecutter  https://github.com/marcofucci/cookiecutter-simple-django.git
+
+pip install -r requirements/local.txt
+python ./manage.py syncdb
+python ./manage.py migrate
+python ./manage.py runserver
+
+# Create a GitHub repo and push it there:
+
+git init
+git add .
+git commit -m &quot;first awesome commit!&quot;
+git remote add origin git@github.com:marcofucci/redditclone.git
+git push -u origin master
+</pre></div>
+</td></tr></table></p>
+</blockquote>
+<h2 id="wagtail-user-language">wagtail user language</h2>
+<ul>
+<li>get preferred language when loggin</li>
+</ul>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># wagtail.admin.decorator</span>
+
+<span class="o">...</span>
+<span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">has_perms</span><span class="p">([</span><span class="s1">&#39;wagtailadmin.access_admin&#39;</span><span class="p">]):</span>
+      <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="s1">&#39;wagtail_userprofile&#39;</span><span class="p">):</span>
+          <span class="n">activate_lang</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">wagtail_userprofile</span><span class="o">.</span><span class="n">get_preferred_language</span><span class="p">())</span>
+      <span class="k">return</span> <span class="n">view_func</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</td></tr></table>
+* active preferred language after change user profile</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># wagtail.admin.view.account.language_preferences</span>
+<span class="o">...</span>
+
+<span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">user_profile</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="c1"># This will set the language only for this request/thread</span>
+            <span class="c1"># (so that the &#39;success&#39; messages is in the right language)</span>
+            <span class="n">activate</span><span class="p">(</span><span class="n">user_profile</span><span class="o">.</span><span class="n">get_preferred_language</span><span class="p">())</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Your preferences have been updated.&quot;</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;wagtailadmin_account&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
 <div class="admonition important">
 <p class="admonition-title">ORA-02000: missing ALWAYS keyword</p>
 <p>The end of upstream support for Oracle 11.2 is Dec. 2020. Django 1.11 will be supported until April 2020 which almost reaches this date. Django 2.0 officially supports Oracle 12.1+.</p>
@@ -862,12 +1381,120 @@ _ 1-Work: related to work scope, or techncal document</li>
 <li>5-amicos:amicos subscription,to del later</li>
 <li>10-backup</li>
 </ul>
+<h2 id="acars">acars</h2>
+<p><strong>missing msg debug</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>SELECT
+Count(&quot;hms_msg&quot;.msgid)
+FROM
+&quot;hms_msg&quot;
+WHERE
+&quot;hms_msg&quot;.rcvdate &gt; &#39;2018-07-01 09:00:00&#39; AND &quot;hms_msg&quot;.rcvdate &lt;= &#39;2018-07-01 12:00:00&#39;
+ AND smi=&#39;DFD&#39;;
+</pre></div>
+</td></tr></table></p>
+<h2 id="django-deployment">Django Deployment</h2>
+<p><a href="https://docs.djangoproject.com/zh-hans/2.0/howto/deployment/wsgi/uwsgi/">uwsgi</a>
+<a href="http://docs.gunicorn.org/en/latest/deploy.html">gunicorn</a></p>
+<p><strong>uwsgi</strong></p>
+<ul>
+<li>install 
+<code>pip install uwsgi</code></li>
+<li>
+<p>create app uwsgi ini </p>
+</li>
+<li>
+<p>manage uwsgi workers, using systemd</p>
+</li>
+</ul>
+<p><a href="https://uwsgi-docs.readthedocs.io/en/latest/Management.html">ref</a>
+<a href="https://uwsgi-docs.readthedocs.io/en/latest/Emperor.html">uwsgi emperor</a></p>
+<p><strong>emperor ini</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># https://github.com/20tab/uwsgi-emperor-mode
+; sample uWSGI emperor configuration file
+[uwsgi]
+; the path to the directory containing the vassals .ini files
+emperor = /path/to/your/uwsgi/vassals/dir
+die-on-term = true
+; the path to the directory containing the uwsgi plugins
+vassal-set = plugins-dir=/path/to/your/uwsgi/plugins/dir
+; the path to the emperor log file
+logto = /path/to/your/uwsgi/emperor/logfile.log
+emperor-tyrant = true
+http = :80
+socket = 127.0.0.1:0
+http-subscription-server = 127.0.0.1:5005
+http-stats-server = 127.0.0.1:5004
+emperor-stats-server = 127.0.0.1:5000
+uwsgi --emperor /etc/uwsgi/vassals
+</pre></div>
+</td></tr></table></p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">[unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">uWSGI Emperor</span>
+<span class="na">After</span><span class="o">=</span><span class="s">syslog.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/root/uwsgi/uwsgi --ini /etc/uwsgi/emperor.ini</span>
+<span class="c1"># Requires systemd version 211 or newer</span>
+<span class="na">RuntimeDirectory</span><span class="o">=</span><span class="s">uwsgi</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+<span class="na">KillSignal</span><span class="o">=</span><span class="s">SIGQUIT</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">notify</span>
+<span class="c1"># TODO: change logging file</span>
+<span class="na">StandardError</span><span class="o">=</span><span class="s">syslog</span>
+<span class="na">NotifyAccess</span><span class="o">=</span><span class="s">all</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.taget</span>
+</pre></div>
+</td></tr></table>
+<a href="https://uwsgi-docs.readthedocs.io/en/latest/Systemd.html">uwsgi systemd</a></p>
+<p>-</p>
                 
                   
                 
               
               
                 
+
+
               
             </article>
           </div>
@@ -917,7 +1544,7 @@ _ 1-Work: related to work scope, or techncal document</li>
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
@@ -931,9 +1558,9 @@ _ 1-Work: related to work scope, or techncal document</li>
       
     </div>
     
-      <script src="../../assets/javascripts/application.f041762f.js"></script>
+      <script src="../../assets/javascripts/application.a59e2a89.js"></script>
       
-      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.4",url:{base:"../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
       
