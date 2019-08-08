@@ -228,6 +228,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#deploy-django-into-production" title="Deploy Django into Production" class="md-nav__link">
+    Deploy Django into Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#redis-and-rabbitmq-and-celery" title="redis and rabbitmq and celery" class="md-nav__link">
     redis and rabbitmq and celery
   </a>
@@ -252,6 +259,27 @@
           <li class="md-nav__item">
   <a href="#celery-error" title="celery error:" class="md-nav__link">
     celery error:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis-db-usage" title="redis db usage" class="md-nav__link">
+    redis db usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-usage" title="celery usage" class="md-nav__link">
+    celery usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-task-config" title="celery task config" class="md-nav__link">
+    celery task config
   </a>
   
 </li>
@@ -456,8 +484,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../inbox/Unit02/" title="Unit02" class="md-nav__link">
-      Unit02
+    <a href="../../inbox/Reading-00/" title="Reading 00" class="md-nav__link">
+      Reading 00
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/Reading-01/" title="Reading 01" class="md-nav__link">
+      Reading 01
     </a>
   </li>
 
@@ -470,18 +510,6 @@
   <li class="md-nav__item">
     <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
       Temp
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../inbox/u01/" title="U01" class="md-nav__link">
-      U01
     </a>
   </li>
 
@@ -752,6 +780,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#deploy-django-into-production" title="Deploy Django into Production" class="md-nav__link">
+    Deploy Django into Production
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#redis-and-rabbitmq-and-celery" title="redis and rabbitmq and celery" class="md-nav__link">
     redis and rabbitmq and celery
   </a>
@@ -776,6 +811,27 @@
           <li class="md-nav__item">
   <a href="#celery-error" title="celery error:" class="md-nav__link">
     celery error:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis-db-usage" title="redis db usage" class="md-nav__link">
+    redis db usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-usage" title="celery usage" class="md-nav__link">
+    celery usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery-task-config" title="celery task config" class="md-nav__link">
+    celery task config
   </a>
   
 </li>
@@ -921,6 +977,152 @@
                 
                 
                 <h1 id="django">Django</h1>
+<h2 id="deploy-django-into-production">Deploy Django into Production</h2>
+<blockquote>
+<p>Q: internal error with current config. 2019-4-09
+current config: supervisor=3.0, upgrade to py3 4.0 </p>
+<p>Q: how to log gunicron error, 
+A: see if <code>'disable_existing_loggers': False,</code> was set to <code>True</code></p>
+<p>Q: how to log django access log
+A: test step 1 , edit django logging to default.</p>
+</blockquote>
+<p>start superivsor at <code>/etc/rc.local</code>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>supervisord -c /etc/supervisord.conf
+</pre></div>
+</td></tr></table>
+supervisor v3.0 command 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>/usr/bin/echo_supervisord_conf
+/usr/bin/pidproxy
+/usr/bin/supervisorctl
+/usr/bin/supervisord
+</pre></div>
+</td></tr></table>
+supervisor V4 installation
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip3 install supervisor
+ln -s /usr/local/python3/bin/supervisord /usr/bin/supervisord
+ln -s /usr/local/python3/bin/supervisorctl /usr/bin/supervisorctl
+</pre></div>
+</td></tr></table>
+cli installed to  <code>/usr/local/python3/bin</code></p>
+<p><strong>defalut</strong> conf</p>
+<p>use <code>echo_supervisord_conf &gt; /etc/supervisord.conf</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">[unix_http_server]</span>
+<span class="na">file</span><span class="o">=</span><span class="s">/tmp/supervisor.sock   ; the path to the socket file</span>
+<span class="c1">;chmod=0700                 ; socket file mode (default 0700)</span>
+<span class="c1">;chown=nobody:nogroup       ; socket file uid:gid owner</span>
+<span class="na">username</span><span class="o">=</span><span class="s">user              ; default is no username (open server)</span>
+<span class="na">password</span><span class="o">=</span><span class="s">123              ; default is no password (open server)</span>
+
+<span class="na">[inet_http_server]         ; inet (TCP) server disabled by default</span>
+<span class="na">port</span><span class="o">=</span><span class="s">*:9002        ; ip_address:port specifier, *:port for all iface</span>
+<span class="na">username</span><span class="o">=</span><span class="s">user             ; default is no username (open server)</span>
+<span class="na">password</span><span class="o">=</span><span class="s">123               ; default is no password (open server)</span>
+
+<span class="k">[supervisord]</span>
+<span class="na">logfile</span><span class="o">=</span><span class="s">/var/log/supervisord.log ; main log file; default $CWD/supervisord.log</span>
+<span class="na">logfile_maxbytes</span><span class="o">=</span><span class="s">5MB        ; max main logfile bytes b4 rotation; default 50MB</span>
+<span class="na">logfile_backups</span><span class="o">=</span><span class="s">10           ; # of main logfile backups; 0 means none, default 10</span>
+<span class="na">loglevel</span><span class="o">=</span><span class="s">info                ; log level; default info; others: debug,warn,trace</span>
+<span class="na">pidfile</span><span class="o">=</span><span class="s">/tmp/supervisord.pid ; supervisord pidfile; default supervisord.pid</span>
+<span class="na">nodaemon</span><span class="o">=</span><span class="s">false               ; start in foreground if true; default false</span>
+<span class="na">minfds</span><span class="o">=</span><span class="s">1024                  ; min. avail startup file descriptors; default 1024</span>
+<span class="na">minprocs</span><span class="o">=</span><span class="s">200                 ; min. avail process descriptors;default 200</span>
+<span class="c1">;umask=022                   ; process file creation umask; default 022</span>
+<span class="c1">;user=supervisord            ; setuid to this UNIX account at startup; recommended if root</span>
+<span class="c1">;identifier=supervisor       ; supervisord identifier, default is &#39;supervisor&#39;</span>
+<span class="c1">;directory=/tmp              ; default is not to cd during start</span>
+<span class="c1">;nocleanup=true              ; don&#39;t clean up tempfiles at start; default false</span>
+<span class="c1">;childlogdir=/tmp            ; &#39;AUTO&#39; child log dir, default $TEMP</span>
+<span class="c1">;environment=KEY=&quot;value&quot;     ; key value pairs to add to environment</span>
+<span class="c1">;strip_ansi=false            ; strip ansi escape codes in logs; def. false</span>
+
+<span class="c1">;!!important, if you have additional environment settings </span>
+<span class="na">environment</span><span class="o">=</span><span class="s">LD_LIBRARY_PATH=&quot;/usr/local/lib:/usr/lib/oracle/11.2/client64/lib&quot;,ORACLE_HOME=&quot;/usr/lib/oracle/11.2/client64&quot;,TNS_ADMIN=&quot;/usr/lib/oracle/11.2/network/admin&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p><a href="https://gist.github.com/mozillazg/6cbdcccbf46fe96a4edd">centos service config</a></p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># update service daemon</span>
+systemctl daemon-reload
+<span class="c1"># auto start</span>
+systemctl <span class="nb">enable</span> supervisord
+<span class="c1"># manual start</span>
+systemctl start supervisord
+</pre></div>
+</td></tr></table>
+supervisord.service</p>
+<p>save to <code>/usr/lib/systemd/system/supervisord.service</code></p>
+<p><strong>no password</strong>,if your have set pwd in config file, need edit service file?
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">supervisord - Supervisor process control system for UNIX</span>
+<span class="na">Documentation</span><span class="o">=</span><span class="s">http://supervisord.org</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/supervisord -c /etc/supervisord.conf</span>
+<span class="na">ExecReload</span><span class="o">=</span><span class="s">/usr/bin/supervisorctl reload</span>
+<span class="na">ExecStop</span><span class="o">=</span><span class="s">/usr/bin/supervisorctl shutdown</span>
+<span class="na">User</span><span class="o">=</span><span class="s">root</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</pre></div>
+</td></tr></table></p>
 <h2 id="redis-and-rabbitmq-and-celery">redis and rabbitmq and celery</h2>
 <ul>
 <li>rabbitmq doc: <a href="http://next.rabbitmq.com/admin-guide.html">http://next.rabbitmq.com/admin-guide.html</a></li>
@@ -1049,6 +1251,37 @@ new format settings: <a href="http://docs.celeryproject.org/en/latest/userguide/
 <li>'unicode' object has no attribute 'body'
  must use redis==2.20.6</li>
 </ul>
+<h3 id="redis-db-usage">redis db usage</h3>
+<ul>
+<li>db 0: nextcloud</li>
+<li>db 1: django hms cache </li>
+<li>db 2: celery task and result</li>
+<li>db 5: myfleet</li>
+</ul>
+<h3 id="celery-usage">celery usage</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># clean task </span>
+celery purge
+
+<span class="c1"># or del redis db </span>
+redis-cli -a pass
+&gt;select db 
+&gt;flushdb
+</pre></div>
+</td></tr></table>
+
+<h3 id="celery-task-config">celery task config</h3>
+<p><code>usage:</code> .task(
+           default_retry_delay=30 * 60, 
+          autoretry_for=(FailWhaleError,),
+          retry_kwargs={'max_retries': 1}
+             )</p>
+<hr />
 <h2 id="django-test">django test</h2>
 <p>Everything! Seriously, you should test whatever you can, including:
 - Views: Viewing of data, changing of data, and custom class-based view methods.

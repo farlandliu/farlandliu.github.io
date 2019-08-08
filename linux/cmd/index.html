@@ -271,8 +271,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../inbox/Unit02/" title="Unit02" class="md-nav__link">
-      Unit02
+    <a href="../../inbox/Reading-00/" title="Reading 00" class="md-nav__link">
+      Reading 00
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../inbox/Reading-01/" title="Reading 01" class="md-nav__link">
+      Reading 01
     </a>
   </li>
 
@@ -285,18 +297,6 @@
   <li class="md-nav__item">
     <a href="../../inbox/temp/" title="Temp" class="md-nav__link">
       Temp
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../inbox/u01/" title="U01" class="md-nav__link">
-      U01
     </a>
   </li>
 
@@ -374,6 +374,13 @@
         <li class="md-nav__item">
   <a href="#ubuntu-swap" title="ubuntu swap" class="md-nav__link">
     ubuntu swap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-system-backup" title="ubuntu system backup" class="md-nav__link">
+    ubuntu system backup
   </a>
   
 </li>
@@ -871,6 +878,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ubuntu-system-backup" title="ubuntu system backup" class="md-nav__link">
+    ubuntu system backup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#smbclient" title="smbclient" class="md-nav__link">
     smbclient
   </a>
@@ -1164,6 +1178,59 @@ swapon sfile
 </pre></div>
 </td></tr></table></p>
 </blockquote>
+<h2 id="ubuntu-system-backup">ubuntu system backup</h2>
+<p>/backup/sysback.sh
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> /
+tar -cpzf backup.tar.gz <span class="se">\</span>
+--exclude<span class="o">=</span>backup.tar.gz <span class="se">\</span>
+--exclude<span class="o">=</span>proc <span class="se">\</span>
+--exclude<span class="o">=</span>backup <span class="se">\</span>
+--exclude<span class="o">=</span>tmp <span class="se">\</span>
+--exclude<span class="o">=</span>mnt <span class="se">\</span>
+--exclude<span class="o">=</span>dev <span class="se">\</span>
+--exclude<span class="o">=</span>sys <span class="se">\</span>
+--exclude<span class="o">=</span>var/log <span class="se">\</span>
+--exclude<span class="o">=</span>var/cache/apt/archives <span class="se">\</span>
+--exclude-caches <span class="se">\</span>
+--warning<span class="o">=</span>no-file-changed <span class="se">\</span>
+--exclude<span class="o">=</span>swapfile <span class="se">\</span>
+--exclude<span class="o">=</span>run <span class="se">\</span>
+/
+</pre></div>
+</td></tr></table>
+/restore.sh 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># mount target partition to /mnt/os 
+sudo rm -rf /mnt/os/etc
+sudo rm -rf /mnt/os/var
+sudo rm -rf /mnt/os/snap
+
+sudo tar -xvpzf /backup.tar.gz -C / --numeric-owner
+
+mkdir /proc /sys /mnt /media /dev /run /tmp
+</pre></div>
+</td></tr></table></p>
 <h2 id="smbclient">smbclient</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1695,9 +1762,9 @@ git clone git@github.com:name/project
 
 vim /etc/apt/apt.conf
 
-Acquire::http:proxy <span class="s2">&quot;http://xxx.8088&quot;</span>
-Acquire::https:proxy <span class="s2">&quot;https://xxx:8088&quot;</span>
-Acquire::socks:proxy <span class="s2">&quot;socks://xxx:8088&quot;</span>
+Acquire::http::proxy <span class="s2">&quot;http://xxx.8088&quot;</span><span class="p">;</span>
+Acquire::https::proxy <span class="s2">&quot;https://xxx:8088&quot;</span><span class="p">;</span>
+Acquire::socks::proxy <span class="s2">&quot;socks://xxx:8088&quot;</span><span class="p">;</span>
 </pre></div>
 </td></tr></table>
 
